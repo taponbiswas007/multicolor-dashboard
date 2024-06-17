@@ -1,22 +1,50 @@
 $(document).ready(function () {
 
+   // show full screen area start
+   $('#fullscreenToggle').on('click', function() {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen().then(() => {
+        $('.maximize').hide();
+        $('.minimize').show();
+      });
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen().then(() => {
+          $('.maximize').show();
+          $('.minimize').hide();
+        });
+      }
+    }
+  });
+
+  // Additional event listeners to handle fullscreen changes
+  $(document).on('fullscreenchange webkitfullscreenchange mozfullscreenchange MSFullscreenChange', function() {
+    if (!document.fullscreenElement) {
+      $('.maximize').show();
+      $('.minimize').hide();
+    } else {
+      $('.maximize').hide();
+      $('.minimize').show();
+    }
+  });
+
     //side bar header color change function
     $("#logobarwhite").click(function () {
-        $("#sidebarLogoArea").addClass("sidelogobar-white-bg");
-        $("#sidebarLogoArea").removeClass("sidelogobar-black-bg");
+        $("#sidebarLogoArea").addClass("white-bg");
+        $("#sidebarLogoArea").removeClass("black-bg");
     });
     $("#logobarBlack").click(function () {
-        $("#sidebarLogoArea").addClass("sidelogobar-black-bg");
-        $("#sidebarLogoArea").removeClass("sidelogobar-white-bg");
+        $("#sidebarLogoArea").addClass("black-bg");
+        $("#sidebarLogoArea").removeClass("white-bg");
     });
     //side bar navbar color change function
     $("#sidenavbarwhite").click(function () {
-        $("#sideNavitem").addClass("sidelogobar-white-bg");
-        $("#sideNavitem").removeClass("sidelogobar-black-bg");
+        $("#sideNavitem").addClass("white-bg");
+        $("#sideNavitem").removeClass("black-bg");
     });
     $("#sidenavbarBlack").click(function () {
-        $("#sideNavitem").addClass("sidelogobar-black-bg");
-        $("#sideNavitem").removeClass("sidelogobar-white-bg");
+        $("#sideNavitem").addClass("black-bg");
+        $("#sideNavitem").removeClass("white-bg");
     });
 
     $(".sortsidebar").click(function () {
