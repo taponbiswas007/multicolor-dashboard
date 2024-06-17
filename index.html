@@ -55,31 +55,35 @@
                             </div>
 
                         </div>
-                        <div class="sidenavbar-area sidelogobar-white-bg">
-                            <a href="" class="sidenavitem">
+                        <div class="sidenavbar-area sidelogobar-white-bg" id="sideNavitem">
+                            <a href="" class="sidenavitem active">
                                 <div class="navcontent">
                                     <i class="fa-sharp fa-light fa-house font-icon"></i>
                                     <span class="navitem-text">Dashboard</span>
+                                </div>
+                               
+                            </a>
+                           
+                            <a href="" class="sidenavitem">
+                                <div class="navcontent">
+                                    <i class="fa-sharp fa-light fa-gear font-icon"></i>
+                                    <span class="navitem-text">setting</span>
                                 </div>
                                 <button class="submenuitem">
                                     <i class="fa-solid fa-angle-right font-icon"></i>
                                 </button>
                             </a>
-                            <a href="" class="sidenavitem">
-                                <div class="navicon"></div>
-                            </a>
-                            <a href="" class="sidenavitem">
-                                <div class="navicon"></div>
-                            </a>
-                            <a href="" class="sidenavitem">
-                                <div class="navicon"></div>
-                            </a>
-                            <a href="" class="sidenavitem">
-                                <div class="navicon"></div>
-                            </a>
-                            <a href="" class="sidenavitem">
-                                <div class="navicon"></div>
-                            </a>
+                            <div class="navsubitems">
+                                <ul>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>Institute Profile</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>fee perticulars</a></li>
+                                    <li><a href="#"><i class="fa-solid fa-circle-right"></i>rules and regulations</a></li>
+                                    <li><a href="#"><i class="fa-solid fa-circle-right"></i>marks and grading</a></li>
+                                    <li><a href="#"><i class="fa-solid fa-circle-right"></i>account settings</a></li>
+                                    <li><a href="#"><i class="fa-solid fa-circle-right"></i>log out</a></li>
+                                </ul>
+                            </div>
+                           
                         </div>
                     </div>
                 </div>
@@ -96,8 +100,14 @@
     <div class="theme-setting-area">
         <div class="inner">
             <div class="sidelogobarcolor-changer">
+                <h1>sidebar header background color</h1>
                 <button class="white" id="logobarwhite"></button>
                 <button class="black" id="logobarBlack"></button>
+            </div>
+            <div class="sidelogobarcolor-changer">
+                <h1>sidebar navbar background color</h1>
+                <button class="white" id="sidenavbarwhite"></button>
+                <button class="black" id="sidenavbarBlack"></button>
             </div>
         </div>
     </div>

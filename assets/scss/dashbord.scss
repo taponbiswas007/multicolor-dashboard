@@ -14,17 +14,7 @@
     button{
         color: $simpleblack;
     }
-    .sidenavitem{
-        &:hover{
-            color: $purple;
-            
-        }
-        &:hover .submenuitem{
-            color: $purple;
-            
-        }
-        
-    }
+    
 }
 .sidelogobar-black-bg{
     background: $black;
@@ -69,10 +59,25 @@
                     justify-content: space-between;
                     align-items: center;
                     padding: 15px 20px;
-                    font-size: 19px;
+                    font-size: 15px;
                     font-weight: 500;
                     font-family: $roboto;
                     margin: 15px 10px;
+                    text-transform: capitalize;
+                    &:first-child{
+                        margin-top: 0;
+                    }
+                    
+                        &:hover{
+                            color: $purple;
+                            
+                        }
+                        &:hover .submenuitem{
+                            color: $purple;
+                            
+                        }
+                        
+                    
                     .navcontent{
                         display: flex;
                         justify-content: flex-start;
@@ -81,6 +86,36 @@
                     }
                     .submenuitem{
                         font-size: 16px;
+                    }
+                }
+                .active{
+                    color: $purple !important;
+                }
+                .navsubitems{
+                    padding-left: 80px;
+                    ul{
+                        border-left: 2px solid $cyan;
+                        li{
+                            a{
+                                font-size: 14px;
+                                text-transform: capitalize;
+                                font-weight: 400;
+                                font-family: $roboto;
+                                margin: 10px;
+                                padding: 5px;
+                                display: block;
+                                position: relative;
+                                .hoversubmenuicon{
+                                    color: $cyan;
+                                    font-size: 9px;
+                                    position: absolute;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    left: -16px;
+                                    z-index: 1;
+                                }
+                            }
+                        }
                     }
                 }
                
