@@ -1,0 +1,18 @@
+@import 'utils/variables';
+@import 'base/resets';
+@import 'base/typography';
+
+.sidebar-light-bg{
+    background: $white;
+    color: $simpleblack ;
+}
+.sidebar{
+    .inner{
+        .logo{
+            width: 50px;
+            img{
+                width: 40px;
+            }
+        }
+    }
+}
