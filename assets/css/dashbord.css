@@ -92,7 +92,7 @@ a {
 
 .wrapper {
   overflow: hidden;
-  background: #dfdfdf;
+  background: #f5f7fd;
 }
 .wrapper .sidebar {
   -webkit-box-shadow: 4px 4px 10px rgba(69, 65, 78, 0.06);
@@ -101,6 +101,7 @@ a {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   height: 100vh;
+  position: relative;
 }
 .wrapper .sidebar .inner {
   height: 100%;
@@ -240,6 +241,10 @@ a {
       -ms-flex-align: center;
           align-items: center;
   padding: 0 30px;
+  position: sticky;
+  top: 0;
+  -webkit-box-shadow: 4px 4px 10px rgba(69, 65, 78, 0.06);
+          box-shadow: 4px 4px 10px rgba(69, 65, 78, 0.06);
 }
 .wrapper .main-panel .top-header-inner .left .search-area {
   max-width: 300px;
@@ -297,59 +302,111 @@ a {
 .wrapper .main-panel .top-header-inner .right .topbar-item .fullscreenmode .minimize {
   display: none;
 }
-
-.setting-icons {
-  background: #ffffff;
-  border-radius: 30px 0 0 30px;
-  padding: 10px 15px;
-  -webkit-box-shadow: -2px 1px 8px rgba(69, 69, 0, 0.6);
-          box-shadow: -2px 1px 8px rgba(69, 69, 0, 0.6);
-  position: fixed;
+.wrapper .main-panel .top-header-inner .right .topbar-item .institute-information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+  cursor: pointer;
+  position: relative;
+}
+.wrapper .main-panel .top-header-inner .right .topbar-item .institute-information .institutelogo {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: block;
+  border: 2px solid #20c997;
+  overflow: hidden;
+  padding: 2px;
+}
+.wrapper .main-panel .top-header-inner .right .topbar-item .institute-information .institute-name {
+  font-size: 20px;
+  font-family: "Andada Pro", serif;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.wrapper .main-panel .top-header-inner .right .topbar-item .institute-information .information-details-area {
+  position: absolute;
+  top: 80px;
   right: 0;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  background: #ffffff;
+  border-radius: 10px;
+  display: none;
+  -webkit-box-shadow: 0 4px 10px rgba(69, 69, 0, 0.6);
+          box-shadow: 0 4px 10px rgba(69, 69, 0, 0.6);
+  z-index: 3;
 }
-.setting-icons .settingbtn {
-  color: #6610f2;
-  font-size: 30px;
-  -webkit-animation: seetingbtnicon 1.5s linear infinite;
-          animation: seetingbtnicon 1.5s linear infinite;
+.wrapper .main-panel .top-header-inner .right .topbar-item .institute-information .information-details-area .inner {
+  padding: 10px;
+  position: relative;
+}
+.wrapper .main-panel .top-header-inner .right .topbar-item .institute-information .information-details-area .inner ul {
+  width: 100%;
+}
+.wrapper .main-panel .top-header-inner .right .topbar-item .institute-information .information-details-area .inner ul li {
+  margin-bottom: 15px;
+  width: 100%;
+}
+.wrapper .main-panel .top-header-inner .right .topbar-item .institute-information .information-details-area .inner ul li a {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  background: #f5f7fd;
+  text-transform: capitalize;
+  display: block;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.wrapper .main-panel .top-header-inner .right .topbar-item .institute-information .information-details-area .inner ul li a:hover {
+  background: #6610f2;
+  color: #ffffff;
+}
+.wrapper .main-panel .top-header-inner .right .topbar-item .institute-information .information-details-area .inner .indicator {
+  font-size: 20px;
+  color: #ffffff;
+  position: absolute;
+  right: 10px;
+  top: -17px;
 }
 
-@-webkit-keyframes seetingbtnicon {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@keyframes seetingbtnicon {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
 .theme-setting-area {
   background: #ffffff;
   border-radius: 10px 0 0 10px;
-  padding: 20px;
   -webkit-box-shadow: -2px 1px 8px rgba(69, 69, 0, 0.6);
           box-shadow: -2px 1px 8px rgba(69, 69, 0, 0.6);
   position: fixed;
-  right: 0;
+  right: -250px;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   z-index: 1;
+}
+.theme-setting-area .inner {
+  position: relative;
+  padding: 20px;
+  max-width: 250px;
+  width: 100%;
+}
+.theme-setting-area .inner .sidelogobarcolor-changer {
+  margin-bottom: 30px;
+}
+.theme-setting-area .inner .sidelogobarcolor-changer h1 {
+  font-size: 16px;
+  font-family: "Andada Pro", serif;
+  font-weight: 600;
+  text-transform: capitalize;
+  border-bottom: 2px solid #8a95a0;
+  margin-bottom: 20px;
 }
 .theme-setting-area .inner .sidelogobarcolor-changer button {
   height: 30px;
@@ -364,4 +421,42 @@ a {
 }
 .theme-setting-area .inner .sidelogobarcolor-changer .black {
   background: #000000;
+}
+.theme-setting-area .inner .setting-icons-close {
+  background: #ffffff;
+  border-radius: 30px 0 0 30px;
+  padding: 10px 15px;
+  -webkit-box-shadow: -4px 0px 2px rgba(69, 69, 0, 0.6);
+          box-shadow: -4px 0px 2px rgba(69, 69, 0, 0.6);
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.theme-setting-area .inner .setting-icons-close .settingbtn {
+  color: #6610f2;
+  font-size: 30px;
+  -webkit-animation: settingbtnicon 1.5s linear infinite;
+          animation: settingbtnicon 1.5s linear infinite;
+}
+@-webkit-keyframes settingbtnicon {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes settingbtnicon {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }

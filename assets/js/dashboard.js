@@ -158,5 +158,28 @@ $(document).ready(function () {
         $("#submenu6").slideToggle();
     });
 
+    
 
+    //top bar item area
+    $(".informationbtn").click(function(){
+        $(".information-details-area").toggle();
+    });
+
+    //theme manu area
+    $(".settingbtn").click(function() {
+        let themeSettingArea = $(".theme-setting-area");
+        let currentRight = themeSettingArea.css("right");
+        
+        if (currentRight === "0px" || currentRight === "0") {
+            themeSettingArea.animate({
+                "right": "-250px"
+            }, 500);
+        } else {
+            themeSettingArea.animate({
+                "right": "0"
+            }, 500);
+        }
+    });
+
+    
 });

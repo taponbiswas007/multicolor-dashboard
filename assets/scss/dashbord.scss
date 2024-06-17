@@ -38,6 +38,7 @@
         height: 100vh;
         transition: all 0.5s ease;
         height: 100vh;
+        position: relative;
 
         .inner {
             height: 100%;
@@ -182,6 +183,9 @@
             justify-content: space-between;
             align-items: center;
             padding: 0 30px;
+            position: sticky;
+            top: 0;
+            box-shadow: 4px 4px 10px rgba(69, 65, 78, .06);
 
             .left {
                 .search-area {
@@ -215,9 +219,11 @@
 
                 .topbar-item {
                     position: relative;
-                    button{
+
+                    button {
                         font-size: 20px;
                     }
+
                     span {
                         background: #20c997;
                         height: 14px;
@@ -231,9 +237,86 @@
                         display: block;
                         padding: 2px 0 0 5px;
                     }
-                    .fullscreenmode{
-                        .minimize{
+
+                    .fullscreenmode {
+                        .minimize {
                             display: none;
+                        }
+                    }
+
+                    .institute-information {
+                        display: flex;
+                        justify-content: left;
+                        align-items: center;
+                        column-gap: 20px;
+                        cursor: pointer;
+                        position: relative;
+
+                        .institutelogo {
+                            height: 50px;
+                            width: 50px;
+                            border-radius: 50%;
+                            display: block;
+                            border: 2px solid $green;
+                            overflow: hidden;
+                            padding: 2px;
+
+                        }
+
+                        .institute-name {
+                            font-size: 20px;
+                            font-family: $andadapro;
+                            font-weight: 400;
+                            text-transform: capitalize;
+                        }
+
+                        .information-details-area {
+                            position: absolute;
+                            top: 80px;
+                            right: 0;
+                            background: $white;
+                            border-radius: 10px;
+                            display: none;
+                            box-shadow: 0 4px 10px rgba(69, 69, 0, .6);
+                            z-index: 3;
+
+                            .inner {
+                                padding: 10px;
+                                position: relative;
+                                ul {
+                                    width: 100%;
+
+                                    li {
+                                        margin-bottom: 15px;
+                                        width: 100%;
+
+                                        a {
+                                            width: 100%;
+                                            padding: 10px;
+                                            font-size: 16px;
+                                            font-family: $inter;
+                                            font-weight: 500;
+                                            background: $gray;
+                                            text-transform: capitalize;
+                                            display: block;
+                                            transition: all .3s ease;
+
+                                            &:hover {
+                                                background: $purple;
+                                                color: $white;
+                                            }
+                                        }
+                                    }
+                                }
+                                .indicator{
+                                    font-size: 20px;
+                                    color: $white;
+                                    position: absolute;
+                                    right: 10px;
+                                    top: -17px;
+                                }
+                            }
+
                         }
                     }
                 }
@@ -242,47 +325,37 @@
     }
 }
 
-.setting-icons {
-    background: $white;
-    border-radius: 30px 0 0 30px;
-    padding: 10px 15px;
-    box-shadow: -2px 1px 8px rgba(69, 69, 0, .6);
-    position: fixed;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
 
-    .settingbtn {
-        color: $purple;
-        font-size: 30px;
-        animation: seetingbtnicon 1.5s linear infinite;
-    }
 
-}
-
-@keyframes seetingbtnicon {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
 
 .theme-setting-area {
     background: $white;
     border-radius: 10px 0 0 10px;
-    padding: 20px;
     box-shadow: -2px 1px 8px rgba(69, 69, 0, .6);
     position: fixed;
-    right: 0;
+    right: -250px;
     top: 50%;
     transform: translateY(-50%);
     z-index: 1;
 
     .inner {
+        position: relative;
+        padding: 20px;
+        max-width: 250px;
+        width: 100%;
+
         .sidelogobarcolor-changer {
+            margin-bottom: 30px;
+
+            h1 {
+                font-size: 16px;
+                font-family: $andadapro;
+                font-weight: 600;
+                text-transform: capitalize;
+                border-bottom: 2px solid $simpleblack;
+                margin-bottom: 20px;
+            }
+
             button {
                 height: 30px;
                 width: 30px;
@@ -298,6 +371,34 @@
             .black {
                 background: $black;
             }
+        }
+
+        .setting-icons-close {
+            background: $white;
+            border-radius: 30px 0 0 30px;
+            padding: 10px 15px;
+            box-shadow: -4px 0px 2px rgba(69, 69, 0, 0.6);
+            position: absolute;
+            right: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+
+            .settingbtn {
+                color: $purple;
+                font-size: 30px;
+                animation: settingbtnicon 1.5s linear infinite;
+            }
+
+            @keyframes settingbtnicon {
+                0% {
+                    transform: rotate(0deg);
+                }
+
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+
         }
     }
 }
