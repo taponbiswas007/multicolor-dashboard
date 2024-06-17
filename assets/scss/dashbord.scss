@@ -6,12 +6,140 @@
     background: $white;
     color: $simpleblack ;
 }
-.sidebar{
+.sidelogobar-white-bg{
+    background: $white;
+    a{
+        color: $simpleblack;
+    }
+    button{
+        color: $simpleblack;
+    }
+    .sidenavitem{
+        &:hover{
+            color: $purple;
+            
+        }
+        &:hover .submenuitem{
+            color: $purple;
+            
+        }
+        
+    }
+}
+.sidelogobar-black-bg{
+    background: $black;
+    a{
+        color: $white;
+    }
+    button{
+        color: $white;
+    }
+  
+   
+}
+.wrapper{
+    height: 100vh;
+    overflow: hidden;
+    .sidebar{
+        box-shadow: -2px -3px 11px rgba(69, 69, 0, 0.6);
+        height: 100vh;
+        transition: all 0.5s ease;
+        .inner{
+            .side-bar-logo-area{
+                padding: 20px 0;
+                border-bottom: 1px solid $simpleblack;
+                .logo{
+                    width: 50px;
+                    img{
+                        width: 40px;
+                    }
+                }
+                .sidebar-toggle-icon{
+                    button{
+                        font-size: 30px;
+                        .bigsidebar{
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .sidenavbar-area{
+                .sidenavitem{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 15px 20px;
+                    font-size: 19px;
+                    font-weight: 500;
+                    font-family: $roboto;
+                    margin: 15px 10px;
+                    .navcontent{
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        column-gap: 15px;
+                    }
+                    .submenuitem{
+                        font-size: 16px;
+                    }
+                }
+               
+            }
+            
+        }
+    }
+    .main-panel{
+        transition: all 0.5s ease;
+    }
+}
+.setting-icons{
+    background: $white;
+    border-radius: 30px 0 0 30px;
+    padding: 10px 15px;
+    box-shadow: -2px 1px 8px rgba(69, 69, 0,  .6);
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    .settingbtn{
+        color: $purple;
+        font-size: 30px;
+        animation: seetingbtnicon 1.5s linear infinite;
+    }
+
+}
+@keyframes seetingbtnicon {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.theme-setting-area{
+    background: $white;
+    border-radius: 10px 0 0 10px;
+    padding: 20px;
+    box-shadow: -2px 1px 8px rgba(69, 69, 0,  .6);
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
     .inner{
-        .logo{
-            width: 50px;
-            img{
-                width: 40px;
+        .sidelogobarcolor-changer{
+            button{
+                height: 30px;
+                width: 30px;
+                border-radius: 50%;
+                box-shadow: -2px 1px 8px rgba(69, 69, 0,  .6);
+                margin-right: 20px;
+            }
+            .white{
+                background: $white;
+            }
+            .black{
+                background: $black;
             }
         }
     }

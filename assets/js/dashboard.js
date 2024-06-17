@@ -1,0 +1,49 @@
+$(document).ready(function(){
+    $("#logobarwhite").click(function(){
+        $("#sidebarLogoArea").addClass("sidelogobar-white-bg");
+        $("#sidebarLogoArea").removeClass("sidelogobar-black-bg");
+    });
+    $("#logobarBlack").click(function(){
+        $("#sidebarLogoArea").addClass("sidelogobar-black-bg");
+        $("#sidebarLogoArea").removeClass("sidelogobar-white-bg");
+    });
+    $(".sortsidebar").click(function(){
+        $("#sideBar").addClass("col-lg-1");
+        $("#sideBar").removeClass("col-lg-3");
+        $("#mainPanel").addClass("col-lg-11");
+        $("#mainPanel").removeClass("col-lg-9");
+        $(".bigsidebar").css({
+            "display":"block"
+        });
+        $(this).css({
+            "display":"none"
+        });
+        $(".submenuitem").css({
+            "display":"none"
+        });
+        $(".navitem-text").css({
+            "display":"none"
+        });
+    });
+    $(".bigsidebar").click(function(){
+        $("#sideBar").addClass("col-lg-3");
+        $("#sideBar").removeClass("col-lg-1");
+        $("#mainPanel").addClass("col-lg-9");
+        $("#mainPanel").removeClass("col-lg-11");
+        $(".sortsidebar").css({
+            "display":"block"
+        });
+        $(this).css({
+            "display":"none"
+        });
+        $(".submenuitem").css({
+            "display":"block"
+        });
+        $(".navitem-text").css({
+            "display":"block"
+        });
+
+    });
+   
+
+});

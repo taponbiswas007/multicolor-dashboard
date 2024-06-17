@@ -58,14 +58,178 @@ button {
   border: none;
 }
 
-.sidebar-light-bg {
-  background: #ffffff;
-  color: #1b1b1b;
+a {
+  text-decoration: none;
 }
 
-.sidebar .inner .logo {
+.m-r {
+  margin-right: 15px;
+}
+
+.font-icon {
+  font-size: 25px;
+}
+
+.sidebar-light-bg {
+  background: #ffffff;
+  color: #716a6a;
+}
+
+.sidelogobar-white-bg {
+  background: #ffffff;
+}
+.sidelogobar-white-bg a {
+  color: #716a6a;
+}
+.sidelogobar-white-bg button {
+  color: #716a6a;
+}
+.sidelogobar-white-bg .sidenavitem:hover {
+  color: #ff05f3;
+}
+.sidelogobar-white-bg .sidenavitem:hover .submenuitem {
+  color: #ff05f3;
+}
+
+.sidelogobar-black-bg {
+  background: #000000;
+}
+.sidelogobar-black-bg a {
+  color: #ffffff;
+}
+.sidelogobar-black-bg button {
+  color: #ffffff;
+}
+
+.wrapper {
+  height: 100vh;
+  overflow: hidden;
+}
+.wrapper .sidebar {
+  -webkit-box-shadow: -2px -3px 11px rgba(69, 69, 0, 0.6);
+          box-shadow: -2px -3px 11px rgba(69, 69, 0, 0.6);
+  height: 100vh;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.wrapper .sidebar .inner .side-bar-logo-area {
+  padding: 20px 0;
+  border-bottom: 1px solid #716a6a;
+}
+.wrapper .sidebar .inner .side-bar-logo-area .logo {
   width: 50px;
 }
-.sidebar .inner .logo img {
+.wrapper .sidebar .inner .side-bar-logo-area .logo img {
   width: 40px;
+}
+.wrapper .sidebar .inner .side-bar-logo-area .sidebar-toggle-icon button {
+  font-size: 30px;
+}
+.wrapper .sidebar .inner .side-bar-logo-area .sidebar-toggle-icon button .bigsidebar {
+  display: none;
+}
+.wrapper .sidebar .inner .sidenavbar-area .sidenavitem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 20px;
+  font-size: 19px;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  margin: 15px 10px;
+}
+.wrapper .sidebar .inner .sidenavbar-area .sidenavitem .navcontent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 15px;
+     -moz-column-gap: 15px;
+          column-gap: 15px;
+}
+.wrapper .sidebar .inner .sidenavbar-area .sidenavitem .submenuitem {
+  font-size: 16px;
+}
+.wrapper .main-panel {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.setting-icons {
+  background: #ffffff;
+  border-radius: 30px 0 0 30px;
+  padding: 10px 15px;
+  -webkit-box-shadow: -2px 1px 8px rgba(69, 69, 0, 0.6);
+          box-shadow: -2px 1px 8px rgba(69, 69, 0, 0.6);
+  position: fixed;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.setting-icons .settingbtn {
+  color: #ff05f3;
+  font-size: 30px;
+  -webkit-animation: seetingbtnicon 1.5s linear infinite;
+          animation: seetingbtnicon 1.5s linear infinite;
+}
+
+@-webkit-keyframes seetingbtnicon {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes seetingbtnicon {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+.theme-setting-area {
+  background: #ffffff;
+  border-radius: 10px 0 0 10px;
+  padding: 20px;
+  -webkit-box-shadow: -2px 1px 8px rgba(69, 69, 0, 0.6);
+          box-shadow: -2px 1px 8px rgba(69, 69, 0, 0.6);
+  position: fixed;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 1;
+}
+.theme-setting-area .inner .sidelogobarcolor-changer button {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  -webkit-box-shadow: -2px 1px 8px rgba(69, 69, 0, 0.6);
+          box-shadow: -2px 1px 8px rgba(69, 69, 0, 0.6);
+  margin-right: 20px;
+}
+.theme-setting-area .inner .sidelogobarcolor-changer .white {
+  background: #ffffff;
+}
+.theme-setting-area .inner .sidelogobarcolor-changer .black {
+  background: #000000;
 }/*# sourceMappingURL=dashbord.css.map */
