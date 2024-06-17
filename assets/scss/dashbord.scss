@@ -30,6 +30,7 @@
 .wrapper{
     height: 100vh;
     overflow: hidden;
+    background: $gray;
     .sidebar{
         box-shadow: -2px -3px 11px rgba(69, 69, 0, 0.6);
         height: 100vh;
@@ -64,6 +65,7 @@
                     font-family: $roboto;
                     margin: 15px 10px;
                     text-transform: capitalize;
+                    transition: all .5s;
                     &:first-child{
                         margin-top: 0;
                     }
@@ -86,6 +88,14 @@
                     }
                     .submenuitem{
                         font-size: 16px;
+                        .submenuarrow {
+                            display: inline-block;
+                            transition: transform 0.3s;
+                        }
+                
+                        .rotated {
+                            transform: rotate(90deg);
+                        }
                     }
                 }
                 .active{
@@ -93,6 +103,7 @@
                 }
                 .navsubitems{
                     padding-left: 80px;
+                    display: none;
                     ul{
                         border-left: 2px solid $cyan;
                         li{
@@ -105,6 +116,13 @@
                                 padding: 5px;
                                 display: block;
                                 position: relative;
+                                transition: all .5s ;
+                                &:hover{
+                                    color: $cyan;
+                                }
+                                &:hover .hoversubmenuicon{
+                                    opacity: 100%;
+                                }
                                 .hoversubmenuicon{
                                     color: $cyan;
                                     font-size: 9px;
@@ -113,7 +131,12 @@
                                     transform: translateY(-50%);
                                     left: -16px;
                                     z-index: 1;
+                                    opacity: 0;
+                                    transition: all .4s;
                                 }
+                            }
+                            .submenuactive{
+                                color: $cyan;
                             }
                         }
                     }

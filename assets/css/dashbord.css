@@ -98,6 +98,7 @@ a {
 .wrapper {
   height: 100vh;
   overflow: hidden;
+  background: #dfdfdf;
 }
 .wrapper .sidebar {
   -webkit-box-shadow: -2px -3px 11px rgba(69, 69, 0, 0.6);
@@ -138,6 +139,8 @@ a {
   font-family: "Roboto", sans-serif;
   margin: 15px 10px;
   text-transform: capitalize;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .wrapper .sidebar .inner .sidenavbar-area .sidenavitem:first-child {
   margin-top: 0;
@@ -165,11 +168,23 @@ a {
 .wrapper .sidebar .inner .sidenavbar-area .sidenavitem .submenuitem {
   font-size: 16px;
 }
+.wrapper .sidebar .inner .sidenavbar-area .sidenavitem .submenuitem .submenuarrow {
+  display: inline-block;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+.wrapper .sidebar .inner .sidenavbar-area .sidenavitem .submenuitem .rotated {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
 .wrapper .sidebar .inner .sidenavbar-area .active {
   color: #ff05f3 !important;
 }
 .wrapper .sidebar .inner .sidenavbar-area .navsubitems {
   padding-left: 80px;
+  display: none;
 }
 .wrapper .sidebar .inner .sidenavbar-area .navsubitems ul {
   border-left: 2px solid #09ffdc;
@@ -183,6 +198,14 @@ a {
   padding: 5px;
   display: block;
   position: relative;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.wrapper .sidebar .inner .sidenavbar-area .navsubitems ul li a:hover {
+  color: #09ffdc;
+}
+.wrapper .sidebar .inner .sidenavbar-area .navsubitems ul li a:hover .hoversubmenuicon {
+  opacity: 100%;
 }
 .wrapper .sidebar .inner .sidenavbar-area .navsubitems ul li a .hoversubmenuicon {
   color: #09ffdc;
@@ -193,6 +216,12 @@ a {
           transform: translateY(-50%);
   left: -16px;
   z-index: 1;
+  opacity: 0;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.wrapper .sidebar .inner .sidenavbar-area .navsubitems ul li .submenuactive {
+  color: #09ffdc;
 }
 .wrapper .main-panel {
   -webkit-transition: all 0.5s ease;
@@ -265,4 +294,4 @@ a {
 }
 .theme-setting-area .inner .sidelogobarcolor-changer .black {
   background: #000000;
-}/*# sourceMappingURL=dashbord.css.map */
+}
