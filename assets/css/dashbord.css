@@ -48,6 +48,75 @@ table {
   border-spacing: 0;
 }
 
+/* Webkit-based browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 4px; /* Width of the entire scrollbar */
+  height: 4px; /* Height of the scrollbar for horizontal scrolling */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Background of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color of the scrollbar handle */
+  border-radius: 10px; /* Roundness of the scrollbar handle */
+  border: 1px solid #ccc; /* Border around the scrollbar handle */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the scrollbar handle when hovered */
+}
+
+/* Firefox */
+html {
+  scrollbar-width: thin; /* Sets the width of the scrollbar */
+  scrollbar-color: #888 #f1f1f1; /* Sets the color of the scrollbar handle and track */
+}
+
+body {
+  scrollbar-width: thin; /* Apply to the body element */
+  scrollbar-color: #888 #f1f1f1;
+}
+
+/* Internet Explorer and Edge */
+body {
+  -ms-overflow-style: none; /* Hides the default scrollbar in IE/Edge */
+}
+
+/* For IE 10+ */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  ::-ms-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+}
+/* General styling for scrollable elements within the page */
+.scrollable-element {
+  overflow: auto;
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #888 #f1f1f1; /* For Firefox */
+}
+
+.scrollable-element::-webkit-scrollbar {
+  width: 4px; /* Width of the scrollbar */
+  height: 4px; /* Height of the scrollbar for horizontal scrolling */
+}
+
+.scrollable-element::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Background of the scrollbar track */
+}
+
+.scrollable-element::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color of the scrollbar handle */
+  border-radius: 10px; /* Roundness of the scrollbar handle */
+  border: 1px solid #ccc; /* Border around the scrollbar handle */
+}
+
+.scrollable-element::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the scrollbar handle when hovered */
+}
+
 img {
   width: 100%;
 }
@@ -81,18 +150,25 @@ a {
 }
 
 .black-bg {
-  background: #000000;
+  background: #1a2035;
 }
 .black-bg a {
-  color: #ffffff;
+  color: #ffffff !important;
 }
 .black-bg button {
-  color: #ffffff;
+  color: #ffffff !important;
+}
+.black-bg ul li {
+  color: #ffffff !important;
 }
 
 .wrapper {
-  overflow: hidden;
   background: #f5f7fd;
+  min-height: 100vh;
+  position: relative;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
 }
 .wrapper .sidebar {
   -webkit-box-shadow: 4px 4px 10px rgba(69, 65, 78, 0.06);
@@ -282,11 +358,22 @@ a {
 }
 .wrapper .main-panel .top-header-inner .right .topbar-item {
   position: relative;
+  padding: 12px 9px;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.wrapper .main-panel .top-header-inner .right .topbar-item:hover {
+  background: #f5f7fd;
+}
+.wrapper .main-panel .top-header-inner .right .topbar-item:last-child {
+  padding: 8px 9px;
 }
 .wrapper .main-panel .top-header-inner .right .topbar-item button {
   font-size: 20px;
+  position: relative;
 }
-.wrapper .main-panel .top-header-inner .right .topbar-item span {
+.wrapper .main-panel .top-header-inner .right .topbar-item button span {
   background: #20c997;
   height: 14px;
   width: 14px;
@@ -297,7 +384,8 @@ a {
   border-radius: 50%;
   color: #ffffff;
   display: block;
-  padding: 2px 0 0 5px;
+  padding-top: 2px;
+  text-align: center;
 }
 .wrapper .main-panel .top-header-inner .right .topbar-item .fullscreenmode .minimize {
   display: none;
@@ -316,11 +404,10 @@ a {
      -moz-column-gap: 20px;
           column-gap: 20px;
   cursor: pointer;
-  position: relative;
 }
 .wrapper .main-panel .top-header-inner .right .topbar-item .institute-information .institutelogo {
-  height: 50px;
-  width: 50px;
+  height: 30px;
+  width: 30px;
   border-radius: 50%;
   display: block;
   border: 2px solid #20c997;
@@ -333,29 +420,168 @@ a {
   font-weight: 400;
   text-transform: capitalize;
 }
-.wrapper .main-panel .top-header-inner .right .topbar-item .institute-information .information-details-area {
+.wrapper .main-panel .top-header-inner .right .topbar-item .information-details-area {
   position: absolute;
-  top: 80px;
+  top: 74px;
   right: 0;
   background: #ffffff;
   border-radius: 10px;
-  display: none;
+  min-width: 250px;
+  width: 100%;
   -webkit-box-shadow: 0 4px 10px rgba(69, 69, 0, 0.6);
           box-shadow: 0 4px 10px rgba(69, 69, 0, 0.6);
   z-index: 3;
+  display: none;
 }
-.wrapper .main-panel .top-header-inner .right .topbar-item .institute-information .information-details-area .inner {
+.wrapper .main-panel .top-header-inner .right .topbar-item .information-details-area .inner {
   padding: 10px;
   position: relative;
+  /* WebKit-based browsers (Chrome, Safari, Edge) */
+  /* Firefox */
+  /* Internet Explorer 10+ and Edge (older versions) */
 }
-.wrapper .main-panel .top-header-inner .right .topbar-item .institute-information .information-details-area .inner ul {
+.wrapper .main-panel .top-header-inner .right .topbar-item .information-details-area .inner .header-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 2px solid #f5f7fd;
+  padding: 10px;
+}
+.wrapper .main-panel .top-header-inner .right .topbar-item .information-details-area .inner .header-area h1 {
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.wrapper .main-panel .top-header-inner .right .topbar-item .information-details-area .inner .header-area button {
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: #00025c;
+  text-transform: capitalize;
+}
+.wrapper .main-panel .top-header-inner .right .topbar-item .information-details-area .inner .main-content-area {
+  height: 220px;
+  overflow-y: scroll;
+}
+.wrapper .main-panel .top-header-inner .right .topbar-item .information-details-area .inner .main-content-area .content {
+  padding: 10px;
+  border-bottom: 2px solid #f5f7fd;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.wrapper .main-panel .top-header-inner .right .topbar-item .information-details-area .inner .main-content-area .content:hover {
+  background: #f5f7fd;
+}
+.wrapper .main-panel .top-header-inner .right .topbar-item .information-details-area .inner .main-content-area .content .sender-images {
+  height: 50px;
+  min-width: 50px;
+  max-width: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #00025c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #ffffff;
+}
+.wrapper .main-panel .top-header-inner .right .topbar-item .information-details-area .inner .main-content-area .content ul {
+  padding-left: 20px;
+}
+.wrapper .main-panel .top-header-inner .right .topbar-item .information-details-area .inner .main-content-area .content ul li {
+  margin-bottom: 5px;
+}
+.wrapper .main-panel .top-header-inner .right .topbar-item .information-details-area .inner .main-content-area .content ul li:nth-child(1) {
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: #000000;
+  text-wrap: nowrap;
+  overflow: hidden;
+}
+.wrapper .main-panel .top-header-inner .right .topbar-item .information-details-area .inner .main-content-area .content ul li:nth-child(2) {
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #1a2035;
+  text-wrap: nowrap;
+  overflow: hidden;
+}
+.wrapper .main-panel .top-header-inner .right .topbar-item .information-details-area .inner .main-content-area .content ul li:nth-child(3) {
+  font-size: 10px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+.wrapper .main-panel .top-header-inner .right .topbar-item .information-details-area .inner .main-content-area {
+  height: 220px;
+  overflow-y: scroll;
+}
+.wrapper .main-panel .top-header-inner .right .topbar-item .information-details-area .inner .main-content-area::-webkit-scrollbar {
+  width: 12px; /* Adjust the width of the scrollbar */
+}
+.wrapper .main-panel .top-header-inner .right .topbar-item .information-details-area .inner .main-content-area::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Background color of the scrollbar track */
+}
+.wrapper .main-panel .top-header-inner .right .topbar-item .information-details-area .inner .main-content-area::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar thumb */
+  border-radius: 6px; /* Optional: round the corners of the scrollbar thumb */
+}
+.wrapper .main-panel .top-header-inner .right .topbar-item .information-details-area .inner .main-content-area::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color when hovered */
+}
+.wrapper .main-panel .top-header-inner .right .topbar-item .information-details-area .inner .main-content-area {
+  scrollbar-width: thin; /* Make the scrollbar thinner */
+  scrollbar-color: #888 #f1f1f1; /* Thumb color, Track color */
+}
+.wrapper .main-panel .top-header-inner .right .topbar-item .information-details-area .inner .main-content-area {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+.wrapper .main-panel .top-header-inner .right .topbar-item .information-details-area .inner .footer {
+  border-top: 2px solid #f5f7fd;
+  text-transform: capitalize;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+.wrapper .main-panel .top-header-inner .right .topbar-item .information-details-area .inner .footer:hover {
+  background: #f5f7fd;
+}
+.wrapper .main-panel .top-header-inner .right .topbar-item .information-details-area .inner .footer a {
+  font-size: 16px;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Roboto", sans-serif;
+}
+.wrapper .main-panel .top-header-inner .right .topbar-item .information-details-area .inner ul {
   width: 100%;
 }
-.wrapper .main-panel .top-header-inner .right .topbar-item .institute-information .information-details-area .inner ul li {
+.wrapper .main-panel .top-header-inner .right .topbar-item .information-details-area .inner ul li {
   margin-bottom: 15px;
   width: 100%;
 }
-.wrapper .main-panel .top-header-inner .right .topbar-item .institute-information .information-details-area .inner ul li a {
+.wrapper .main-panel .top-header-inner .right .topbar-item .information-details-area .inner ul li a {
   width: 100%;
   padding: 10px;
   font-size: 16px;
@@ -367,16 +593,19 @@ a {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-.wrapper .main-panel .top-header-inner .right .topbar-item .institute-information .information-details-area .inner ul li a:hover {
+.wrapper .main-panel .top-header-inner .right .topbar-item .information-details-area .inner ul li a:hover {
   background: #6610f2;
   color: #ffffff;
 }
-.wrapper .main-panel .top-header-inner .right .topbar-item .institute-information .information-details-area .inner .indicator {
+.wrapper .main-panel .top-header-inner .right .topbar-item .information-details-area .inner .indicator {
   font-size: 20px;
   color: #ffffff;
   position: absolute;
   right: 10px;
   top: -17px;
+}
+.wrapper .main-panel .top-header-inner .right .topbar-item .user-area {
+  top: 76px !important;
 }
 
 .theme-setting-area {

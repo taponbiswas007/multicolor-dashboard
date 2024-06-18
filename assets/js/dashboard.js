@@ -161,8 +161,28 @@ $(document).ready(function () {
     
 
     //top bar item area
-    $(".informationbtn").click(function(){
-        $(".information-details-area").toggle();
+    $('.topbar-item').on('click', function(event) {
+        // Prevent the click event from bubbling up to the document
+        event.stopPropagation();
+
+        // Find the associated popup
+        var $popup = $(this).find('.information-details-area');
+
+        // Hide other popups
+        $('.information-details-area').not($popup).hide();
+
+        // Toggle the current popup
+        $popup.toggle();
+    });
+
+    // Hide popups when clicking outside
+    $(document).on('click', function() {
+        $('.information-details-area').hide();
+    });
+
+    // Prevent the popup from closing when clicking inside
+    $('.information-details-area').on('click', function(event) {
+        event.stopPropagation();
     });
 
     //theme manu area
