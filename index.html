@@ -220,7 +220,7 @@
                 </div>
                 <div class="main-panel col-lg-9 p-0" id="mainPanel">
                     <!-- top nav area start -->
-                    <div class="top-header white-bg">
+                    <div class="top-header white-bg" id="topheader">
                         <div class="top-header-inner">
                             <div class="left">
                                 <div class="search-area">
@@ -441,101 +441,116 @@
                     <!-- top nav area start -->
 
                     <!-- main body start -->
-                    <div class="row">
-                        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-3">
-                         <a href="#">
-                          <div class="card card-stats card-round">
-                            <div class="card-body">
-                              <div class="row align-items-center">
-                                <div class="col-icon">
-                                  <div class="icon-big text-center icon-primary bubble-shadow-small">
-                                    <i class="fa-light fa-users"></i>
-                                  </div>
-                                </div>
-                                <div class="col col-stats ms-3 ms-sm-0">
-                                  <div class="numbers" >
-                                    <p class="card-category">Total Students</p>
-                                    <h4 class="card-title">1,294</h4>
-                                    <p class="card-sub-category">This month</p>
-                                    <h4 class="card-sub-title">1,294</h4>
-                                   
-                                  </div>
-                                </div>
-                              </div>
+
+                    <div class="main-body-wrapper">
+                        <div class="main-body-header">
+                            <h1>dashboard</h1>
+                            <div class="button-area">
+                                <button>add class</button>
+                                <button>add teacher</button>
+                                <button>add student</button>
                             </div>
-                          </div>
-                         </a>
                         </div>
-                        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-3">
-                         <a href="#">
-                          <div class="card card-stats card-round">
-                            <div class="card-body">
-                              <div class="row align-items-center">
-                                <div class="col-icon">
-                                  <div class="icon-big text-center icon-info bubble-shadow-small">
-                                    <i class="fa-regular fa-briefcase"></i>
-                                  </div>
-                                </div>
-                                <div class="col col-stats ms-3 ms-sm-0">
-                                  <div class="numbers">
-                                    <p class="card-category">Total Employees</p>
-                                    <h4 class="card-title">100</h4>
-                                    <p class="card-sub-category">This month</p>
-                                    <h4 class="card-sub-title">1,294</h4>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                         </a>
-                        </div>
-                        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-3">
-                          <a href="#">
-                            <div class="card card-stats card-round">
-                              <div class="card-body">
-                                <div class="row align-items-center">
-                                  <div class="col-icon">
-                                    <div class="icon-big text-center icon-success bubble-shadow-small">
-                                        <i class="fa-light fa-hand-holding-dollar"></i>
-                                    </div>
-                                  </div>
-                                  <div class="col col-stats ms-3 ms-sm-0">
-                                    <div class="numbers">
-                                      <p class="card-category">Revenue</p>
-                                      <h4 class="card-title">$ 1,345</h4>
-                                      <p class="card-sub-category">This month</p>
-                                      <h4 class="card-sub-title">$ 1,294</h4>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </a>
-                        </div>
-                        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-3">
-                            <a href="#">
-                              <div class="card card-stats card-round">
-                                <div class="card-body">
-                                  <div class="row align-items-center">
-                                    <div class="col-icon">
-                                      <div class="icon-big text-center icon-secondary bubble-shadow-small">
-                                        <i class="fa-regular fa-chart-line"></i>
-                                      </div>
-                                    </div>
-                                    <div class="col col-stats ms-3 ms-sm-0">
-                                      <div class="numbers">
-                                        <p class="card-category">Total Profit</p>
-                                        <h4 class="card-title">$ 576</h4>
-                                        <p class="card-sub-category">This month</p>
-                                    <h4 class="card-sub-title">$ 1,294</h4>
+                        <div class="dashboard-summery-area">
+                            <div class="row">
+                                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-3">
+                                 <a href="#">
+                                  <div class="card card-stats card-round">
+                                    <div class="card-body">
+                                      <div class="row align-items-center">
+                                        <div class="col-icon">
+                                          <div class="icon-big text-center icon-primary bubble-shadow-small">
+                                            <i class="fa-light fa-users"></i>
+                                          </div>
+                                        </div>
+                                        <div class="col col-stats ms-3 ms-sm-0">
+                                          <div class="numbers" >
+                                            <p class="card-category">Total Students</p>
+                                            <h4 class="card-title">1,294</h4>
+                                            <p class="card-sub-category">This month</p>
+                                            <h4 class="card-sub-title">1,294</h4>
+                                           
+                                          </div>
+                                        </div>
                                       </div>
                                     </div>
                                   </div>
+                                 </a>
+                                </div>
+                                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-3">
+                                 <a href="#">
+                                  <div class="card card-stats card-round">
+                                    <div class="card-body">
+                                      <div class="row align-items-center">
+                                        <div class="col-icon">
+                                          <div class="icon-big text-center icon-info bubble-shadow-small">
+                                            <i class="fa-regular fa-briefcase"></i>
+                                          </div>
+                                        </div>
+                                        <div class="col col-stats ms-3 ms-sm-0">
+                                          <div class="numbers">
+                                            <p class="card-category">Total Employees</p>
+                                            <h4 class="card-title">100</h4>
+                                            <p class="card-sub-category">This month</p>
+                                            <h4 class="card-sub-title">1,294</h4>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                 </a>
+                                </div>
+                                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-3">
+                                  <a href="#">
+                                    <div class="card card-stats card-round">
+                                      <div class="card-body">
+                                        <div class="row align-items-center">
+                                          <div class="col-icon">
+                                            <div class="icon-big text-center icon-success bubble-shadow-small">
+                                                <i class="fa-light fa-hand-holding-dollar"></i>
+                                            </div>
+                                          </div>
+                                          <div class="col col-stats ms-3 ms-sm-0">
+                                            <div class="numbers">
+                                              <p class="card-category">Revenue</p>
+                                              <h4 class="card-title">$ 1,345</h4>
+                                              <p class="card-sub-category">This month</p>
+                                              <h4 class="card-sub-title">$ 1,294</h4>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </a>
+                                </div>
+                                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-3">
+                                    <a href="#">
+                                      <div class="card card-stats card-round">
+                                        <div class="card-body">
+                                          <div class="row align-items-center">
+                                            <div class="col-icon">
+                                              <div class="icon-big text-center icon-secondary bubble-shadow-small">
+                                                <i class="fa-regular fa-chart-line"></i>
+                                              </div>
+                                            </div>
+                                            <div class="col col-stats ms-3 ms-sm-0">
+                                              <div class="numbers">
+                                                <p class="card-category">Total Profit</p>
+                                                <h4 class="card-title">$ 576</h4>
+                                                <p class="card-sub-category">This month</p>
+                                            <h4 class="card-sub-title">$ 1,294</h4>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </a>
                                 </div>
                               </div>
-                            </a>
                         </div>
-                      </div>
+                    </div>
+                    
+                   
                 </div>
             </div>
         </div>
@@ -549,6 +564,11 @@
                 <h1>sidebar header background color</h1>
                 <button class="white" id="logobarwhite"></button>
                 <button class="black" id="logobarBlack"></button>
+            </div>
+            <div class="sidelogobarcolor-changer">
+                <h1>top header background color</h1>
+                <button class="white" id="topnavbarwhite"></button>
+                <button class="black" id="topnavbarBlack"></button>
             </div>
             <div class="sidelogobarcolor-changer">
                 <h1>sidebar navbar background color</h1>

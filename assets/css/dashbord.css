@@ -161,6 +161,9 @@ a {
 .black-bg ul li {
   color: #ffffff !important;
 }
+.black-bg h1 {
+  color: #ffffff;
+}
 
 .wrapper {
   background: #f5f7fd;
@@ -368,6 +371,9 @@ a {
 .wrapper .main-panel .top-header-inner .right .topbar-item:hover {
   background: #f5f7fd;
 }
+.wrapper .main-panel .top-header-inner .right .topbar-item:hover button {
+  color: #1a2035 !important;
+}
 .wrapper .main-panel .top-header-inner .right .topbar-item:last-child {
   padding: 8px 9px;
 }
@@ -533,21 +539,28 @@ a {
   overflow-y: scroll;
 }
 .wrapper .main-panel .top-header-inner .right .topbar-item .information-details-area .inner .main-content-area::-webkit-scrollbar {
-  width: 12px; /* Adjust the width of the scrollbar */
+  width: 12px;
+  /* Adjust the width of the scrollbar */
 }
 .wrapper .main-panel .top-header-inner .right .topbar-item .information-details-area .inner .main-content-area::-webkit-scrollbar-track {
-  background: #f1f1f1; /* Background color of the scrollbar track */
+  background: #f1f1f1;
+  /* Background color of the scrollbar track */
 }
 .wrapper .main-panel .top-header-inner .right .topbar-item .information-details-area .inner .main-content-area::-webkit-scrollbar-thumb {
-  background: #888; /* Color of the scrollbar thumb */
-  border-radius: 6px; /* Optional: round the corners of the scrollbar thumb */
+  background: #888;
+  /* Color of the scrollbar thumb */
+  border-radius: 6px;
+  /* Optional: round the corners of the scrollbar thumb */
 }
 .wrapper .main-panel .top-header-inner .right .topbar-item .information-details-area .inner .main-content-area::-webkit-scrollbar-thumb:hover {
-  background: #555; /* Color when hovered */
+  background: #555;
+  /* Color when hovered */
 }
 .wrapper .main-panel .top-header-inner .right .topbar-item .information-details-area .inner .main-content-area {
-  scrollbar-width: thin; /* Make the scrollbar thinner */
-  scrollbar-color: #888 #f1f1f1; /* Thumb color, Track color */
+  scrollbar-width: thin;
+  /* Make the scrollbar thinner */
+  scrollbar-color: #888 #f1f1f1;
+  /* Thumb color, Track color */
 }
 .wrapper .main-panel .top-header-inner .right .topbar-item .information-details-area .inner .main-content-area {
   -ms-overflow-style: -ms-autohiding-scrollbar;
@@ -609,13 +622,118 @@ a {
 .wrapper .main-panel .top-header-inner .right .topbar-item .user-area {
   top: 76px !important;
 }
-.wrapper .main-panel .card-stats {
+.wrapper .main-panel .main-body-wrapper {
+  padding: 20px;
+}
+.wrapper .main-panel .main-body-wrapper .main-body-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px 0;
+}
+.wrapper .main-panel .main-body-wrapper .main-body-header h1 {
+  font-size: 20px;
+  text-transform: capitalize;
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+  color: #1a2035;
+}
+.wrapper .main-panel .main-body-wrapper .main-body-header .button-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: 20px;
+}
+.wrapper .main-panel .main-body-wrapper .main-body-header .button-area button {
+  padding: 10px;
+  border-radius: 8px;
+  background: #00025c;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  text-align: center;
+  text-transform: capitalize;
+}
+.wrapper .main-panel .main-body-wrapper .dashboard-summery-area .card {
+  border: none;
   -webkit-box-shadow: 2px 6px 15px 0 rgba(69, 65, 78, 0.1);
           box-shadow: 2px 6px 15px 0 rgba(69, 65, 78, 0.1);
+  margin-bottom: 20px;
 }
-.wrapper .main-panel .card-stats .card-body .col-icon {
-  height: 65px;
+.wrapper .main-panel .main-body-wrapper .dashboard-summery-area .card .card-body .col-icon {
   width: 65px;
+  height: 65px;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 15px;
+}
+.wrapper .main-panel .main-body-wrapper .dashboard-summery-area .card .card-body .col-icon .icon-big {
+  width: 100%;
+  height: 100%;
+  font-size: 2.2em;
+  min-height: 64px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #20c997;
+  border-radius: 5px;
+  color: #ffffff;
+}
+.wrapper .main-panel .main-body-wrapper .dashboard-summery-area .card .card-body .numbers .card-category {
+  margin-top: 8px;
+  font-size: 1rem;
+  color: #1a2035;
+  margin-bottom: 0;
+  word-break: normal;
+  font-family: "Roboto", sans-serif;
+}
+.wrapper .main-panel .main-body-wrapper .dashboard-summery-area .card .card-body .numbers .card-title {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  margin-bottom: 0px;
+  color: #2a2f5b;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.6;
+  border-bottom: 1px solid #1a1a1a;
+}
+.wrapper .main-panel .main-body-wrapper .dashboard-summery-area .card .card-body .numbers .card-sub-category {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  color: #13035c;
+  margin: 0;
+  text-transform: capitalize;
+  margin-top: 8px;
+}
+.wrapper .main-panel .main-body-wrapper .dashboard-summery-area .card .card-body .numbers .card-sub-title {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  color: #a30a8a;
+  margin-bottom: 0;
+  margin-top: 5px;
 }
 
 .theme-setting-area {

@@ -46,6 +46,15 @@ $(document).ready(function () {
         $("#sideNavitem").addClass("black-bg");
         $("#sideNavitem").removeClass("white-bg");
     });
+    //top navbar color change function
+    $("#topnavbarwhite").click(function () {
+        $("#topheader").addClass("white-bg");
+        $("#topheader").removeClass("black-bg");
+    });
+    $("#topnavbarBlack").click(function () {
+        $("#topheader").addClass("black-bg");
+        $("#topheader").removeClass("white-bg");
+    });
 
     $(".sortsidebar").click(function () {
         $("#sideBar").addClass("col-lg-1");
@@ -139,25 +148,7 @@ $(document).ready(function () {
         $(this).find(".submenuarrow").toggleClass("rotated");
     });
     
-    // $("#navmenuitem1").click(function(){
-    //     $("#submenu1").slideToggle();
-    // });
-    // $("#navmenuitem2").click(function(){
-    //     $("#submenu2").slideToggle();
-    // });
-    // $("#navmenuitem3").click(function(){
-    //     $("#submenu3").slideToggle();
-    // });
-    // $("#navmenuitem4").click(function(){
-    //     $("#submenu4").slideToggle();
-    // });
-    // $("#navmenuitem5").click(function(){
-    //     $("#submenu5").slideToggle();
-    // });
-    // $("#navmenuitem6").click(function(){
-    //     $("#submenu6").slideToggle();
-    // });
-
+  
     
 
     //top bar item area

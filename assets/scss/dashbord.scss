@@ -25,10 +25,14 @@
     button {
         color: $white !important;
     }
-    ul{
-        li{
+
+    ul {
+        li {
             color: $white !important;
         }
+    }
+    h1{
+        color: $white;
     }
 
 
@@ -41,6 +45,7 @@
     top: 0;
     height: 100vh;
     overflow: hidden;
+
     .sidebar {
         box-shadow: 4px 4px 10px rgba(69, 65, 78, .06);
         height: 100vh;
@@ -138,6 +143,7 @@
 
                         li {
                             margin-bottom: 10px;
+
                             a {
                                 font-size: 14px;
                                 text-transform: capitalize;
@@ -194,6 +200,7 @@
             position: sticky;
             top: 0;
             box-shadow: 4px 4px 10px rgba(69, 65, 78, .06);
+
             .left {
                 .search-area {
                     max-width: 300px;
@@ -226,19 +233,28 @@
 
                 .topbar-item {
                     position: relative;
-                   
+
                     padding: 12px 9px;
                     border-radius: 5px;
                     transition: all .3s ease;
-                    &:hover{
+
+                    &:hover {
                         background: $gray;
+                       
                     }
-                    &:last-child{
+                    &:hover button {
+                        color: $blackbg !important;
+                       
+                    }
+
+                    &:last-child {
                         padding: 8px 9px;
                     }
+
                     button {
                         font-size: 20px;
                         position: relative;
+
                         span {
                             background: #20c997;
                             height: 14px;
@@ -255,7 +271,7 @@
                         }
                     }
 
-                   
+
 
                     .fullscreenmode {
                         .minimize {
@@ -302,23 +318,26 @@
                         box-shadow: 0 4px 10px rgba(69, 69, 0, .6);
                         z-index: 3;
                         display: none;
+
                         .inner {
                             padding: 10px;
                             position: relative;
-                            
-                            .header-area{
+
+                            .header-area {
                                 display: flex;
                                 justify-content: space-between;
                                 align-items: center;
                                 border-bottom: 2px solid $gray;
                                 padding: 10px;
-                                h1{
+
+                                h1 {
                                     font-size: 15px;
                                     font-family: $roboto;
                                     font-weight: 500;
                                     text-transform: capitalize;
                                 }
-                                button{
+
+                                button {
                                     font-size: 15px;
                                     font-family: $roboto;
                                     font-weight: 500;
@@ -326,23 +345,26 @@
                                     text-transform: capitalize;
                                 }
                             }
-                            .main-content-area{
+
+                            .main-content-area {
                                 height: 220px;
                                 overflow-y: scroll;
-                                
-                                .content{
+
+                                .content {
                                     padding: 10px;
                                     border-bottom: 2px solid $gray;
                                     transition: all .3s ease;
                                     overflow: hidden;
                                     border-radius: 5px;
-                                    &:hover{
+
+                                    &:hover {
                                         background: $gray;
                                     }
-                                    .sender-images{
+
+                                    .sender-images {
                                         height: 50px;
-                                        min-width: 50px ;
-                                        max-width: 50px ;
+                                        min-width: 50px;
+                                        max-width: 50px;
                                         border-radius: 50%;
                                         overflow: hidden;
                                         background: $blue;
@@ -351,11 +373,14 @@
                                         align-items: center;
                                         color: $white;
                                     }
-                                    ul{
+
+                                    ul {
                                         padding-left: 20px;
-                                        li{
+
+                                        li {
                                             margin-bottom: 5px;
-                                            &:nth-child(1){
+
+                                            &:nth-child(1) {
                                                 font-size: 15px;
                                                 font-family: $roboto;
                                                 font-weight: 500;
@@ -363,7 +388,8 @@
                                                 text-wrap: nowrap;
                                                 overflow: hidden;
                                             }
-                                            &:nth-child(2){
+
+                                            &:nth-child(2) {
                                                 font-size: 12px;
                                                 font-family: $roboto;
                                                 font-weight: 400;
@@ -371,7 +397,8 @@
                                                 text-wrap: nowrap;
                                                 overflow: hidden;
                                             }
-                                            &:nth-child(3){
+
+                                            &:nth-child(3) {
                                                 font-size: 10px;
                                                 font-family: $poppins;
                                                 font-weight: 300;
@@ -380,57 +407,66 @@
                                     }
                                 }
                             }
+
                             .main-content-area {
                                 height: 220px;
                                 overflow-y: scroll;
                             }
-                            
+
                             /* WebKit-based browsers (Chrome, Safari, Edge) */
                             .main-content-area::-webkit-scrollbar {
-                                width: 12px; /* Adjust the width of the scrollbar */
+                                width: 12px;
+                                /* Adjust the width of the scrollbar */
                             }
-                            
+
                             .main-content-area::-webkit-scrollbar-track {
-                                background: #f1f1f1; /* Background color of the scrollbar track */
+                                background: #f1f1f1;
+                                /* Background color of the scrollbar track */
                             }
-                            
+
                             .main-content-area::-webkit-scrollbar-thumb {
-                                background: #888; /* Color of the scrollbar thumb */
-                                border-radius: 6px; /* Optional: round the corners of the scrollbar thumb */
+                                background: #888;
+                                /* Color of the scrollbar thumb */
+                                border-radius: 6px;
+                                /* Optional: round the corners of the scrollbar thumb */
                             }
-                            
+
                             .main-content-area::-webkit-scrollbar-thumb:hover {
-                                background: #555; /* Color when hovered */
+                                background: #555;
+                                /* Color when hovered */
                             }
-                            
+
                             /* Firefox */
                             .main-content-area {
-                                scrollbar-width: thin; /* Make the scrollbar thinner */
-                                scrollbar-color: #888 #f1f1f1; /* Thumb color, Track color */
+                                scrollbar-width: thin;
+                                /* Make the scrollbar thinner */
+                                scrollbar-color: #888 #f1f1f1;
+                                /* Thumb color, Track color */
                             }
-                            
+
                             /* Internet Explorer 10+ and Edge (older versions) */
                             .main-content-area {
                                 -ms-overflow-style: -ms-autohiding-scrollbar;
                             }
-                            
-                            .footer{
+
+                            .footer {
                                 border-top: 2px solid $gray;
                                 text-transform: capitalize;
                                 transition: all .3s ease;
                                 border-radius: 5px;
-                                    
-                                    &:hover{
-                                        background: $gray;
-                                    }
-                                a{
+
+                                &:hover {
+                                    background: $gray;
+                                }
+
+                                a {
                                     font-size: 16px;
                                     padding: 10px;
                                     display: flex;
                                     justify-content: space-between;
                                     align-items: center;
                                     font-family: $roboto;
-                                   
+
                                 }
                             }
 
@@ -472,21 +508,115 @@
                     }
 
                     .user-area {
-                       
+
                         top: 76px !important;
                     }
                 }
             }
         }
-        .card-stats{
-            box-shadow: 2px 6px 15px 0 rgba(69, 65, 78, .1);
-            .card-body{
-                .col-icon{
-                    height: 65px;
-                    width: 65px;
+
+        .main-body-wrapper{
+            padding: 20px;
+            .main-body-header{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 30px 0;
+                h1{
+                    font-size: 20px;
+                    text-transform: capitalize;
+                    font-weight: 600;
+                    font-family: $roboto;
+                    color: $blackbg;
+                }
+                .button-area{
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    column-gap: 20px;
+                    flex-wrap: wrap;
+                    row-gap: 20px;
+                    button{
+                        padding: 10px;
+                        border-radius: 8px;
+                        background: $blue;
+                        color: $white;
+                        font-family: $poppins;
+                        font-weight: 500;
+                        text-align: center;
+                        text-transform: capitalize;
+                    }
+                }
+               
+            }
+            .dashboard-summery-area{
+                .card {
+                    border: none;
+                    box-shadow: 2px 6px 15px 0 rgba(69, 65, 78, .1);
+                    margin-bottom: 20px;
+                    .card-body {
+                        .col-icon {
+                            width: 65px;
+                            height: 65px;
+                            padding-left: 0;
+                            padding-right: 0;
+                            margin-left: 15px;
+                            
+        
+                            .icon-big {
+                                width: 100%;
+                                height: 100%;
+                                font-size: 2.2em;
+                                min-height: 64px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                background: $green;
+                                border-radius: 5px;
+                                color: $white;
+                            }
+                        }
+                        .numbers{
+                            .card-category {
+                                margin-top: 8px;
+                                font-size: 1rem;
+                                color: $blackbg;
+                                margin-bottom: 0;
+                                word-break: normal;
+                                font-family: $roboto;
+                              }
+                              .card-title {
+                                font-family: $inter;
+                                margin: 0;
+                                margin-bottom: 0px;
+                                color: #2a2f5b;
+                                font-size: 20px;
+                                font-weight: 600;
+                                line-height: 1.6;
+                                border-bottom: 1px solid #1a1a1a;
+                              }
+                              .card-sub-category {
+                                font-family: $roboto;
+                                font-size: 1rem;
+                                color: #13035c;
+                                margin: 0;
+                                text-transform: capitalize;
+                                margin-top: 8px;
+                              }
+                              .card-sub-title {
+                                font-family: $inter;
+                                font-size: 1rem;
+                                color: #a30a8a;
+                                margin-bottom: 0;
+                                margin-top: 5px;
+                              }
+                        }
+                    }
                 }
             }
         }
+       
+       
     }
 }
 
