@@ -143,11 +143,11 @@ $(document).ready(function () {
     let isSidebarExpanded = false;
 
 $("#sideBar").on("mouseenter", function () {
-    if ($(this).hasClass("col-1") || $(this).hasClass("col-lg-1")) {
-        $(this).addClass("col-3 col-lg-3");
-        $(this).removeClass("col-1 col-lg-1");
-        $("#mainPanel").addClass("col-lg-9 col-9");
-        $("#mainPanel").removeClass("col-lg-11 col-11");
+    if ($(this).hasClass("custom-col-1")) {
+        $(this).addClass("custom-col-3");
+        $(this).removeClass("custom-col-1");
+        $("#mainPanel").addClass("custom-col-9");
+        $("#mainPanel").removeClass("custom-col-11");
         $(".sortsidebar").css("display", "block");
         $(".bigsidebar").css("display", "none");
         $(".submenuitem").css("display", "block");
@@ -159,10 +159,10 @@ $("#sideBar").on("mouseenter", function () {
 
 $("#sideBar").on("mouseleave", function () {
     if (isSidebarExpanded) {
-        $(this).addClass("col-1 col-lg-1");
-        $(this).removeClass("col-3 col-lg-3");
-        $("#mainPanel").addClass("col-lg-11 col-11");
-        $("#mainPanel").removeClass("col-lg-9 col-9");
+        $(this).addClass("custom-col-1");
+        $(this).removeClass("custom-col-3");
+        $("#mainPanel").addClass("custom-col-11");
+        $("#mainPanel").removeClass("custom-col-9");
         $(".sortsidebar").css("display", "none");
         $(".bigsidebar").css("display", "block");
         $(".submenuitem").css("display", "none");
