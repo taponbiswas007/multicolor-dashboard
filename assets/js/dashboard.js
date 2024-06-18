@@ -149,7 +149,7 @@ $("#sideBar").on("mouseenter", function () {
         $("#mainPanel").addClass("custom-col-9");
         $("#mainPanel").removeClass("custom-col-11");
         $(".sortsidebar").css("display", "block");
-        $(".bigsidebar").css("display", "none");
+        $(".bigsidebar").css("display", "none ");
         $(".submenuitem").css("display", "block");
         $(".navitem-text").css("display", "block");
         $(".sidebarlogo").show();
@@ -177,6 +177,9 @@ function checkWidth() {
     if (width <= 991) {
         $('#sideBar').addClass('custom-col-1').removeClass('custom-col-3');
         $('#mainPanel').addClass('custom-col-11').removeClass('custom-col-9');
+        $(".bigsidebar").css({
+            "display":"block"
+        });
     } else {
         $('#sideBar').addClass('custom-col-3').removeClass('custom-col-1');
         $('#mainPanel').addClass('custom-col-9').removeClass('custom-col-11');

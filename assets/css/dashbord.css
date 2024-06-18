@@ -924,6 +924,9 @@ a {
   .wrapper .sidebar .side-bar-logo-area .sidebarlogo {
     display: none;
   }
+  .wrapper .sidebar .sortsidebar {
+    display: none;
+  }
   .wrapper .sidebar .submenuitem {
     display: none;
   }
