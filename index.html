@@ -64,7 +64,7 @@
 
                             </a>
                             <!-- menu item  -->
-                            <a href="#" class="sidenavitem" id="navmenuitem1">
+                            <a data-bs-toggle="collapse" href="#generalsettings" class="sidenavitem" >
                                 <div class="navcontent">
                                     <i class="fa-sharp fa-light fa-gear font-icon"></i>
                                     <span class="navitem-text">general settings</span>
@@ -73,7 +73,7 @@
                                     <i class="fa-solid fa-angle-right font-icon submenuarrow"></i>
                                 </button>
                             </a>
-                            <div class="navsubitems" id="submenu1">
+                            <div class="navsubitems collapse" id="generalsettings">
                                 <ul>
                                     <li><a href="#" class="submenuactive"><i
                                                 class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>Institute
@@ -92,7 +92,8 @@
                             </div>
 
                             <!-- menu item -->
-                            <a href="#" class="sidenavitem" id="navmenuitem2">
+
+                            <a data-bs-toggle="collapse" href="#classes" class="sidenavitem" >
                                 <div class="navcontent">
                                     <i class="fa-sharp fa-light fa-pen-field font-icon"></i>
                                     <span class="navitem-text">classes</span>
@@ -101,7 +102,7 @@
                                     <i class="fa-solid fa-angle-right font-icon submenuarrow"></i>
                                 </button>
                             </a>
-                            <div class="navsubitems" id="submenu2">
+                            <div class="navsubitems collapse" id="classes">
                                 <ul>
                                     <li><a href="#" class="submenuactive"><i
                                                 class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>all class</a>
@@ -113,7 +114,7 @@
                             </div>
 
                             <!-- menu item -->
-                            <a href="#" class="sidenavitem" id="navmenuitem3">
+                            <a data-bs-toggle="collapse" href="#subjects" class="sidenavitem" >
                                 <div class="navcontent">
                                     <i class="fa-thin fa-book-open-cover font-icon"></i>
                                     <span class="navitem-text">subjects</span>
@@ -122,7 +123,7 @@
                                     <i class="fa-solid fa-angle-right font-icon submenuarrow"></i>
                                 </button>
                             </a>
-                            <div class="navsubitems" id="submenu3">
+                            <div class="navsubitems collapse" id="subjects">
                                 <ul>
                                     <li><a href="#" class="submenuactive"><i
                                                 class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>classes with
@@ -133,7 +134,7 @@
                             </div>
 
                             <!-- menu item -->
-                            <a href="#" class="sidenavitem" id="navmenuitem4">
+                            <a data-bs-toggle="collapse" href="#students" class="sidenavitem" >
                                 <div class="navcontent">
                                     <i class="fa-light fa-user font-icon"></i>
                                     <span class="navitem-text">Students</span>
@@ -142,7 +143,7 @@
                                     <i class="fa-solid fa-angle-right font-icon submenuarrow"></i>
                                 </button>
                             </a>
-                            <div class="navsubitems" id="submenu4">
+                            <div class="navsubitems collapse" id="students">
                                 <ul>
                                     <li><a href="#" class="submenuactive"><i
                                                 class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>all
@@ -163,7 +164,7 @@
                             </div>
 
                             <!-- menu item -->
-                            <a href="#" class="sidenavitem" id="navmenuitem5">
+                            <a data-bs-toggle="collapse" href="#employees" class="sidenavitem" >
                                 <div class="navcontent">
                                     <i class="fa-light fa-briefcase font-icon"></i>
                                     <span class="navitem-text">employees</span>
@@ -172,7 +173,7 @@
                                     <i class="fa-solid fa-angle-right font-icon submenuarrow"></i>
                                 </button>
                             </a>
-                            <div class="navsubitems" id="submenu5">
+                            <div class="navsubitems collapse" id="employees">
                                 <ul>
                                     <li><a href="#" class="submenuactive"><i
                                                 class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>all
@@ -189,7 +190,7 @@
                             </div>
 
                             <!-- menu item -->
-                            <a href="#" class="sidenavitem" id="navmenuitem6">
+                            <a data-bs-toggle="collapse" href="#accounts" class="sidenavitem" >
                                 <div class="navcontent">
                                     <i class="fa-light fa-briefcase font-icon"></i>
                                     <span class="navitem-text">accounts</span>
@@ -198,7 +199,7 @@
                                     <i class="fa-solid fa-angle-right font-icon submenuarrow"></i>
                                 </button>
                             </a>
-                            <div class="navsubitems" id="submenu6">
+                            <div class="navsubitems collapse" id="accounts">
                                 <ul>
                                     <li><a href="#" class="submenuactive"><i
                                                 class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>chart of
@@ -213,7 +214,7 @@
 
                                 </ul>
                             </div>
-
+                            
                         </div>
                     </div>
                 </div>
@@ -438,6 +439,103 @@
                         </div>
                     </div>
                     <!-- top nav area start -->
+
+                    <!-- main body start -->
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-3">
+                         <a href="#">
+                          <div class="card card-stats card-round">
+                            <div class="card-body">
+                              <div class="row align-items-center">
+                                <div class="col-icon">
+                                  <div class="icon-big text-center icon-primary bubble-shadow-small">
+                                    <i class="fa-light fa-users"></i>
+                                  </div>
+                                </div>
+                                <div class="col col-stats ms-3 ms-sm-0">
+                                  <div class="numbers" >
+                                    <p class="card-category">Total Students</p>
+                                    <h4 class="card-title">1,294</h4>
+                                    <p class="card-sub-category">This month</p>
+                                    <h4 class="card-sub-title">1,294</h4>
+                                   
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                         </a>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-3">
+                         <a href="#">
+                          <div class="card card-stats card-round">
+                            <div class="card-body">
+                              <div class="row align-items-center">
+                                <div class="col-icon">
+                                  <div class="icon-big text-center icon-info bubble-shadow-small">
+                                    <i class="fa-regular fa-briefcase"></i>
+                                  </div>
+                                </div>
+                                <div class="col col-stats ms-3 ms-sm-0">
+                                  <div class="numbers">
+                                    <p class="card-category">Total Employees</p>
+                                    <h4 class="card-title">100</h4>
+                                    <p class="card-sub-category">This month</p>
+                                    <h4 class="card-sub-title">1,294</h4>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                         </a>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-3">
+                          <a href="#">
+                            <div class="card card-stats card-round">
+                              <div class="card-body">
+                                <div class="row align-items-center">
+                                  <div class="col-icon">
+                                    <div class="icon-big text-center icon-success bubble-shadow-small">
+                                        <i class="fa-light fa-hand-holding-dollar"></i>
+                                    </div>
+                                  </div>
+                                  <div class="col col-stats ms-3 ms-sm-0">
+                                    <div class="numbers">
+                                      <p class="card-category">Revenue</p>
+                                      <h4 class="card-title">$ 1,345</h4>
+                                      <p class="card-sub-category">This month</p>
+                                      <h4 class="card-sub-title">$ 1,294</h4>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-3">
+                            <a href="#">
+                              <div class="card card-stats card-round">
+                                <div class="card-body">
+                                  <div class="row align-items-center">
+                                    <div class="col-icon">
+                                      <div class="icon-big text-center icon-secondary bubble-shadow-small">
+                                        <i class="fa-regular fa-chart-line"></i>
+                                      </div>
+                                    </div>
+                                    <div class="col col-stats ms-3 ms-sm-0">
+                                      <div class="numbers">
+                                        <p class="card-category">Total Profit</p>
+                                        <h4 class="card-title">$ 576</h4>
+                                        <p class="card-sub-category">This month</p>
+                                    <h4 class="card-sub-title">$ 1,294</h4>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </a>
+                        </div>
+                      </div>
                 </div>
             </div>
         </div>
