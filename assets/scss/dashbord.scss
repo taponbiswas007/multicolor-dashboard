@@ -31,12 +31,21 @@
             color: $white !important;
         }
     }
-    h1{
+
+    h1 {
         color: $white;
+    }
+
+    .topbar-item {
+        &:hover {
+            background: $black !important;
+            color: $white;
+        }
     }
 
 
 }
+
 
 .wrapper {
     background: $gray;
@@ -46,13 +55,23 @@
     height: 100vh;
     overflow: hidden;
 
+    .custom-col-1{
+        width: 76px;
+    }
+    .custom-col-11{
+        width: calc(100% - 76px);
+    }
+    .custom-col-3{
+        width: 250px;
+    }
+    .custom-col-9{
+        width: calc(100% - 250px);
+    }
     .sidebar {
         box-shadow: 4px 4px 10px rgba(69, 65, 78, .06);
-        height: 100vh;
         transition: all 0.5s ease;
-        height: 100vh;
         position: relative;
-
+        height: 100vh;
         .inner {
             height: 100%;
 
@@ -71,9 +90,16 @@
 
                 .sidebar-toggle-icon {
                     button {
-                        font-size: 30px;
-
+                        font-size: 25px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        column-gap: 10px;
+                        flex-wrap: nowrap;
                         .bigsidebar {
+                            display: none;
+                        }
+                        .sidebarclose{
                             display: none;
                         }
                     }
@@ -81,7 +107,9 @@
             }
 
             .sidenavbar-area {
-                height: 100%;
+                height: calc(100% - 70px);
+                overflow-y: scroll;
+                /* WebKit-based browsers (Chrome, Safari, Edge) */
 
                 .sidenavitem {
                     display: flex;
@@ -185,6 +213,43 @@
 
             }
 
+            .sidenavbar-area::-webkit-scrollbar {
+                width: 4px;
+                /* Adjust the width of the scrollbar */
+            }
+
+            .sidenavbar-area::-webkit-scrollbar-track {
+                background: $white;
+                /* Background color of the scrollbar track */
+            }
+
+            .sidenavbar-area::-webkit-scrollbar-thumb {
+                background: $gray;
+                /* Color of the scrollbar thumb */
+                border-radius: 6px;
+                /* Optional: round the corners of the scrollbar thumb */
+            }
+
+            .sidenavbar-area::-webkit-scrollbar-thumb:hover {
+                background: $gray;
+                border-radius: 6px;
+                /* Color when hovered */
+            }
+
+            /* Firefox */
+            .sidenavbar-area {
+                scrollbar-width: thin;
+                /* Make the scrollbar thinner */
+                scrollbar-color: $gray $white;
+              
+                /* Thumb color, Track color */
+            }
+
+            /* Internet Explorer 10+ and Edge (older versions) */
+            .sidenavbar-area {
+                -ms-overflow-style: -ms-autohiding-scrollbar;
+            }
+
         }
     }
 
@@ -202,6 +267,37 @@
             box-shadow: 4px 4px 10px rgba(69, 65, 78, .06);
 
             .left {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                column-gap: 20px;
+                .logo {
+                    width: 50px;
+                    
+                    img {
+                        width: 40px;
+                    }
+                }
+                .topbarlogo{
+                    display: none;
+                }
+                .topbar-item {
+                    padding: 12px 9px;
+                    border-radius: 5px;
+                    transition: all .3s ease;
+                    &:hover {
+                        background: $gray;
+
+                    }
+
+                    &:hover button {
+                        color: $blackbg;
+
+                    }
+                }
+                #toggleBar{
+                    display: none;
+                }
                 .search-area {
                     max-width: 300px;
                     width: 100%;
@@ -240,11 +336,12 @@
 
                     &:hover {
                         background: $gray;
-                       
+
                     }
+
                     &:hover button {
-                        color: $blackbg !important;
-                       
+                        color: $blackbg;
+
                     }
 
                     &:last-child {
@@ -515,28 +612,32 @@
             }
         }
 
-        .main-body-wrapper{
+        .main-body-wrapper {
             padding: 20px;
-            .main-body-header{
+
+            .main-body-header {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 padding: 30px 0;
-                h1{
+
+                h1 {
                     font-size: 20px;
                     text-transform: capitalize;
                     font-weight: 600;
                     font-family: $roboto;
                     color: $blackbg;
                 }
-                .button-area{
+
+                .button-area {
                     display: flex;
                     justify-content: flex-end;
                     align-items: center;
                     column-gap: 20px;
                     flex-wrap: wrap;
                     row-gap: 20px;
-                    button{
+
+                    button {
                         padding: 10px;
                         border-radius: 8px;
                         background: $blue;
@@ -547,13 +648,15 @@
                         text-transform: capitalize;
                     }
                 }
-               
+
             }
-            .dashboard-summery-area{
+
+            .dashboard-summery-area {
                 .card {
                     border: none;
                     box-shadow: 2px 6px 15px 0 rgba(69, 65, 78, .1);
                     margin-bottom: 20px;
+
                     .card-body {
                         .col-icon {
                             width: 65px;
@@ -561,8 +664,8 @@
                             padding-left: 0;
                             padding-right: 0;
                             margin-left: 15px;
-                            
-        
+
+
                             .icon-big {
                                 width: 100%;
                                 height: 100%;
@@ -576,7 +679,8 @@
                                 color: $white;
                             }
                         }
-                        .numbers{
+
+                        .numbers {
                             .card-category {
                                 margin-top: 8px;
                                 font-size: 1rem;
@@ -584,8 +688,9 @@
                                 margin-bottom: 0;
                                 word-break: normal;
                                 font-family: $roboto;
-                              }
-                              .card-title {
+                            }
+
+                            .card-title {
                                 font-family: $inter;
                                 margin: 0;
                                 margin-bottom: 0px;
@@ -594,29 +699,31 @@
                                 font-weight: 600;
                                 line-height: 1.6;
                                 border-bottom: 1px solid #1a1a1a;
-                              }
-                              .card-sub-category {
+                            }
+
+                            .card-sub-category {
                                 font-family: $roboto;
                                 font-size: 1rem;
                                 color: #13035c;
                                 margin: 0;
                                 text-transform: capitalize;
                                 margin-top: 8px;
-                              }
-                              .card-sub-title {
+                            }
+
+                            .card-sub-title {
                                 font-family: $inter;
                                 font-size: 1rem;
                                 color: #a30a8a;
                                 margin-bottom: 0;
                                 margin-top: 5px;
-                              }
+                            }
                         }
                     }
                 }
             }
         }
-       
-       
+
+
     }
 }
 
@@ -695,5 +802,31 @@
             }
 
         }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .wrapper {
+        .sidebar {
+            
+            .side-bar-logo-area{
+                .sidebarlogo{
+                    display: none ;
+                   }
+            }
+           .submenuitem{
+            display: none;
+           }
+           .navitem-text{
+            display: none;
+           }
+           
+        }
+        #toggleBar{
+            display: block !important;
+        }
+        .topbarlogo{
+            display: block !important;
+           }
     }
 }
