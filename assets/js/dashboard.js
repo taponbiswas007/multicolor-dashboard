@@ -28,6 +28,15 @@ $(document).ready(function () {
     }
   });
 
+    //full body color change function
+    $("#fullbodyGray").click(function () {
+        $("#fullWrapper").addClass("full-gray-bg");
+        $("#fullWrapper").removeClass("full-black-bg");
+    });
+    $("#fullbodyBlack").click(function () {
+        $("#fullWrapper").addClass("full-black-bg");
+        $("#fullWrapper").removeClass("full-gray-bg");
+    });
     //side bar header color change function
     $("#logobarwhite").click(function () {
         $("#sidebarLogoArea").addClass("white-bg");
@@ -50,20 +59,45 @@ $(document).ready(function () {
     $("#topnavbarwhite").click(function () {
         $("#topheader").addClass("white-bg");
         $("#topheader").removeClass("black-bg");
+        $("#responsivetopheader").addClass("white-bg");
+        $("#responsivetopheader").removeClass("black-bg");
+        $("#topbarpopup1").addClass("white-bg");
+        $("#topbarpopup1").removeClass("black-bg");
+        $("#topbarpopup2").addClass("white-bg");
+        $("#topbarpopup2").removeClass("black-bg");
+        $("#topbarpopup3").addClass("white-bg");
+        $("#topbarpopup3").removeClass("black-bg");
+        $("#topbarpopupr1").addClass("white-bg");
+        $("#topbarpopupr1").removeClass("black-bg");
+        $("#topbarpopupr2").addClass("white-bg");
+        $("#topbarpopupr2").removeClass("black-bg");
+        $("#topbarpopupr3").addClass("white-bg");
+        $("#topbarpopupr3").removeClass("black-bg");
     });
     $("#topnavbarBlack").click(function () {
         $("#topheader").addClass("black-bg");
         $("#topheader").removeClass("white-bg");
+        $("#responsivetopheader").addClass("black-bg");
+        $("#responsivetopheader").removeClass("white-bg");
+        $("#topbarpopup1").addClass("black-bg");
+        $("#topbarpopup1").removeClass("white-bg");
+        $("#topbarpopup2").addClass("black-bg");
+        $("#topbarpopup2").removeClass("white-bg");
+        $("#topbarpopup3").addClass("black-bg");
+        $("#topbarpopup3").removeClass("white-bg");
+        $("#topbarpopupr1").addClass("black-bg");
+        $("#topbarpopupr1").removeClass("white-bg");
+        $("#topbarpopupr2").addClass("black-bg");
+        $("#topbarpopupr2").removeClass("white-bg");
+        $("#topbarpopupr3").addClass("black-bg");
+        $("#topbarpopupr3").removeClass("white-bg");
     });
 
     //sidebar function start
     $("#toggleBar").click(function(){
-        $(".sidebar").animate({
-            "left":"0"
-            
-        }, 400);
-       $(".sidebarclose").show();
-       $(".sidebarlogo").show();
+        $(".responsivetopheader").slideToggle();
+       $(".closeicon ,.baricon").toggle();
+       
     });
     $(".sidebarclose").click(function(){
         $(".sidebar").animate({

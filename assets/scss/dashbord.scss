@@ -12,14 +12,26 @@
     button {
         color: $simpleblack;
     }
+    .active{
+        color: $purple !important;
+    }
 
 }
 
 .black-bg {
     background: $blackbg;
-
+    .active{
+        color: $green !important;
+    }
     a {
         color: $white !important;
+        &:hover{
+            color: $green !important;
+        }
+        &:hover .submenuitem{
+            color: $green !important;
+        }
+        
     }
 
     button {
@@ -42,13 +54,66 @@
             color: $white;
         }
     }
+    .indicator{
+        color: $blackbg !important;
+    }
+    .content{
+        border-bottom: 2px solid $black !important;
+        &:hover{
+            background: $black !important;
+        }
+    }
+    .header-area{
+        border-bottom: 2px solid $black !important;
+        
+    }
+    .footer{
+        border-top: 2px solid $black !important;
+        &:hover{
+            background: $black !important;
+        }
+    }
+    .inner{
+        ul{
+            li{
+                a{
+                   &:hover{
+                    background: $black !important;
+                   } 
+                }
+            }
+        }
+    }
 
-
+    .search-area{
+        input{
+            background: $black !important;
+            color: $white;
+            &:focus{
+                outline: none !important;
+            }
+        }
+        .search-icon{
+            color: $white !important;
+        }
+    }
+    
 }
 
-
-.wrapper {
+.full-gray-bg{
     background: $gray;
+}
+.full-black-bg{
+    background: $black;
+    h1{
+        color: $white !important;
+    }
+}
+.full-purple-bg{
+    background: $purple;
+}
+.wrapper {
+   
     min-height: 100vh;
     position: relative;
     top: 0;
@@ -159,9 +224,7 @@
                     }
                 }
 
-                .active {
-                    color: $purple !important;
-                }
+                
 
                 .navsubitems {
                     padding-left: 80px;
@@ -255,7 +318,9 @@
 
     .main-panel {
         transition: all 0.5s ease;
-
+        .responsivetopheader{
+            display: none;
+        }
         .top-header-inner {
             height: 70px;
             display: flex;
@@ -265,22 +330,27 @@
             position: sticky;
             top: 0;
             box-shadow: 4px 4px 10px rgba(69, 65, 78, .06);
-
+            z-index: 1;
+            .logo {
+                width: 50px;
+                
+                img {
+                    width: 40px;
+                }
+            }
+            .topbarlogo{
+                display: none;
+            }
+            #toggleBar{
+                display: none ;
+               
+            }
             .left {
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
                 column-gap: 20px;
-                .logo {
-                    width: 50px;
-                    
-                    img {
-                        width: 40px;
-                    }
-                }
-                .topbarlogo{
-                    display: none;
-                }
+               
                 .topbar-item {
                     padding: 12px 9px;
                     border-radius: 5px;
@@ -294,10 +364,9 @@
                         color: $blackbg;
 
                     }
+                  
                 }
-                #toggleBar{
-                    display: none;
-                }
+             
                 .search-area {
                     max-width: 300px;
                     width: 100%;
@@ -309,6 +378,10 @@
                         border: 1px solid $simpleblack;
                         border-radius: 8px;
                         padding: 10px 10px 10px 40px;
+                        font-size: 15px;
+                        font-weight: 400;
+                        font-family: $inter;
+                        background: $gray;
                     }
 
                     .search-icon {
@@ -407,8 +480,8 @@
                     .information-details-area {
                         position: absolute;
                         top: 74px;
-                        right: 0;
-                        background: $white;
+                        left: 50%;
+                        transform: translateX(-50%);
                         border-radius: 10px;
                         min-width: 250px;
                         width: 100%;
@@ -580,14 +653,12 @@
                                         font-size: 16px;
                                         font-family: $inter;
                                         font-weight: 500;
-                                        background: $gray;
                                         text-transform: capitalize;
                                         display: block;
                                         transition: all .3s ease;
 
                                         &:hover {
-                                            background: $purple;
-                                            color: $white;
+                                            background: $gray;
                                         }
                                     }
                                 }
@@ -597,7 +668,8 @@
                                 font-size: 20px;
                                 color: $white;
                                 position: absolute;
-                                right: 10px;
+                                left: 50%;
+                                transform: translateX(-50%);
                                 top: -17px;
                             }
                         }
@@ -742,18 +814,29 @@
 
     .inner {
         position: relative;
-        padding: 20px;
-        max-width: 250px;
-        width: 100%;
+        width: 250px;
+        .setting-area-title{
+            height: 60px;
+            background: $blue;
+            padding: 10px;
+            border-radius: 10px 0 0 0;
+            h2{
+                font-size: 20px;
+                font-family: $roboto;
+                font-weight: 500;
+                text-transform: capitalize;
+                color: $white;
+            }
+        }
 
-        .sidelogobarcolor-changer {
+        .color-changer {
             margin-bottom: 30px;
 
             h1 {
                 font-size: 16px;
-                font-family: $andadapro;
+                font-family: $roboto;
                 font-weight: 600;
-                text-transform: capitalize;
+                text-transform: uppercase;
                 border-bottom: 2px solid $simpleblack;
                 margin-bottom: 20px;
             }
@@ -769,6 +852,9 @@
             .white {
                 background: $white;
             }
+            .gray {
+                background: $gray;
+            }
 
             .black {
                 background: $black;
@@ -778,7 +864,7 @@
         .setting-icons-close {
             background: $white;
             border-radius: 30px 0 0 30px;
-            padding: 10px 15px;
+            padding: 10px 4px;
             box-shadow: -4px 0px 2px rgba(69, 69, 0, 0.6);
             position: absolute;
             right: 100%;
@@ -828,9 +914,48 @@
         }
         #toggleBar{
             display: block !important;
+            button{
+                font-size: 25px;
+                .closeicon{
+                    display: none;
+                }
+            }
         }
         .topbarlogo{
             display: block !important;
+           }
+
+           .main-panel{
+                .topheaderhide{
+                    .top-header-inner{
+                        column-gap: 20px;
+                        .right{
+                            display: none;
+                        }
+                    }
+                }
+                .responsivetopheader{
+                    position: absolute;
+                    top: 76px;
+                    right: 5px;
+                    z-index: 1;
+                   
+                    .top-header-inner{
+                        height: fit-content !important;
+                        max-width: 240px;
+                        padding: 20px 5px;
+                        width: 100%;
+                        box-shadow: 0 4px 10px rgba(69, 69, 0, 0.6);
+                        border-radius: 7px;
+                        .right{
+                            flex-wrap: wrap;
+                            justify-content: space-between;
+                            row-gap: 20px;
+                            column-gap: 0;
+                            
+                        }
+                    }
+                }
            }
     }
 }

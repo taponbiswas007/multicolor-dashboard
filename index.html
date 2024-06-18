@@ -35,7 +35,7 @@
 </head>
 
 <body>
-    <section class="wrapper">
+    <section class="wrapper full-gray-bg" id="fullWrapper">
         <div class="container-fluid">
             <div class="row">
                 <div class="sidebar  custom-col-3   p-0" id="sideBar">
@@ -51,7 +51,7 @@
                                 <button class="sidebartoggle">
                                     <i class="fa-light fa-arrow-left-to-line sortsidebar"></i>
                                     <i class="fa-light fa-arrow-right-to-line bigsidebar"></i>
-                                    <i class="fa-regular fa-xmark sidebarclose"></i>
+
                                 </button>
                             </div>
 
@@ -65,7 +65,7 @@
 
                             </a>
                             <!-- menu item  -->
-                            <a data-bs-toggle="collapse" href="#generalsettings" class="sidenavitem" >
+                            <a data-bs-toggle="collapse" href="#generalsettings" class="sidenavitem">
                                 <div class="navcontent">
                                     <i class="fa-sharp fa-light fa-gear font-icon"></i>
                                     <span class="navitem-text">general settings</span>
@@ -94,7 +94,7 @@
 
                             <!-- menu item -->
 
-                            <a data-bs-toggle="collapse" href="#classes" class="sidenavitem" >
+                            <a data-bs-toggle="collapse" href="#classes" class="sidenavitem">
                                 <div class="navcontent">
                                     <i class="fa-sharp fa-light fa-pen-field font-icon"></i>
                                     <span class="navitem-text">classes</span>
@@ -115,7 +115,7 @@
                             </div>
 
                             <!-- menu item -->
-                            <a data-bs-toggle="collapse" href="#subjects" class="sidenavitem" >
+                            <a data-bs-toggle="collapse" href="#subjects" class="sidenavitem">
                                 <div class="navcontent">
                                     <i class="fa-thin fa-book-open-cover font-icon"></i>
                                     <span class="navitem-text">subjects</span>
@@ -135,7 +135,7 @@
                             </div>
 
                             <!-- menu item -->
-                            <a data-bs-toggle="collapse" href="#students" class="sidenavitem" >
+                            <a data-bs-toggle="collapse" href="#students" class="sidenavitem">
                                 <div class="navcontent">
                                     <i class="fa-light fa-user font-icon"></i>
                                     <span class="navitem-text">Students</span>
@@ -165,7 +165,7 @@
                             </div>
 
                             <!-- menu item -->
-                            <a data-bs-toggle="collapse" href="#employees" class="sidenavitem" >
+                            <a data-bs-toggle="collapse" href="#employees" class="sidenavitem">
                                 <div class="navcontent">
                                     <i class="fa-light fa-briefcase font-icon"></i>
                                     <span class="navitem-text">employees</span>
@@ -191,7 +191,7 @@
                             </div>
 
                             <!-- menu item -->
-                            <a data-bs-toggle="collapse" href="#accounts" class="sidenavitem" >
+                            <a data-bs-toggle="collapse" href="#accounts" class="sidenavitem">
                                 <div class="navcontent">
                                     <i class="fa-light fa-briefcase font-icon"></i>
                                     <span class="navitem-text">accounts</span>
@@ -215,38 +215,39 @@
 
                                 </ul>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
                 <div class="main-panel custom-col-9    p-0" id="mainPanel">
                     <!-- top nav area start -->
-                    <div class="top-header white-bg" id="topheader">
+                    <div class="top-header white-bg topheaderhide" id="topheader">
                         <div class="top-header-inner">
-                            <div class="left">
-                                <!-- logo area start -->
-                                <div class="logo topbarlogo">
-                                    <a href="#">
-                                        <img src="assets/images/logo.png" alt="logo">
-                                    </a>
-                                </div>
-                                <!-- logo area end -->
-                                <!-- toggle bar area -->
-                                <div class="topbar-item" id="toggleBar">
-                                    <button>
-                                        <i class="fa-regular fa-bars"></i>
-                                    </button>
-                                </div>
-                                 <!-- toggle bar area end -->
+                            <!-- logo area start -->
+                            <div class="logo topbarlogo">
+                                <a href="#">
+                                    <img src="assets/images/logo.png" alt="logo">
+                                </a>
+                            </div>
+                            <!-- logo area end -->
 
-                                 <!-- search area start -->
+                            <div class="left">
+                                <!-- search area start -->
                                 <div class="search-area">
                                     <input type="search">
                                     <i class="fa-light fa-magnifying-glass search-icon"></i>
                                 </div>
-                                  <!-- search area end -->
+                                <!-- search area end -->
 
                             </div>
+                            <!-- toggle bar area -->
+                            <div class="topbar-item" id="toggleBar">
+                                <button>
+                                    <i class="fa-regular fa-bars baricon"></i>
+                                    <i class="fa-regular fa-xmark closeicon"></i>
+                                </button>
+                            </div>
+                            <!-- toggle bar area end -->
                             <div class="right">
                                 <!-- message area start -->
                                 <div class="topbar-item ">
@@ -254,63 +255,63 @@
                                         <i class="fa-sharp fa-solid fa-envelope"></i>
                                         <span>4</span>
                                     </button>
-                                   
-                                    <div class="information-details-area">
+
+                                    <div class="information-details-area white-bg" id="topbarpopup1">
                                         <div class="inner">
-                                           <div class="header-area">
+                                            <div class="header-area">
                                                 <h1>messages</h1>
                                                 <button>mark all as read</button>
-                                           </div>
-                                           <div class="main-content-area">
-                                            <!-- main content area start-->
-                                           <a href="#" class="content d-flex justify-content-left">
-                                            <div class="sender-images">
-                                                <img src="assets/images/pp.png" alt="">
                                             </div>
-                                            <ul>
-                                                <li>Tapon sarker</li>
-                                                <li>How are you?</li>
-                                                <li>5 minutes ago</li>
-                                            </ul>
-                                       </a>
-                                         <!-- main content area end -->
-                                       <!-- main content area start-->
-                                       <a href="#" class="content d-flex justify-content-left">
-                                            <div class="sender-images">
-                                                <img src="assets/images/pp.png" alt="">
+                                            <div class="main-content-area">
+                                                <!-- main content area start-->
+                                                <a href="#" class="content d-flex justify-content-left">
+                                                    <div class="sender-images">
+                                                        <img src="assets/images/pp.png" alt="">
+                                                    </div>
+                                                    <ul>
+                                                        <li>Tapon sarker</li>
+                                                        <li>How are you?</li>
+                                                        <li>5 minutes ago</li>
+                                                    </ul>
+                                                </a>
+                                                <!-- main content area end -->
+                                                <!-- main content area start-->
+                                                <a href="#" class="content d-flex justify-content-left">
+                                                    <div class="sender-images">
+                                                        <img src="assets/images/pp.png" alt="">
+                                                    </div>
+                                                    <ul>
+                                                        <li>Tapon sarker</li>
+                                                        <li>How are you?</li>
+                                                        <li>5 minutes ago</li>
+                                                    </ul>
+                                                </a>
+                                                <!-- main content area end -->
+                                                <!-- main content area start-->
+                                                <a href="#" class="content d-flex justify-content-left">
+                                                    <div class="sender-images">
+                                                        <img src="assets/images/pp.png" alt="">
+                                                    </div>
+                                                    <ul>
+                                                        <li>Tapon sarker</li>
+                                                        <li>How are you?</li>
+                                                        <li>5 minutes ago</li>
+                                                    </ul>
+                                                </a>
+                                                <!-- main content area end -->
+                                                <!-- main content area start-->
+                                                <a href="#" class="content d-flex justify-content-left">
+                                                    <div class="sender-images">
+                                                        <img src="assets/images/pp.png" alt="">
+                                                    </div>
+                                                    <ul>
+                                                        <li>Tapon sarker</li>
+                                                        <li>How are you?</li>
+                                                        <li>5 minutes ago</li>
+                                                    </ul>
+                                                </a>
+                                                <!-- main content area end -->
                                             </div>
-                                            <ul>
-                                                <li>Tapon sarker</li>
-                                                <li>How are you?</li>
-                                                <li>5 minutes ago</li>
-                                            </ul>
-                                       </a>
-                                         <!-- main content area end -->
-                                       <!-- main content area start-->
-                                       <a href="#" class="content d-flex justify-content-left">
-                                            <div class="sender-images">
-                                                <img src="assets/images/pp.png" alt="">
-                                            </div>
-                                            <ul>
-                                                <li>Tapon sarker</li>
-                                                <li>How are you?</li>
-                                                <li>5 minutes ago</li>
-                                            </ul>
-                                       </a>
-                                         <!-- main content area end -->
-                                       <!-- main content area start-->
-                                       <a href="#" class="content d-flex justify-content-left">
-                                            <div class="sender-images">
-                                                <img src="assets/images/pp.png" alt="">
-                                            </div>
-                                            <ul>
-                                                <li>Tapon sarker</li>
-                                                <li>How are you?</li>
-                                                <li>5 minutes ago</li>
-                                            </ul>
-                                       </a>
-                                         <!-- main content area end -->
-                                           </div>
                                             <div class="footer">
                                                 <a href="#">
                                                     <span>see all messages</span>
@@ -332,61 +333,61 @@
                                         <span>4</span>
                                     </button>
 
-                                    <div class="information-details-area">
+                                    <div class="information-details-area white-bg" id="topbarpopup2">
                                         <div class="inner">
-                                           <div class="header-area">
+                                            <div class="header-area">
                                                 <h1>you have 4 new notification</h1>
 
-                                           </div>
-                                           <div class="main-content-area">
-                                            <!-- main content area start-->
-                                           <a href="#" class="content d-flex justify-content-left">
-                                            <div class="sender-images">
-                                                <i class="fa-light fa-user-plus"></i>
                                             </div>
-                                            <ul>
-                                                <li>new user registered</li>
-                                                <li>5 minutes ago</li>
-                                            </ul>
-                                       </a>
-                                         <!-- main content area end -->
-                                       <!-- main content area start-->
-                                       <a href="#" class="content d-flex justify-content-left">
-                                            <div class="sender-images">
-                                                <i class="fa-sharp fa-solid fa-comment"></i>
+                                            <div class="main-content-area">
+                                                <!-- main content area start-->
+                                                <a href="#" class="content d-flex justify-content-left">
+                                                    <div class="sender-images">
+                                                        <i class="fa-light fa-user-plus"></i>
+                                                    </div>
+                                                    <ul>
+                                                        <li>new user registered</li>
+                                                        <li>5 minutes ago</li>
+                                                    </ul>
+                                                </a>
+                                                <!-- main content area end -->
+                                                <!-- main content area start-->
+                                                <a href="#" class="content d-flex justify-content-left">
+                                                    <div class="sender-images">
+                                                        <i class="fa-sharp fa-solid fa-comment"></i>
+                                                    </div>
+                                                    <ul>
+                                                        <li>Tapon commented on admin</li>
+                                                        <li>5 minutes ago</li>
+                                                    </ul>
+                                                </a>
+                                                <!-- main content area end -->
+                                                <!-- main content area start-->
+                                                <a href="#" class="content d-flex justify-content-left">
+                                                    <div class="sender-images">
+                                                        <img src="assets/images/pp.png" alt="">
+                                                    </div>
+                                                    <ul>
+                                                        <li>tapon send message to you</li>
+                                                        <li>5 minutes ago</li>
+                                                    </ul>
+                                                </a>
+                                                <!-- main content area end -->
+                                                <!-- main content area start-->
+                                                <a href="#" class="content d-flex justify-content-left">
+                                                    <div class="sender-images">
+                                                        <i class="fa-sharp fa-solid fa-heart"></i>
+                                                    </div>
+                                                    <ul>
+                                                        <li>Tapon like admin</li>
+                                                        <li>5 minutes ago</li>
+                                                    </ul>
+                                                </a>
+                                                <!-- main content area end -->
                                             </div>
-                                            <ul>
-                                                <li>Tapon commented on admin</li>
-                                                <li>5 minutes ago</li>
-                                            </ul>
-                                       </a>
-                                         <!-- main content area end -->
-                                       <!-- main content area start-->
-                                       <a href="#" class="content d-flex justify-content-left">
-                                            <div class="sender-images">
-                                                <img src="assets/images/pp.png" alt="">
-                                            </div>
-                                            <ul>
-                                                <li>tapon send message to you</li>
-                                                <li>5 minutes ago</li>
-                                            </ul>
-                                       </a>
-                                         <!-- main content area end -->
-                                       <!-- main content area start-->
-                                       <a href="#" class="content d-flex justify-content-left">
-                                            <div class="sender-images">
-                                                <i class="fa-sharp fa-solid fa-heart"></i>
-                                            </div>
-                                            <ul>
-                                                <li>Tapon like admin</li>
-                                                <li>5 minutes ago</li>
-                                            </ul>
-                                       </a>
-                                         <!-- main content area end -->
-                                           </div>
                                             <div class="footer">
                                                 <a href="#">
-                                                    <span>see all messages</span>
+                                                    <span>see all notification</span>
                                                     <span><i class="fa-light fa-angle-right"></i></span>
                                                 </a>
                                             </div>
@@ -395,11 +396,11 @@
                                             </div>
                                         </div>
                                     </div>
-                                    
-                                </div>
-                                 <!-- notification area end -->
 
-                                 <!-- full screen mode area start -->
+                                </div>
+                                <!-- notification area end -->
+
+                                <!-- full screen mode area start -->
                                 <div class="topbar-item">
                                     <button class="fullscreenmode" id="fullscreenToggle">
                                         <i class="fa-sharp fa-light fa-arrows-maximize maximize"></i>
@@ -407,9 +408,9 @@
                                     </button>
 
                                 </div>
-                                 <!-- full screen mode area end -->
+                                <!-- full screen mode area end -->
 
-                                 <!-- institute area start -->
+                                <!-- institute area start -->
                                 <div class="topbar-item">
                                     <div class="institute-information informationbtn">
                                         <a href="#" class="institutelogo">
@@ -421,9 +422,9 @@
                                                 <i class="fa-light fa-angle-down"></i>
                                             </h1>
                                         </div>
-                                      
+
                                     </div>
-                                    <div class="information-details-area user-area">
+                                    <div class="information-details-area white-bg user-area" id="topbarpopup3">
                                         <div class="inner">
                                             <ul>
                                                 <li>
@@ -450,7 +451,224 @@
                                     </div>
 
                                 </div>
-                                 <!-- institute area end -->
+                                <!-- institute area end -->
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="top-header white-bg responsivetopheader" id="responsivetopheader">
+                        <div class="top-header-inner">
+                            <div class="left">
+
+
+
+                            </div>
+                            <div class="right">
+                                <!-- message area start -->
+                                <div class="topbar-item ">
+                                    <button>
+                                        <i class="fa-sharp fa-solid fa-envelope"></i>
+                                        <span>4</span>
+                                    </button>
+
+                                    <div class="information-details-area white-bg" id="topbarpopupr1">
+                                        <div class="inner">
+                                            <div class="header-area">
+                                                <h1>messages</h1>
+                                                <button>mark all as read</button>
+                                            </div>
+                                            <div class="main-content-area">
+                                                <!-- main content area start-->
+                                                <a href="#" class="content d-flex justify-content-left">
+                                                    <div class="sender-images">
+                                                        <img src="assets/images/pp.png" alt="">
+                                                    </div>
+                                                    <ul>
+                                                        <li>Tapon sarker</li>
+                                                        <li>How are you?</li>
+                                                        <li>5 minutes ago</li>
+                                                    </ul>
+                                                </a>
+                                                <!-- main content area end -->
+                                                <!-- main content area start-->
+                                                <a href="#" class="content d-flex justify-content-left">
+                                                    <div class="sender-images">
+                                                        <img src="assets/images/pp.png" alt="">
+                                                    </div>
+                                                    <ul>
+                                                        <li>Tapon sarker</li>
+                                                        <li>How are you?</li>
+                                                        <li>5 minutes ago</li>
+                                                    </ul>
+                                                </a>
+                                                <!-- main content area end -->
+                                                <!-- main content area start-->
+                                                <a href="#" class="content d-flex justify-content-left">
+                                                    <div class="sender-images">
+                                                        <img src="assets/images/pp.png" alt="">
+                                                    </div>
+                                                    <ul>
+                                                        <li>Tapon sarker</li>
+                                                        <li>How are you?</li>
+                                                        <li>5 minutes ago</li>
+                                                    </ul>
+                                                </a>
+                                                <!-- main content area end -->
+                                                <!-- main content area start-->
+                                                <a href="#" class="content d-flex justify-content-left">
+                                                    <div class="sender-images">
+                                                        <img src="assets/images/pp.png" alt="">
+                                                    </div>
+                                                    <ul>
+                                                        <li>Tapon sarker</li>
+                                                        <li>How are you?</li>
+                                                        <li>5 minutes ago</li>
+                                                    </ul>
+                                                </a>
+                                                <!-- main content area end -->
+                                            </div>
+                                            <div class="footer">
+                                                <a href="#">
+                                                    <span>see all messages</span>
+                                                    <span><i class="fa-light fa-angle-right"></i></span>
+                                                </a>
+                                            </div>
+                                            <div class="indicator">
+                                                <i class="fa-solid fa-triangle"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- message area end -->
+
+                                <!-- notification area start -->
+                                <div class="topbar-item">
+                                    <button>
+                                        <i class="fa-sharp fa-solid fa-bell"></i>
+                                        <span>4</span>
+                                    </button>
+
+                                    <div class="information-details-area white-bg" id="topbarpopupr2">
+                                        <div class="inner">
+                                            <div class="header-area">
+                                                <h1>you have 4 new notification</h1>
+
+                                            </div>
+                                            <div class="main-content-area">
+                                                <!-- main content area start-->
+                                                <a href="#" class="content d-flex justify-content-left">
+                                                    <div class="sender-images">
+                                                        <i class="fa-light fa-user-plus"></i>
+                                                    </div>
+                                                    <ul>
+                                                        <li>new user registered</li>
+                                                        <li>5 minutes ago</li>
+                                                    </ul>
+                                                </a>
+                                                <!-- main content area end -->
+                                                <!-- main content area start-->
+                                                <a href="#" class="content d-flex justify-content-left">
+                                                    <div class="sender-images">
+                                                        <i class="fa-sharp fa-solid fa-comment"></i>
+                                                    </div>
+                                                    <ul>
+                                                        <li>Tapon commented on admin</li>
+                                                        <li>5 minutes ago</li>
+                                                    </ul>
+                                                </a>
+                                                <!-- main content area end -->
+                                                <!-- main content area start-->
+                                                <a href="#" class="content d-flex justify-content-left">
+                                                    <div class="sender-images">
+                                                        <img src="assets/images/pp.png" alt="">
+                                                    </div>
+                                                    <ul>
+                                                        <li>tapon send message to you</li>
+                                                        <li>5 minutes ago</li>
+                                                    </ul>
+                                                </a>
+                                                <!-- main content area end -->
+                                                <!-- main content area start-->
+                                                <a href="#" class="content d-flex justify-content-left">
+                                                    <div class="sender-images">
+                                                        <i class="fa-sharp fa-solid fa-heart"></i>
+                                                    </div>
+                                                    <ul>
+                                                        <li>Tapon like admin</li>
+                                                        <li>5 minutes ago</li>
+                                                    </ul>
+                                                </a>
+                                                <!-- main content area end -->
+                                            </div>
+                                            <div class="footer">
+                                                <a href="#">
+                                                    <span>see all messages</span>
+                                                    <span><i class="fa-light fa-angle-right"></i></span>
+                                                </a>
+                                            </div>
+                                            <div class="indicator">
+                                                <i class="fa-solid fa-triangle"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- notification area end -->
+
+                                <!-- full screen mode area start -->
+                                <div class="topbar-item">
+                                    <button class="fullscreenmode" id="fullscreenToggle">
+                                        <i class="fa-sharp fa-light fa-arrows-maximize maximize"></i>
+                                        <i class="fa-sharp fa-light fa-arrows-minimize minimize"></i>
+                                    </button>
+
+                                </div>
+                                <!-- full screen mode area end -->
+
+                                <!-- institute area start -->
+                                <div class="topbar-item">
+                                    <div class="institute-information informationbtn">
+                                        <a href="#" class="institutelogo">
+                                            <img src="assets/images/profile.jpg" alt="images">
+                                        </a>
+                                        <div class="institute-name">
+                                            <h1>
+                                                institute name
+                                                <i class="fa-light fa-angle-down"></i>
+                                            </h1>
+                                        </div>
+
+                                    </div>
+                                    <div class="information-details-area white-bg  user-area" id="topbarpopupr3">
+                                        <div class="inner">
+                                            <ul>
+                                                <li>
+                                                    <a href="#">
+                                                        <i class="fa-thin fa-address-card m-r"></i>profile
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <i class="fa-light fa-gear m-r"></i> account settings
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <i class="fa-sharp fa-thin fa-left-from-bracket m-r"></i>log
+                                                        out
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <div class="indicator">
+                                                <i class="fa-solid fa-triangle"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- institute area end -->
 
 
                             </div>
@@ -473,103 +691,106 @@
                         <div class="dashboard-summery-area">
                             <div class="row">
                                 <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-3">
-                                 <a href="#">
-                                  <div class="card card-stats card-round">
-                                    <div class="card-body">
-                                      <div class="row align-items-center">
-                                        <div class="col-icon">
-                                          <div class="icon-big text-center icon-primary bubble-shadow-small">
-                                            <i class="fa-light fa-users"></i>
-                                          </div>
-                                        </div>
-                                        <div class="col col-stats ms-3 ms-sm-0">
-                                          <div class="numbers" >
-                                            <p class="card-category">Total Students</p>
-                                            <h4 class="card-title">1,294</h4>
-                                            <p class="card-sub-category">This month</p>
-                                            <h4 class="card-sub-title">1,294</h4>
-                                           
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                 </a>
-                                </div>
-                                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-3">
-                                 <a href="#">
-                                  <div class="card card-stats card-round">
-                                    <div class="card-body">
-                                      <div class="row align-items-center">
-                                        <div class="col-icon">
-                                          <div class="icon-big text-center icon-info bubble-shadow-small">
-                                            <i class="fa-regular fa-briefcase"></i>
-                                          </div>
-                                        </div>
-                                        <div class="col col-stats ms-3 ms-sm-0">
-                                          <div class="numbers">
-                                            <p class="card-category">Total Employees</p>
-                                            <h4 class="card-title">100</h4>
-                                            <p class="card-sub-category">This month</p>
-                                            <h4 class="card-sub-title">1,294</h4>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                 </a>
-                                </div>
-                                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-3">
-                                  <a href="#">
-                                    <div class="card card-stats card-round">
-                                      <div class="card-body">
-                                        <div class="row align-items-center">
-                                          <div class="col-icon">
-                                            <div class="icon-big text-center icon-success bubble-shadow-small">
-                                                <i class="fa-light fa-hand-holding-dollar"></i>
+                                    <a href="#">
+                                        <div class="card card-stats card-round">
+                                            <div class="card-body">
+                                                <div class="row align-items-center">
+                                                    <div class="col-icon">
+                                                        <div
+                                                            class="icon-big text-center icon-primary bubble-shadow-small">
+                                                            <i class="fa-light fa-users"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col col-stats ms-3 ms-sm-0">
+                                                        <div class="numbers">
+                                                            <p class="card-category">Total Students</p>
+                                                            <h4 class="card-title">1,294</h4>
+                                                            <p class="card-sub-category">This month</p>
+                                                            <h4 class="card-sub-title">1,294</h4>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                          </div>
-                                          <div class="col col-stats ms-3 ms-sm-0">
-                                            <div class="numbers">
-                                              <p class="card-category">Revenue</p>
-                                              <h4 class="card-title">$ 1,345</h4>
-                                              <p class="card-sub-category">This month</p>
-                                              <h4 class="card-sub-title">$ 1,294</h4>
-                                            </div>
-                                          </div>
                                         </div>
-                                      </div>
-                                    </div>
-                                  </a>
+                                    </a>
                                 </div>
                                 <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-3">
                                     <a href="#">
-                                      <div class="card card-stats card-round">
-                                        <div class="card-body">
-                                          <div class="row align-items-center">
-                                            <div class="col-icon">
-                                              <div class="icon-big text-center icon-secondary bubble-shadow-small">
-                                                <i class="fa-regular fa-chart-line"></i>
-                                              </div>
+                                        <div class="card card-stats card-round">
+                                            <div class="card-body">
+                                                <div class="row align-items-center">
+                                                    <div class="col-icon">
+                                                        <div class="icon-big text-center icon-info bubble-shadow-small">
+                                                            <i class="fa-regular fa-briefcase"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col col-stats ms-3 ms-sm-0">
+                                                        <div class="numbers">
+                                                            <p class="card-category">Total Employees</p>
+                                                            <h4 class="card-title">100</h4>
+                                                            <p class="card-sub-category">This month</p>
+                                                            <h4 class="card-sub-title">1,294</h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="col col-stats ms-3 ms-sm-0">
-                                              <div class="numbers">
-                                                <p class="card-category">Total Profit</p>
-                                                <h4 class="card-title">$ 576</h4>
-                                                <p class="card-sub-category">This month</p>
-                                            <h4 class="card-sub-title">$ 1,294</h4>
-                                              </div>
-                                            </div>
-                                          </div>
                                         </div>
-                                      </div>
                                     </a>
                                 </div>
-                              </div>
+                                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-3">
+                                    <a href="#">
+                                        <div class="card card-stats card-round">
+                                            <div class="card-body">
+                                                <div class="row align-items-center">
+                                                    <div class="col-icon">
+                                                        <div
+                                                            class="icon-big text-center icon-success bubble-shadow-small">
+                                                            <i class="fa-light fa-hand-holding-dollar"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col col-stats ms-3 ms-sm-0">
+                                                        <div class="numbers">
+                                                            <p class="card-category">Revenue</p>
+                                                            <h4 class="card-title">$ 1,345</h4>
+                                                            <p class="card-sub-category">This month</p>
+                                                            <h4 class="card-sub-title">$ 1,294</h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-3">
+                                    <a href="#">
+                                        <div class="card card-stats card-round">
+                                            <div class="card-body">
+                                                <div class="row align-items-center">
+                                                    <div class="col-icon">
+                                                        <div
+                                                            class="icon-big text-center icon-secondary bubble-shadow-small">
+                                                            <i class="fa-regular fa-chart-line"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col col-stats ms-3 ms-sm-0">
+                                                        <div class="numbers">
+                                                            <p class="card-category">Total Profit</p>
+                                                            <h4 class="card-title">$ 576</h4>
+                                                            <p class="card-sub-category">This month</p>
+                                                            <h4 class="card-sub-title">$ 1,294</h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    
-                   
+
+
                 </div>
             </div>
         </div>
@@ -579,20 +800,28 @@
 
     <div class="theme-setting-area">
         <div class="inner">
-            <div class="sidelogobarcolor-changer">
-                <h1>sidebar header background color</h1>
+            <div class="setting-area-title">
+                <h2>settings</h2>
+            </div>
+            <div class="color-changer">
+                <h1>body</h1>
+                <button class="gray" id="fullbodyGray"></button>
+                <button class="black" id="fullbodyBlack"></button>
+            </div>
+            <div class="color-changer">
+                <h1>logo header</h1>
                 <button class="white" id="logobarwhite"></button>
                 <button class="black" id="logobarBlack"></button>
             </div>
-            <div class="sidelogobarcolor-changer">
-                <h1>top header background color</h1>
-                <button class="white" id="topnavbarwhite"></button>
-                <button class="black" id="topnavbarBlack"></button>
-            </div>
-            <div class="sidelogobarcolor-changer">
-                <h1>sidebar navbar background color</h1>
+            <div class="color-changer">
+                <h1>sidebar</h1>
                 <button class="white" id="sidenavbarwhite"></button>
                 <button class="black" id="sidenavbarBlack"></button>
+            </div>
+            <div class="color-changer">
+                <h1>top header</h1>
+                <button class="white" id="topnavbarwhite"></button>
+                <button class="black" id="topnavbarBlack"></button>
             </div>
             <div class="setting-icons-close">
                 <button class="settingbtn"> <i class="fa-light fa-gear"></i></button>
