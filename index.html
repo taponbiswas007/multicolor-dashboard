@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-light.css">
 
     <!-- apex chart css link -->
-     <link rel="stylesheet" href="assets/css/apexcharts.css">
+    <link rel="stylesheet" href="assets/css/apexcharts.css">
     <!-- main css link -->
     <link rel="stylesheet" href="assets/css/dashbord.css">
 
@@ -692,7 +692,7 @@
                                 <button>add student</button>
                             </div>
                         </div>
-                          <!-- body header end -->
+                        <!-- body header end -->
 
                         <!-- dashboard summery card area start -->
                         <div class="dashboard-summery-area">
@@ -798,22 +798,23 @@
                         <!-- dashboard summery card area end -->
 
                         <!-- statistics chart area start -->
-                        <div class="row">
+                        <div class="row ">
                             <div class="col-xl-5 col-12">
                                 <div class="statistics-chart-area">
                                     <h1>statistics</h1>
-                                    
+
                                     <div id="statisticsChart"></div>
                                 </div>
                             </div>
                             <div class="col-xl-7 col-12">
                                 <div class="row">
-                                    <div class="col-6">
+                                    <div  class="col-12 col-sm-6">
                                         <div class="estimated-fee-area">
                                             <div class="inner">
                                                 <h1>estimated fee this month</h1>
                                                 <main>
-                                                    <span><i class="fa-solid fa-spinner-scale spinner"></i> estimation</span>
+                                                    <span><i class="fa-solid fa-spinner-scale spinner"></i>
+                                                        estimation</span>
                                                     <span class="estimatedamount">$ 0</span>
                                                 </main>
                                                 <footer>
@@ -824,42 +825,77 @@
                                                     <div class="center"></div>
                                                     <div class="right">
                                                         <span>$ 0</span>
-                                                        <h3><i class="fa-light fa-hand-holding-dollar m-r"></i>Remainings</h3>
+                                                        <h3><i
+                                                                class="fa-light fa-hand-holding-dollar m-r"></i>Remainings
+                                                        </h3>
                                                     </div>
                                                 </footer>
                                             </div>
-                                           
+
 
                                         </div>
-                                        
+
                                     </div>
-                                    <div class="col-6">
+                                    <div class="col-12 col-sm-6">
                                         <div class="attendance">
                                             <div class="attendance-items ">
                                                 <h1>today present students</h1>
                                                 <div class="progress">
-                                                    <div class="progress-bar student-attendance-bar" role="progressbar" style="width: 78%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">78%</div>
-                                                  </div>
+                                                    <div class="progress-bar student-attendance-bar" role="progressbar"
+                                                        style="width: 78%;" aria-valuenow="25" aria-valuemin="0"
+                                                        aria-valuemax="100">78%</div>
+                                                </div>
                                             </div>
                                             <div class="attendance-items">
                                                 <h1>Today Present Employees</h1>
                                                 <div class="progress">
-                                                    <div class="progress-bar employees-attendance-bar" role="progressbar" style="width: 90%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">90%</div>
-                                                  </div>
+                                                    <div class="progress-bar employees-attendance-bar"
+                                                        role="progressbar" style="width: 90%;" aria-valuenow="25"
+                                                        aria-valuemin="0" aria-valuemax="100">90%</div>
+                                                </div>
                                             </div>
                                             <div class="attendance-items">
                                                 <h1>This Month Fee Collection</h1>
                                                 <div class="progress">
-                                                    <div class="progress-bar fee-collections-bar" role="progressbar" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">50%</div>
-                                                  </div>
+                                                    <div class="progress-bar fee-collections-bar" role="progressbar"
+                                                        style="width: 50%;" aria-valuenow="25" aria-valuemin="0"
+                                                        aria-valuemax="100">50%</div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                           
+
                         </div>
                         <!-- statistics chart area end -->
+                        <div class="row">
+                            <div class="col-12">
+                                <!-- student absent table start -->
+                                <div class="student-absent-table-wrapper">
+                                    <h1>absent students</h1>
+                                    <div class="student-details">
+                                        <ul>
+                                            <li>#14521</li>
+                                            <li><img src="assets/images/pp.png" alt="img"></li>
+                                            <li>tapon chandra sarker</li>
+                                            <li>class - 7</li>
+                                            <li><span>active</span></li>
+                                            <li><button>application</button></li>
+                                            <li>
+                                                <ul>
+                                                    <li><button><i class="fa-light fa-phone"></i></button></li>
+                                                    <li><button><i class="fa-light fa-message"></i></button></li>
+                                                </ul>
+                                            </li>
+                                            
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- student absent table end -->
+                            </div>
+                            
+                        </div>
                     </div>
 
 
@@ -911,8 +947,8 @@
         integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-        <!-- apex chart js -->
-         <script src="assets/js/apexcharts.min.js"></script>
+    <!-- apex chart js -->
+    <script src="assets/js/apexcharts.min.js"></script>
     <!-- dashboard js link -->
     <script src="assets/js/dashboard.js"></script>
     <script src="assets/js/chartvalue.js"></script>

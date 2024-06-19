@@ -228,6 +228,9 @@ a {
 .full-gray-bg .attendance {
   background: #ffffff;
 }
+.full-gray-bg .student-absent-table-wrapper {
+  background: #ffffff;
+}
 
 .full-black-bg {
   background: #1a2035;
@@ -283,6 +286,13 @@ a {
 }
 .full-black-bg .attendance {
   background: #6610f2;
+}
+.full-black-bg .student-absent-table-wrapper {
+  background: #6610f2;
+}
+.full-black-bg .student-absent-table-wrapper .student-details {
+  background: #2a2f5b;
+  color: #ffffff !important;
 }
 
 .full-purple-bg {
@@ -489,6 +499,7 @@ a {
 .wrapper .main-panel {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  height: 100vh;
   /* WebKit-based browsers (Chrome, Safari, Edge) */
   /* Firefox */
   /* Internet Explorer 10+ and Edge (older versions) */
@@ -854,6 +865,7 @@ a {
 }
 .wrapper .main-panel .main-body-wrapper {
   padding: 20px;
+  height: calc(100% - 70px);
   overflow-y: scroll;
 }
 .wrapper .main-panel .main-body-wrapper .main-body-header {
@@ -977,6 +989,7 @@ a {
 .wrapper .main-panel .main-body-wrapper .statistics-chart-area {
   padding: 20px 30px 20px 0;
   border-radius: 10px;
+  margin-top: 20px;
 }
 .wrapper .main-panel .main-body-wrapper .statistics-chart-area h1 {
   font-size: 16px;
@@ -1004,6 +1017,7 @@ a {
   padding: 40px 30px;
   border-radius: 10px;
   height: 435px;
+  margin-top: 20px;
 }
 .wrapper .main-panel .main-body-wrapper .estimated-fee-area .inner {
   min-height: 365px;
@@ -1112,6 +1126,7 @@ a {
   margin-top: 10px;
 }
 .wrapper .main-panel .main-body-wrapper .attendance {
+  margin-top: 20px;
   height: 435px;
   border-radius: 10px;
   padding: 40px 30px;
@@ -1139,6 +1154,73 @@ a {
 }
 .wrapper .main-panel .main-body-wrapper .attendance .attendance-items .fee-collections-bar {
   background: #00025c;
+}
+.wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper {
+  margin-top: 20px;
+  padding: 30px;
+  width: 100%;
+  border-radius: 10px;
+}
+.wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper h1 {
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+.wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .student-details {
+  -webkit-box-shadow: 2px 6px 15px 0 rgba(69, 65, 78, 0.2);
+          box-shadow: 2px 6px 15px 0 rgba(69, 65, 78, 0.2);
+  border-radius: 8px;
+  padding: 10px 20px;
+}
+.wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .student-details ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+}
+.wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .student-details ul li {
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .student-details ul li img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #00025c;
+  padding: 2px;
+}
+.wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .student-details ul li button {
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 4px;
+  color: #00025c;
+  text-transform: capitalize;
+  -webkit-box-shadow: 2px 6px 15px 0 rgba(69, 65, 78, 0.2);
+          box-shadow: 2px 6px 15px 0 rgba(69, 65, 78, 0.2);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .student-details ul li button:hover {
+  background: #888;
+  color: #ffffff;
+}
+.wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .student-details ul li span {
+  background: #20c997;
+  padding: 10px;
+  border-radius: 5px;
+  color: #ffffff;
 }
 .wrapper .main-panel .main-body-wrapper::-webkit-scrollbar {
   width: 12px;

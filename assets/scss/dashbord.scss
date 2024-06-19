@@ -131,7 +131,12 @@
     .estimated-fee-area {
         background: $white;
     }
+
     .attendance {
+        background: $white;
+    }
+
+    .student-absent-table-wrapper {
         background: $white;
     }
 }
@@ -203,8 +208,17 @@
     .estimated-fee-area {
         background: $purple;
     }
+
     .attendance {
         background: $purple;
+    }
+
+    .student-absent-table-wrapper {
+        background: $purple;
+        .student-details{
+            background: #2a2f5b;
+            color: $white !important;
+        }
     }
 }
 
@@ -425,6 +439,7 @@
 
     .main-panel {
         transition: all 0.5s ease;
+        height: 100vh;
 
         .responsivetopheader {
             display: none;
@@ -800,7 +815,9 @@
 
         .main-body-wrapper {
             padding: 20px;
+            height: calc(100% - 70px);
             overflow-y: scroll;
+
             .main-body-header {
                 display: flex;
                 justify-content: space-between;
@@ -919,6 +936,7 @@
             .statistics-chart-area {
                 padding: 20px 30px 20px 0;
                 border-radius: 10px;
+                margin-top: 20px;
 
                 h1 {
                     font-size: 16px;
@@ -951,8 +969,10 @@
                 padding: 40px 30px;
                 border-radius: 10px;
                 height: 435px;
+                margin-top: 20px;
                 .inner {
                     min-height: 365px;
+
                     h1 {
                         font-size: 16px;
                         font-family: $roboto;
@@ -961,9 +981,11 @@
                         margin-bottom: 15px;
                         margin-left: 20px;
                     }
-                    main{
+
+                    main {
                         padding: 0 40px;
-                        span{
+
+                        span {
                             color: $red;
                             font-size: 16px;
                             display: flex;
@@ -974,39 +996,46 @@
                             font-weight: 500;
                             text-transform: capitalize;
                             margin-bottom: 85px;
-                            .spinner{
+
+                            .spinner {
                                 font-size: 20px;
                                 animation: spinner 1s linear infinite;
                             }
+
                             @keyframes spinner {
-                                0%{
+                                0% {
                                     rotate: 0deg;
                                 }
-                                100%{
+
+                                100% {
                                     rotate: 360deg;
                                 }
                             }
                         }
-                        .estimatedamount{
+
+                        .estimatedamount {
                             margin-bottom: 0;
                             font-size: 40px;
                         }
                     }
-                    footer{
+
+                    footer {
                         margin-top: 100PX;
                         display: flex;
                         justify-content: center;
                         align-items: center;
                         height: 100px;
                         column-gap: 20px;
-                        .left{
-                            span{
+
+                        .left {
+                            span {
                                 font-size: 20px;
                                 font-family: $roboto;
                                 font-weight: 500;
                                 color: #13035c;
                             }
-                            h3{
+
+                            h3 {
                                 font-size: 15px;
                                 font-family: $roboto;
                                 font-weight: 500;
@@ -1014,19 +1043,22 @@
                                 margin-top: 10px;
                             }
                         }
-                        .center{
+
+                        .center {
                             border: 1px solid $blue;
                             border-radius: 5px;
                             height: 100%;
                         }
-                        .right{
-                            span{
+
+                        .right {
+                            span {
                                 font-size: 20px;
                                 font-family: $roboto;
                                 font-weight: 500;
                                 color: #13035c;
                             }
-                            h3{
+
+                            h3 {
                                 font-size: 15px;
                                 font-family: $roboto;
                                 font-weight: 500;
@@ -1038,33 +1070,100 @@
                 }
 
             }
-            .attendance{
+
+            .attendance {
+                margin-top: 20px;
                 height: 435px;
                 border-radius: 10px;
                 padding: 40px 30px;
                 display: flex;
                 flex-direction: column;
                 row-gap: 40px;
-                .attendance-items{
-                    h1{
+
+                .attendance-items {
+                    h1 {
                         font-size: 15px;
                         text-transform: capitalize;
                         font-family: $roboto;
                         font-weight: 500;
                         margin-bottom: 10px;
                     }
-                    .student-attendance-bar{
+
+                    .student-attendance-bar {
                         background: $blue;
                     }
-                    .employees-attendance-bar{
+
+                    .employees-attendance-bar {
                         background: $green;
                     }
-                    .fee-collections-bar{
+
+                    .fee-collections-bar {
                         background: $blue;
                     }
                 }
             }
+
+            .student-absent-table-wrapper {
+                margin-top: 20px;
+                padding: 30px;
+                width: 100%;
+                border-radius: 10px;
+
+                h1 {
+                    font-size: 20px;
+                    font-family: $roboto;
+                    text-transform: capitalize;
+                    margin-bottom: 20px;
+                    font-weight: 600;
+                }
+                .student-details{
+                    box-shadow: 2px 6px 15px 0 rgba(69, 65, 78, 0.2);
+                    border-radius: 8px;
+                    padding: 10px 20px;
+                    ul{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        column-gap: 20px;
+                        li{
+                            font-size: 14px;
+                            font-family: $inter;
+                            font-weight: 400;
+                            text-transform: capitalize;
+                            img{
+                                width: 50px;
+                                height: 50px;
+                                border-radius: 50%;
+                                background: $blue;
+                                padding: 2px;
+                            }
+                            button{
+                                background: $white;
+                                padding: 10px;
+                                border-radius: 4px;
+                                color: $blue;
+                                text-transform: capitalize;
+                                box-shadow: 2px 6px 15px 0 rgba(69, 65, 78, 0.2);
+                                transition: all .3s ease;
+                                &:hover{
+                                    background: #888;
+                                    color: $white;
+                                }
+                            }
+                            span{
+                                background: $green;
+                                padding: 10px;
+                                border-radius: 5px;
+                                color: $white;
+                            }
+                        }
+                    }
+                }
+               
+
+            }
         }
+
         /* WebKit-based browsers (Chrome, Safari, Edge) */
         .main-body-wrapper::-webkit-scrollbar {
             width: 12px;
