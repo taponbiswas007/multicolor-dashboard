@@ -219,6 +219,12 @@ a {
 .full-gray-bg {
   background: #f5f7fd;
 }
+.full-gray-bg .statistics-chart-area {
+  background: #ffffff;
+}
+.full-gray-bg .estimated-fee-area {
+  background: #ffffff;
+}
 
 .full-black-bg {
   background: #1a2035;
@@ -227,7 +233,50 @@ a {
   color: #ffffff !important;
 }
 .full-black-bg .card {
-  background: #a26af5;
+  background: #6610f2;
+}
+.full-black-bg .card p {
+  color: #ffffff !important;
+}
+.full-black-bg .card h4 {
+  color: #ffffff !important;
+}
+.full-black-bg .statistics-chart-area {
+  background: #6610f2;
+}
+.full-black-bg .statistics-chart-area .apexcharts-zoomin-icon svg {
+  fill: #ffffff !important;
+}
+.full-black-bg .statistics-chart-area .apexcharts-zoomin-icon svg:hover {
+  fill: #000000 !important;
+}
+.full-black-bg .statistics-chart-area .apexcharts-zoomout-icon svg {
+  fill: #ffffff !important;
+}
+.full-black-bg .statistics-chart-area .apexcharts-reset-icon svg {
+  fill: #ffffff !important;
+}
+.full-black-bg .statistics-chart-area .apexcharts-menu-icon svg {
+  fill: #ffffff !important;
+}
+.full-black-bg .statistics-chart-area .apexcharts-menu {
+  background: #1a2035 !important;
+  border: none;
+}
+.full-black-bg .statistics-chart-area .apexcharts-menu .apexcharts-menu-item {
+  color: #ffffff !important;
+}
+.full-black-bg .statistics-chart-area .apexcharts-menu .apexcharts-menu-item:hover {
+  color: #000000 !important;
+}
+.full-black-bg .statistics-chart-area text {
+  fill: #ffffff !important;
+}
+.full-black-bg .statistics-chart-area .apexcharts-legend-text {
+  color: #ffffff !important;
+}
+.full-black-bg .estimated-fee-area {
+  background: #6610f2;
 }
 
 .full-purple-bg {
@@ -914,6 +963,142 @@ a {
   margin-top: 5px;
   text-align: end;
   margin-right: 20px;
+}
+.wrapper .main-panel .main-body-wrapper .statistics-chart-area {
+  padding: 20px 30px 20px 0;
+  border-radius: 10px;
+}
+.wrapper .main-panel .main-body-wrapper .statistics-chart-area h1 {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-bottom: 15px;
+  margin-left: 20px;
+}
+.wrapper .main-panel .main-body-wrapper .statistics-chart-area .apexcharts-toolbar {
+  top: -26px !important;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+.wrapper .main-panel .main-body-wrapper .statistics-chart-area .apexcharts-legend {
+  bottom: -3px !important;
+}
+.wrapper .main-panel .main-body-wrapper .statistics-chart-area .apexcharts-legend .apexcharts-legend-text {
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  font-family: "Roboto", sans-serif !important;
+}
+.wrapper .main-panel .main-body-wrapper .estimated-fee-area {
+  padding: 35px;
+  border-radius: 10px;
+}
+.wrapper .main-panel .main-body-wrapper .estimated-fee-area .inner {
+  min-height: 365px;
+}
+.wrapper .main-panel .main-body-wrapper .estimated-fee-area .inner h1 {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-bottom: 15px;
+  margin-left: 20px;
+}
+.wrapper .main-panel .main-body-wrapper .estimated-fee-area .inner main {
+  padding: 0 40px;
+}
+.wrapper .main-panel .main-body-wrapper .estimated-fee-area .inner main span {
+  color: #910101;
+  font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 15px;
+     -moz-column-gap: 15px;
+          column-gap: 15px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-bottom: 85px;
+}
+.wrapper .main-panel .main-body-wrapper .estimated-fee-area .inner main span .spinner {
+  font-size: 20px;
+  -webkit-animation: spinner 1s linear infinite;
+          animation: spinner 1s linear infinite;
+}
+@-webkit-keyframes spinner {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+@keyframes spinner {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+.wrapper .main-panel .main-body-wrapper .estimated-fee-area .inner main .estimatedamount {
+  margin-bottom: 0;
+  font-size: 40px;
+}
+.wrapper .main-panel .main-body-wrapper .estimated-fee-area .inner footer {
+  margin-top: 100PX;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100px;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+}
+.wrapper .main-panel .main-body-wrapper .estimated-fee-area .inner footer .left span {
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: #13035c;
+}
+.wrapper .main-panel .main-body-wrapper .estimated-fee-area .inner footer .left h3 {
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: #20c997;
+  margin-top: 10px;
+}
+.wrapper .main-panel .main-body-wrapper .estimated-fee-area .inner footer .center {
+  border: 1px solid #00025c;
+  border-radius: 5px;
+  height: 100%;
+}
+.wrapper .main-panel .main-body-wrapper .estimated-fee-area .inner footer .right span {
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: #13035c;
+}
+.wrapper .main-panel .main-body-wrapper .estimated-fee-area .inner footer .right h3 {
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: #910101;
+  margin-top: 10px;
 }
 
 .theme-setting-area {

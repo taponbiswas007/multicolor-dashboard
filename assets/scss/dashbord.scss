@@ -17,6 +17,7 @@
         color: $purple !important;
     }
 
+
 }
 
 .black-bg {
@@ -122,6 +123,14 @@
 
 .full-gray-bg {
     background: $gray;
+
+    .statistics-chart-area {
+        background: $white;
+    }
+
+    .estimated-fee-area {
+        background: $white;
+    }
 }
 
 .full-black-bg {
@@ -132,7 +141,64 @@
     }
 
     .card {
-        background: #a26af5;
+        background: $purple;
+
+        p {
+            color: $white !important;
+        }
+
+        h4 {
+            color: $white !important;
+        }
+    }
+
+    .statistics-chart-area {
+        background: $purple;
+
+        .apexcharts-zoomin-icon svg {
+            fill: $white !important;
+
+            &:hover {
+                fill: $black !important;
+            }
+        }
+
+        .apexcharts-zoomout-icon svg {
+            fill: $white !important;
+        }
+
+        .apexcharts-reset-icon svg {
+            fill: $white !important;
+        }
+
+        .apexcharts-menu-icon svg {
+            fill: $white !important;
+        }
+
+        .apexcharts-menu {
+            background: $blackbg !important;
+            border: none;
+
+            .apexcharts-menu-item {
+                color: $white !important;
+
+                &:hover {
+                    color: $black !important;
+                }
+            }
+        }
+
+        text {
+            fill: $white !important;
+        }
+
+        .apexcharts-legend-text {
+            color: $white !important;
+        }
+    }
+
+    .estimated-fee-area {
+        background: $purple;
     }
 }
 
@@ -842,6 +908,129 @@
                         }
                     }
                 }
+            }
+
+            .statistics-chart-area {
+                padding: 20px 30px 20px 0;
+                border-radius: 10px;
+
+                h1 {
+                    font-size: 16px;
+                    font-family: $roboto;
+                    font-weight: 500;
+                    text-transform: capitalize;
+                    margin-bottom: 15px;
+                    margin-left: 20px;
+                }
+
+                .apexcharts-toolbar {
+                    top: -26px !important;
+                    font-family: $poppins;
+                    font-size: 14px;
+                    font-weight: 400;
+                }
+
+                .apexcharts-legend {
+                    bottom: -3px !important;
+
+                    .apexcharts-legend-text {
+                        font-weight: 600 !important;
+                        font-size: 14px !important;
+                        font-family: $roboto !important;
+                    }
+                }
+            }
+
+            .estimated-fee-area {
+                padding: 35px;
+                border-radius: 10px;
+
+                .inner {
+                    min-height: 365px;
+                    h1 {
+                        font-size: 16px;
+                        font-family: $roboto;
+                        font-weight: 500;
+                        text-transform: capitalize;
+                        margin-bottom: 15px;
+                        margin-left: 20px;
+                    }
+                    main{
+                        padding: 0 40px;
+                        span{
+                            color: $red;
+                            font-size: 16px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            column-gap: 15px;
+                            font-family: $roboto;
+                            font-weight: 500;
+                            text-transform: capitalize;
+                            margin-bottom: 85px;
+                            .spinner{
+                                font-size: 20px;
+                                animation: spinner 1s linear infinite;
+                            }
+                            @keyframes spinner {
+                                0%{
+                                    rotate: 0deg;
+                                }
+                                100%{
+                                    rotate: 360deg;
+                                }
+                            }
+                        }
+                        .estimatedamount{
+                            margin-bottom: 0;
+                            font-size: 40px;
+                        }
+                    }
+                    footer{
+                        margin-top: 100PX;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 100px;
+                        column-gap: 20px;
+                        .left{
+                            span{
+                                font-size: 20px;
+                                font-family: $roboto;
+                                font-weight: 500;
+                                color: #13035c;
+                            }
+                            h3{
+                                font-size: 15px;
+                                font-family: $roboto;
+                                font-weight: 500;
+                                color: $green;
+                                margin-top: 10px;
+                            }
+                        }
+                        .center{
+                            border: 1px solid $blue;
+                            border-radius: 5px;
+                            height: 100%;
+                        }
+                        .right{
+                            span{
+                                font-size: 20px;
+                                font-family: $roboto;
+                                font-weight: 500;
+                                color: #13035c;
+                            }
+                            h3{
+                                font-size: 15px;
+                                font-family: $roboto;
+                                font-weight: 500;
+                                color: $red;
+                                margin-top: 10px;
+                            }
+                        }
+                    }
+                }
+
             }
         }
 
