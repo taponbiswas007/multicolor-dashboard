@@ -225,6 +225,9 @@ a {
 .full-gray-bg .estimated-fee-area {
   background: #ffffff;
 }
+.full-gray-bg .attendance {
+  background: #ffffff;
+}
 
 .full-black-bg {
   background: #1a2035;
@@ -276,6 +279,9 @@ a {
   color: #ffffff !important;
 }
 .full-black-bg .estimated-fee-area {
+  background: #6610f2;
+}
+.full-black-bg .attendance {
   background: #6610f2;
 }
 
@@ -483,6 +489,9 @@ a {
 .wrapper .main-panel {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  /* WebKit-based browsers (Chrome, Safari, Edge) */
+  /* Firefox */
+  /* Internet Explorer 10+ and Edge (older versions) */
 }
 .wrapper .main-panel .responsivetopheader {
   display: none;
@@ -845,6 +854,7 @@ a {
 }
 .wrapper .main-panel .main-body-wrapper {
   padding: 20px;
+  overflow-y: scroll;
 }
 .wrapper .main-panel .main-body-wrapper .main-body-header {
   display: -webkit-box;
@@ -991,8 +1001,9 @@ a {
   font-family: "Roboto", sans-serif !important;
 }
 .wrapper .main-panel .main-body-wrapper .estimated-fee-area {
-  padding: 35px;
+  padding: 40px 30px;
   border-radius: 10px;
+  height: 435px;
 }
 .wrapper .main-panel .main-body-wrapper .estimated-fee-area .inner {
   min-height: 365px;
@@ -1100,6 +1111,62 @@ a {
   color: #910101;
   margin-top: 10px;
 }
+.wrapper .main-panel .main-body-wrapper .attendance {
+  height: 435px;
+  border-radius: 10px;
+  padding: 40px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 40px;
+}
+.wrapper .main-panel .main-body-wrapper .attendance .attendance-items h1 {
+  font-size: 15px;
+  text-transform: capitalize;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.wrapper .main-panel .main-body-wrapper .attendance .attendance-items .student-attendance-bar {
+  background: #00025c;
+}
+.wrapper .main-panel .main-body-wrapper .attendance .attendance-items .employees-attendance-bar {
+  background: #20c997;
+}
+.wrapper .main-panel .main-body-wrapper .attendance .attendance-items .fee-collections-bar {
+  background: #00025c;
+}
+.wrapper .main-panel .main-body-wrapper::-webkit-scrollbar {
+  width: 12px;
+  /* Adjust the width of the scrollbar */
+}
+.wrapper .main-panel .main-body-wrapper::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  /* Background color of the scrollbar track */
+}
+.wrapper .main-panel .main-body-wrapper::-webkit-scrollbar-thumb {
+  background: #888;
+  /* Color of the scrollbar thumb */
+  border-radius: 6px;
+  /* Optional: round the corners of the scrollbar thumb */
+}
+.wrapper .main-panel .main-body-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  /* Color when hovered */
+}
+.wrapper .main-panel .main-body-wrapper {
+  scrollbar-width: thin;
+  /* Make the scrollbar thinner */
+  scrollbar-color: #888 #f1f1f1;
+  /* Thumb color, Track color */
+}
+.wrapper .main-panel .main-body-wrapper {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
 
 .theme-setting-area {
   background: #6610f2;
@@ -1107,11 +1174,11 @@ a {
   -webkit-box-shadow: -2px 1px 8px rgba(69, 69, 0, 0.6);
           box-shadow: -2px 1px 8px rgba(69, 69, 0, 0.6);
   position: fixed;
-  right: -250px;
+  right: -261px;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  z-index: 1;
+  z-index: 999;
 }
 .theme-setting-area .inner {
   position: relative;
@@ -1165,7 +1232,7 @@ a {
 .theme-setting-area .inner .setting-icons-close {
   background: #6610f2;
   border-radius: 30px 0 0 30px;
-  padding: 10px 4px;
+  padding: 10px 12px 10px 4px;
   -webkit-box-shadow: -4px 0px 2px rgba(69, 69, 0, 0.6);
           box-shadow: -4px 0px 2px rgba(69, 69, 0, 0.6);
   position: absolute;

@@ -329,7 +329,7 @@ checkWidth();
         
         if (currentRight === "0px" || currentRight === "0") {
             themeSettingArea.animate({
-                "right": "-250px"
+                "right": "-261px"
             }, 500);
         } else {
             themeSettingArea.animate({

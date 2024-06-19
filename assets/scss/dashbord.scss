@@ -131,6 +131,9 @@
     .estimated-fee-area {
         background: $white;
     }
+    .attendance {
+        background: $white;
+    }
 }
 
 .full-black-bg {
@@ -198,6 +201,9 @@
     }
 
     .estimated-fee-area {
+        background: $purple;
+    }
+    .attendance {
         background: $purple;
     }
 }
@@ -794,7 +800,7 @@
 
         .main-body-wrapper {
             padding: 20px;
-
+            overflow-y: scroll;
             .main-body-header {
                 display: flex;
                 justify-content: space-between;
@@ -942,9 +948,9 @@
             }
 
             .estimated-fee-area {
-                padding: 35px;
+                padding: 40px 30px;
                 border-radius: 10px;
-
+                height: 435px;
                 .inner {
                     min-height: 365px;
                     h1 {
@@ -1032,6 +1038,67 @@
                 }
 
             }
+            .attendance{
+                height: 435px;
+                border-radius: 10px;
+                padding: 40px 30px;
+                display: flex;
+                flex-direction: column;
+                row-gap: 40px;
+                .attendance-items{
+                    h1{
+                        font-size: 15px;
+                        text-transform: capitalize;
+                        font-family: $roboto;
+                        font-weight: 500;
+                        margin-bottom: 10px;
+                    }
+                    .student-attendance-bar{
+                        background: $blue;
+                    }
+                    .employees-attendance-bar{
+                        background: $green;
+                    }
+                    .fee-collections-bar{
+                        background: $blue;
+                    }
+                }
+            }
+        }
+        /* WebKit-based browsers (Chrome, Safari, Edge) */
+        .main-body-wrapper::-webkit-scrollbar {
+            width: 12px;
+            /* Adjust the width of the scrollbar */
+        }
+
+        .main-body-wrapper::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            /* Background color of the scrollbar track */
+        }
+
+        .main-body-wrapper::-webkit-scrollbar-thumb {
+            background: #888;
+            /* Color of the scrollbar thumb */
+            border-radius: 6px;
+            /* Optional: round the corners of the scrollbar thumb */
+        }
+
+        .main-body-wrapper::-webkit-scrollbar-thumb:hover {
+            background: #555;
+            /* Color when hovered */
+        }
+
+        /* Firefox */
+        .main-body-wrapper {
+            scrollbar-width: thin;
+            /* Make the scrollbar thinner */
+            scrollbar-color: #888 #f1f1f1;
+            /* Thumb color, Track color */
+        }
+
+        /* Internet Explorer 10+ and Edge (older versions) */
+        .main-body-wrapper {
+            -ms-overflow-style: -ms-autohiding-scrollbar;
         }
 
 
@@ -1046,10 +1113,10 @@
     border-radius: 10px 0 0 10px;
     box-shadow: -2px 1px 8px rgba(69, 69, 0, .6);
     position: fixed;
-    right: -250px;
+    right: -261px;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 1;
+    z-index: 999;
 
     .inner {
         position: relative;
@@ -1111,7 +1178,7 @@
         .setting-icons-close {
             background: $purple;
             border-radius: 30px 0 0 30px;
-            padding: 10px 4px;
+            padding: 10px 12px 10px 4px;
             box-shadow: -4px 0px 2px rgba(69, 69, 0, 0.6);
             position: absolute;
             right: 100%;
