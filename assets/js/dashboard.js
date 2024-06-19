@@ -209,10 +209,10 @@ $("#sideBar").on("mouseleave", function () {
         $(".navitem-text").css("display", "none");
         $(".sidebarlogo").hide();
         $(this).css({
-            "position":" ",
-            "top":" ",
-            "left":" ",
-            "z-index":" "
+            "position":"sticky ",
+            "top":" 0",
+            "left":" 0",
+            "z-index":" 99"
         });
         isSidebarExpanded = false;
     }
