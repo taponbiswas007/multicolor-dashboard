@@ -211,13 +211,17 @@ a {
 .black-bg .search-area .search-icon {
   color: #ffffff !important;
 }
+.black-bg .top-header-inner {
+  -webkit-box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.3) !important;
+          box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.3) !important;
+}
 
 .full-gray-bg {
   background: #f5f7fd;
 }
 
 .full-black-bg {
-  background: #000000;
+  background: #1a2035;
 }
 .full-black-bg h1 {
   color: #ffffff !important;
@@ -874,6 +878,8 @@ a {
   margin-bottom: 0;
   word-break: normal;
   font-family: "Roboto", sans-serif;
+  text-align: end;
+  margin-right: 20px;
 }
 .wrapper .main-panel .main-body-wrapper .dashboard-summery-area .card .card-body .numbers .card-title {
   font-family: "Inter", sans-serif;
@@ -884,6 +890,8 @@ a {
   font-weight: 600;
   line-height: 1.6;
   border-bottom: 1px solid #1a1a1a;
+  text-align: end;
+  margin-right: 20px;
 }
 .wrapper .main-panel .main-body-wrapper .dashboard-summery-area .card .card-body .numbers .card-sub-category {
   font-family: "Roboto", sans-serif;
@@ -892,6 +900,8 @@ a {
   margin: 0;
   text-transform: capitalize;
   margin-top: 8px;
+  text-align: end;
+  margin-right: 20px;
 }
 .wrapper .main-panel .main-body-wrapper .dashboard-summery-area .card .card-body .numbers .card-sub-title {
   font-family: "Inter", sans-serif;
@@ -899,10 +909,12 @@ a {
   color: #a30a8a;
   margin-bottom: 0;
   margin-top: 5px;
+  text-align: end;
+  margin-right: 20px;
 }
 
 .theme-setting-area {
-  background: #ffffff;
+  background: #6610f2;
   border-radius: 10px 0 0 10px;
   -webkit-box-shadow: -2px 1px 8px rgba(69, 69, 0, 0.6);
           box-shadow: -2px 1px 8px rgba(69, 69, 0, 0.6);
@@ -920,8 +932,9 @@ a {
 .theme-setting-area .inner .setting-area-title {
   height: 60px;
   background: #00025c;
-  padding: 10px;
+  padding: 20px 0 0 20px;
   border-radius: 10px 0 0 0;
+  margin-bottom: 20px;
 }
 .theme-setting-area .inner .setting-area-title h2 {
   font-size: 20px;
@@ -931,23 +944,26 @@ a {
   color: #ffffff;
 }
 .theme-setting-area .inner .color-changer {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
+  padding-left: 20px;
 }
 .theme-setting-area .inner .color-changer h1 {
-  font-size: 16px;
+  font-size: 14px;
   font-family: "Roboto", sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
   border-bottom: 2px solid #8a95a0;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  color: #ffffff;
+  padding-top: 7px;
 }
 .theme-setting-area .inner .color-changer button {
-  height: 30px;
-  width: 30px;
+  height: 20px;
+  width: 20px;
   border-radius: 50%;
   -webkit-box-shadow: -2px 1px 8px rgba(69, 69, 0, 0.6);
           box-shadow: -2px 1px 8px rgba(69, 69, 0, 0.6);
-  margin-right: 20px;
+  margin-right: 15px;
 }
 .theme-setting-area .inner .color-changer .white {
   background: #ffffff;
@@ -959,7 +975,7 @@ a {
   background: #000000;
 }
 .theme-setting-area .inner .setting-icons-close {
-  background: #ffffff;
+  background: #6610f2;
   border-radius: 30px 0 0 30px;
   padding: 10px 4px;
   -webkit-box-shadow: -4px 0px 2px rgba(69, 69, 0, 0.6);
@@ -971,7 +987,7 @@ a {
           transform: translateY(-50%);
 }
 .theme-setting-area .inner .setting-icons-close .settingbtn {
-  color: #6610f2;
+  color: #ffffff;
   font-size: 30px;
   -webkit-animation: settingbtnicon 1.5s linear infinite;
           animation: settingbtnicon 1.5s linear infinite;
