@@ -12,7 +12,8 @@
     button {
         color: $simpleblack;
     }
-    .active{
+
+    .active {
         color: $purple !important;
     }
 
@@ -20,18 +21,22 @@
 
 .black-bg {
     background: $blackbg;
-    .active{
+
+    .active {
         color: $green !important;
     }
+
     a {
         color: $white !important;
-        &:hover{
+
+        &:hover {
             color: $green !important;
         }
-        &:hover .submenuitem{
+
+        &:hover .submenuitem {
             color: $green !important;
         }
-        
+
     }
 
     button {
@@ -54,94 +59,117 @@
             color: $white;
         }
     }
-    .indicator{
+
+    .indicator {
         color: $blackbg !important;
     }
-    .content{
+
+    .content {
         border-bottom: 2px solid $black !important;
-        &:hover{
+
+        &:hover {
             background: $black !important;
         }
     }
-    .header-area{
+
+    .header-area {
         border-bottom: 2px solid $black !important;
-        
+
     }
-    .footer{
+
+    .footer {
         border-top: 2px solid $black !important;
-        &:hover{
+
+        &:hover {
             background: $black !important;
         }
     }
-    .inner{
-        ul{
-            li{
-                a{
-                   &:hover{
-                    background: $black !important;
-                   } 
+
+    .inner {
+        ul {
+            li {
+                a {
+                    &:hover {
+                        background: $black !important;
+                    }
                 }
             }
         }
     }
 
-    .search-area{
-        input{
+    .search-area {
+        input {
             background: $black !important;
             color: $white;
-            &:focus{
+
+            &:focus {
                 outline: none !important;
             }
         }
-        .search-icon{
+
+        .search-icon {
             color: $white !important;
         }
     }
-    .top-header-inner{
+
+    .top-header-inner {
         box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.3) !important;
     }
 
-    
-    
+
+
 }
 
-.full-gray-bg{
+.full-gray-bg {
     background: $gray;
 }
-.full-black-bg{
+
+.full-black-bg {
     background: $blackbg;
-    h1{
+
+    h1 {
         color: $white !important;
     }
+
+    .card {
+        background: #a26af5;
+    }
 }
-.full-purple-bg{
+
+.full-purple-bg {
     background: $purple;
 }
+
 .wrapper {
-   
+
     min-height: 100vh;
     position: relative;
     top: 0;
     height: 100vh;
     overflow: hidden;
 
-    .custom-col-1{
+    .custom-col-1 {
         width: 76px;
     }
-    .custom-col-11{
+
+    .custom-col-11 {
         width: calc(100% - 76px);
     }
-    .custom-col-3{
+
+    .custom-col-3 {
         width: 250px;
     }
-    .custom-col-9{
+
+    .custom-col-9 {
         width: calc(100% - 250px);
     }
+
     .sidebar {
         box-shadow: 4px 4px 10px rgba(69, 65, 78, .06);
         transition: all 0.5s ease;
         position: relative;
         height: 100vh;
+
         .inner {
             height: 100%;
 
@@ -166,10 +194,12 @@
                         align-items: center;
                         column-gap: 10px;
                         flex-wrap: nowrap;
+
                         .bigsidebar {
                             display: none;
                         }
-                        .sidebarclose{
+
+                        .sidebarclose {
                             display: none;
                         }
                     }
@@ -229,7 +259,7 @@
                     }
                 }
 
-                
+
 
                 .navsubitems {
                     padding-left: 80px;
@@ -309,7 +339,7 @@
                 scrollbar-width: thin;
                 /* Make the scrollbar thinner */
                 scrollbar-color: $gray $white;
-              
+
                 /* Thumb color, Track color */
             }
 
@@ -323,9 +353,11 @@
 
     .main-panel {
         transition: all 0.5s ease;
-        .responsivetopheader{
+
+        .responsivetopheader {
             display: none;
         }
+
         .top-header-inner {
             height: 70px;
             display: flex;
@@ -336,30 +368,35 @@
             top: 0;
             box-shadow: 4px 4px 10px rgba(69, 65, 78, .06);
             z-index: 1;
+
             .logo {
                 width: 50px;
-                
+
                 img {
                     width: 40px;
                 }
             }
-            .topbarlogo{
+
+            .topbarlogo {
                 display: none;
             }
-            #toggleBar{
-                display: none ;
-               
+
+            #toggleBar {
+                display: none;
+
             }
+
             .left {
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
                 column-gap: 20px;
-               
+
                 .topbar-item {
                     padding: 12px 9px;
                     border-radius: 5px;
                     transition: all .3s ease;
+
                     &:hover {
                         background: $gray;
 
@@ -369,9 +406,9 @@
                         color: $blackbg;
 
                     }
-                  
+
                 }
-             
+
                 .search-area {
                     max-width: 300px;
                     width: 100%;
@@ -488,7 +525,7 @@
                         left: 50%;
                         transform: translateX(-50%);
                         border-radius: 10px;
-                        min-width: 250px;
+                        min-width: 240px;
                         width: 100%;
                         box-shadow: 0 4px 10px rgba(69, 69, 0, .6);
                         z-index: 3;
@@ -828,25 +865,28 @@
     .inner {
         position: relative;
         width: 250px;
-        .setting-area-title{
+
+        .setting-area-title {
             height: 60px;
             background: $blue;
             padding: 20px 0 0 20px;
             border-radius: 10px 0 0 0;
             margin-bottom: 20px;
-            h2{
+
+            h2 {
                 font-size: 20px;
                 font-family: $roboto;
                 font-weight: 500;
                 text-transform: capitalize;
                 color: $white;
-                
+
             }
         }
 
         .color-changer {
             margin-bottom: 10px;
             padding-left: 20px;
+
             h1 {
                 font-size: 14px;
                 font-family: $roboto;
@@ -869,6 +909,7 @@
             .white {
                 background: $white;
             }
+
             .gray {
                 background: $gray;
             }
@@ -911,68 +952,121 @@
 @media screen and (max-width: 991px) {
     .wrapper {
         .sidebar {
-            
-            .side-bar-logo-area{
-                .sidebarlogo{
-                    display: none ;
-                   }
+
+            .side-bar-logo-area {
+                .sidebarlogo {
+                    display: none;
+                }
             }
-            .sortsidebar{
+
+            .sortsidebar {
                 display: none;
             }
-            
-           .submenuitem{
-            display: none;
-           }
-           .navitem-text{
-            display: none;
-           }
-           
+
+            .submenuitem {
+                display: none;
+            }
+
+            .navitem-text {
+                display: none;
+            }
+
         }
-        #toggleBar{
+
+        #toggleBar {
             display: block !important;
-            button{
+
+            button {
                 font-size: 25px;
-                .closeicon{
+
+                .closeicon {
                     display: none;
                 }
             }
         }
-        .topbarlogo{
-            display: block !important;
-           }
 
-           .main-panel{
-                .topheaderhide{
-                    .top-header-inner{
-                        column-gap: 20px;
-                        .right{
-                            display: none;
+        .topbarlogo {
+            display: block !important;
+        }
+
+        .main-panel {
+            .topheaderhide {
+                .top-header-inner {
+                    column-gap: 20px;
+
+                    .right {
+                        display: none;
+                    }
+                }
+            }
+
+            .responsivetopheader {
+                position: absolute;
+                top: 76px;
+                right: 5px;
+                z-index: 2;
+
+                .top-header-inner {
+                    height: fit-content !important;
+                    max-width: 240px;
+                    padding: 20px 5px;
+                    width: 100%;
+                    box-shadow: 0 4px 10px rgba(69, 69, 0, 0.6);
+                    border-radius: 7px;
+
+                    .right {
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        row-gap: 20px;
+                        column-gap: 0;
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+        .main-panel {
+            .main-body-wrapper {
+                .main-body-header {
+                    flex-direction: column;
+                    row-gap: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .wrapper {
+        .main-panel {
+            .main-body-wrapper {
+                .main-body-header {
+                    .button-area {
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .wrapper {
+        .main-panel {
+            .top-header-inner {
+                .right {
+                    .topbar-item {
+                        .information-details-area {
+                            min-width: 200px;
                         }
                     }
                 }
-                .responsivetopheader{
-                    position: absolute;
-                    top: 76px;
-                    right: 5px;
-                    z-index: 1;
-                   
-                    .top-header-inner{
-                        height: fit-content !important;
-                        max-width: 240px;
-                        padding: 20px 5px;
-                        width: 100%;
-                        box-shadow: 0 4px 10px rgba(69, 69, 0, 0.6);
-                        border-radius: 7px;
-                        .right{
-                            flex-wrap: wrap;
-                            justify-content: space-between;
-                            row-gap: 20px;
-                            column-gap: 0;
-                            
-                        }
-                    }
-                }
-           }
+            }
+        }
+
     }
 }
