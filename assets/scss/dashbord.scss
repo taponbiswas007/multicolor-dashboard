@@ -215,9 +215,22 @@
 
     .student-absent-table-wrapper {
         background: $purple;
-        .student-details{
+
+        .student-details {
             background: #2a2f5b;
             color: $white !important;
+        }
+    }
+
+    .details-main-area{
+        .details{
+            background: $black !important;
+            .studentid{
+                background: $black !important;
+            }
+            .listitem{
+                color: $white !important;
+            }
         }
     }
 }
@@ -241,6 +254,7 @@
     .custom-col-11 {
         width: calc(100% - 76px);
     }
+
     .custom-col-0 {
         width: 0;
     }
@@ -479,9 +493,11 @@
                 display: none;
 
             }
+
             #lefttoggleBar {
                 display: none;
-                .closeicon{
+
+                .closeicon {
                     display: none;
                 }
 
@@ -984,6 +1000,7 @@
                 border-radius: 10px;
                 height: 435px;
                 margin-top: 20px;
+
                 .inner {
                     min-height: 365px;
 
@@ -1130,50 +1147,162 @@
                     margin-bottom: 20px;
                     font-weight: 600;
                 }
-                .student-details{
-                    box-shadow: 2px 6px 15px 0 rgba(69, 65, 78, 0.2);
-                    border-radius: 8px;
-                    padding: 10px 20px;
-                    ul{
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        column-gap: 20px;
-                        li{
-                            font-size: 14px;
-                            font-family: $inter;
-                            font-weight: 400;
-                            text-transform: capitalize;
-                            img{
-                                width: 50px;
-                                height: 50px;
-                                border-radius: 50%;
-                                background: $blue;
-                                padding: 2px;
-                            }
-                            button{
+
+                .details-main-area {
+                    overflow: scroll;
+                    height: 440px;
+
+                    .details {
+                        box-shadow: 0 0 15px 2px rgba(69, 65, 78, 0.2);
+                        border-radius: 8px;
+                        min-width: 768px;
+                        margin: 10px;
+                        padding-right: 10px;
+                        background: $white;
+
+                        ul {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            column-gap: 10px;
+                            position: relative;
+
+                            .studentid {
+                                position: sticky;
+                                left: 0;
+                                top: 0;
+                                padding: 25px;
                                 background: $white;
-                                padding: 10px;
-                                border-radius: 4px;
-                                color: $blue;
+                                border-radius: 8px 0 0 8px;
+                                /* Applying multiple box-shadows */
+                                box-shadow:
+                                    -15px 0 15px -10px rgba(69, 65, 78, 0.2),
+                                    /* Left shadow */
+                                    0 -15px 15px -10px rgba(69, 65, 78, 0.2),
+                                    /* Top shadow */
+                                    0 15px 15px -10px rgba(69, 65, 78, 0.2);
+                                /* Bottom shadow */
+
+
+                            }
+
+                            li {
+                                font-size: 14px;
+                                font-family: $inter;
+                                font-weight: 400;
                                 text-transform: capitalize;
-                                box-shadow: 2px 6px 15px 0 rgba(69, 65, 78, 0.2);
-                                transition: all .3s ease;
-                                &:hover{
-                                    background: #888;
+                                vertical-align: middle;
+
+                                img {
+                                    width: 50px;
+                                    height: 50px;
+                                    border-radius: 50%;
+                                    background: $blue;
+                                    padding: 2px;
+                                }
+
+                                button {
+                                    background: $white;
+                                    padding: 10px;
+                                    border-radius: 4px;
+                                    color: $blue;
+                                    text-transform: capitalize;
+                                    box-shadow: 2px 6px 15px 0 rgba(69, 65, 78, 0.2);
+                                    transition: all .3s ease;
+
+                                    &:hover {
+                                        background: #888;
+                                        color: $white;
+                                    }
+                                }
+
+                                span {
+                                    
+                                    padding: 5px 10px;
+                                    border-radius: 5px;
                                     color: $white;
                                 }
+                                .statusactive{
+                                    background: $green;
+                                }
+                                .statusinactive{
+                                    background: $red;
+                                }
+
+                                // #absentStudentcontactbar{
+                                //     display: none;
+                                // }
                             }
-                            span{
-                                background: $green;
-                                padding: 10px;
-                                border-radius: 5px;
-                                color: $white;
+                        }
+
+                        .listarea {
+                            .listitem {
+                                &:nth-child(1) {
+                                    min-width: 70px;
+                                }
+
+                                &:nth-child(2) {
+                                    min-width: 50px;
+                                }
+
+                                &:nth-child(3) {
+                                    min-width: 120px;
+                                }
+
+                                &:nth-child(4) {
+                                    min-width: 70px;
+                                }
+
+                                &:nth-child(5) {
+                                    min-width: 40px;
+                                }
+
+                                &:nth-child(6) {
+                                    min-width: 120px;
+                                }
+
                             }
                         }
                     }
                 }
-               
+
+                /* WebKit-based browsers (Chrome, Safari, Edge) */
+                .details-main-area::-webkit-scrollbar {
+                    width: 12px;
+                    /* Adjust the width of the scrollbar */
+                }
+
+                .details-main-area::-webkit-scrollbar-track {
+                    background: $white;
+                    /* Background color of the scrollbar track */
+                }
+
+                .details-main-area::-webkit-scrollbar-thumb {
+                    background: #888;
+                    /* Color of the scrollbar thumb */
+                    border-radius: 6px;
+                    /* Optional: round the corners of the scrollbar thumb */
+                }
+
+                .details-main-area::-webkit-scrollbar-thumb:hover {
+                    background: #555;
+                    /* Color when hovered */
+                }
+
+                /* Firefox */
+                .details-main-area {
+                    scrollbar-width: thin;
+                    /* Make the scrollbar thinner */
+                    scrollbar-color: #888 $white;
+                    /* Thumb color, Track color */
+                }
+
+                /* Internet Explorer 10+ and Edge (older versions) */
+                .details-main-area {
+                    -ms-overflow-style: -ms-autohiding-scrollbar;
+                }
+
+
 
             }
         }
@@ -1353,9 +1482,10 @@
                 }
             }
         }
+
         #lefttoggleBar {
             display: block !important;
-           
+
             button {
                 font-size: 25px;
 
@@ -1416,6 +1546,19 @@
                     flex-direction: column;
                     row-gap: 30px;
                 }
+
+                // #absentStudentcontactbar{
+                //     display: block !important;
+                // }
+                // #absentStudentContactitems{
+                //     position: absolute;
+                //     right: 42px;
+                //     z-index: 1;
+                //     top: 50%;
+                //     transform: translateY(-50%);
+                //     background: $white;
+                //     padding: 10px;
+                // }
             }
         }
     }

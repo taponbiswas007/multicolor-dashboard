@@ -226,25 +226,25 @@
                     <!-- top nav area start -->
                     <div class="top-header white-bg topheaderhide" id="topheader">
                         <div class="top-header-inner">
-                           <div class="logo-and-left-bar-side d-flex align-items-center">
-                             <!-- logo area start -->
-                            <div class="logo topbarlogo">
-                                <a href="#">
-                                    <img src="assets/images/logo.png" alt="logo">
-                                </a>
-                            </div>
-                            <!-- logo area end -->
+                            <div class="logo-and-left-bar-side d-flex align-items-center">
+                                <!-- logo area start -->
+                                <div class="logo topbarlogo">
+                                    <a href="#">
+                                        <img src="assets/images/logo.png" alt="logo">
+                                    </a>
+                                </div>
+                                <!-- logo area end -->
 
-                               <!-- toggle bar area -->
-                            <div class="topbar-item" id="lefttoggleBar">
-                                <button>
-                                    <i class="fa-regular fa-bars baricon"></i>
-                                    <i class="fa-regular fa-xmark closeicon"></i>
-                                </button>
+                                <!-- toggle bar area -->
+                                <div class="topbar-item" id="lefttoggleBar">
+                                    <button>
+                                        <i class="fa-regular fa-bars baricon"></i>
+                                        <i class="fa-regular fa-xmark closeicon"></i>
+                                    </button>
+                                </div>
+                                <!-- toggle bar area end -->
                             </div>
-                            <!-- toggle bar area end -->
-                           </div>
-                           
+
                             <div class="left">
                                 <!-- search area start -->
                                 <div class="search-area">
@@ -258,7 +258,7 @@
                             <div class="topbar-item" id="toggleBar">
                                 <button>
                                     <i class="fa-light fa-ellipsis-stroke-vertical"></i>
-                                   
+
                                 </button>
                             </div>
                             <!-- toggle bar area end -->
@@ -819,7 +819,7 @@
                             </div>
                             <div class="col-xl-7 col-12">
                                 <div class="row">
-                                    <div  class="col-12 col-sm-6">
+                                    <div class="col-12 col-sm-6">
                                         <div class="estimated-fee-area">
                                             <div class="inner">
                                                 <h1>estimated fee this month</h1>
@@ -885,27 +885,224 @@
                                 <!-- student absent table start -->
                                 <div class="student-absent-table-wrapper">
                                     <h1>absent students</h1>
-                                    <div class="student-details">
-                                        <ul>
-                                            <li>#14521</li>
-                                            <li><img src="assets/images/pp.png" alt="img"></li>
-                                            <li>tapon chandra sarker</li>
-                                            <li>class - 7</li>
-                                            <li><span>active</span></li>
-                                            <li><button>application</button></li>
-                                            <li>
-                                                <ul>
-                                                    <li><button><i class="fa-light fa-phone"></i></button></li>
-                                                    <li><button><i class="fa-light fa-message"></i></button></li>
-                                                </ul>
-                                            </li>
-                                            
-                                        </ul>
+                                    <div class="details-main-area">
+                                        <div class="details">
+                                            <ul class="listarea">
+                                                <li class="studentid listitem">#14521</li>
+                                                <li class="listitem"><img src="assets/images/pp.png" alt="img"></li>
+                                                <li class="listitem">tapon chandra sarker</li>
+                                                <li class="listitem">class - 7</li>
+                                                <li class="listitem"><span class="statusactive"><i
+                                                            class="fa-sharp fa-light fa-circle-check"></i></span></li>
+                                                <li class="listitem" id="absentStudentContactitems">
+                                                    <ul>
+                                                        <li><button><i class="fa-light fa-phone"></i></button></li>
+                                                        <li><button><i class="fa-light fa-message"></i></button></li>
+                                                        <li><button><i class="fa-thin fa-file-pdf"></i></button></li>
+                                                    </ul>
+                                                </li>
+                                                <!-- <li><button id="absentStudentcontactbar"><i class="fa-regular fa-ellipsis-vertical"></i></button></li> -->
+                                            </ul>
+                                        </div>
+                                        <div class="details">
+                                            <ul class="listarea">
+                                                <li class="studentid listitem">#14521</li>
+                                                <li class="listitem"><img src="assets/images/pp.png" alt="img"></li>
+                                                <li class="listitem">tapon chandra sarker</li>
+                                                <li class="listitem">class - 7</li>
+                                                <li class="listitem"><span class="statusinactive"><i class="fa-light fa-x"></i></span></li>
+                                                <li class="listitem" id="absentStudentContactitems">
+                                                    <ul>
+                                                        <li><button><i class="fa-light fa-phone"></i></button></li>
+                                                        <li><button><i class="fa-light fa-message"></i></button></li>
+                                                        <li><button><i class="fa-thin fa-file-pdf"></i></button></li>
+                                                    </ul>
+                                                </li>
+                                                <!-- <li><button id="absentStudentcontactbar"><i class="fa-regular fa-ellipsis-vertical"></i></button></li> -->
+                                            </ul>
+                                        </div>
+                                        <div class="details">
+                                            <ul class="listarea">
+                                                <li class="studentid listitem">#14521</li>
+                                                <li class="listitem"><img src="assets/images/pp.png" alt="img"></li>
+                                                <li class="listitem">tapon chandra sarker</li>
+                                                <li class="listitem">class - 7</li>
+                                                <li class="listitem"><span class="statusactive"><i
+                                                            class="fa-sharp fa-light fa-circle-check"></i></span></li>
+                                                <li class="listitem" id="absentStudentContactitems">
+                                                    <ul>
+                                                        <li><button><i class="fa-light fa-phone"></i></button></li>
+                                                        <li><button><i class="fa-light fa-message"></i></button></li>
+                                                        <li><button><i class="fa-thin fa-file-pdf"></i></button></li>
+                                                    </ul>
+                                                </li>
+                                                <!-- <li><button id="absentStudentcontactbar"><i class="fa-regular fa-ellipsis-vertical"></i></button></li> -->
+                                            </ul>
+                                        </div>
+                                        <div class="details">
+                                            <ul class="listarea">
+                                                <li class="studentid listitem">#14521</li>
+                                                <li class="listitem"><img src="assets/images/pp.png" alt="img"></li>
+                                                <li class="listitem">tapon chandra sarker</li>
+                                                <li class="listitem">class - 7</li>
+                                                <li class="listitem"><span class="statusactive"><i
+                                                            class="fa-sharp fa-light fa-circle-check"></i></span></li>
+                                                <li class="listitem" id="absentStudentContactitems">
+                                                    <ul>
+                                                        <li><button><i class="fa-light fa-phone"></i></button></li>
+                                                        <li><button><i class="fa-light fa-message"></i></button></li>
+                                                        <li><button><i class="fa-thin fa-file-pdf"></i></button></li>
+                                                    </ul>
+                                                </li>
+                                                <!-- <li><button id="absentStudentcontactbar"><i class="fa-regular fa-ellipsis-vertical"></i></button></li> -->
+                                            </ul>
+                                        </div>
+                                        <div class="details">
+                                            <ul class="listarea">
+                                                <li class="studentid listitem">#14521</li>
+                                                <li class="listitem"><img src="assets/images/pp.png" alt="img"></li>
+                                                <li class="listitem">tapon chandra sarker</li>
+                                                <li class="listitem">class - 7</li>
+                                                <li class="listitem"><span class="statusinactive"><i class="fa-light fa-x"></i></span></li>
+                                                <li class="listitem" id="absentStudentContactitems">
+                                                    <ul>
+                                                        <li><button><i class="fa-light fa-phone"></i></button></li>
+                                                        <li><button><i class="fa-light fa-message"></i></button></li>
+                                                        <li><button><i class="fa-thin fa-file-pdf"></i></button></li>
+                                                    </ul>
+                                                </li>
+                                                <!-- <li><button id="absentStudentcontactbar"><i class="fa-regular fa-ellipsis-vertical"></i></button></li> -->
+                                            </ul>
+                                        </div>
+                                        <div class="details">
+                                            <ul class="listarea">
+                                                <li class="studentid listitem">#14521</li>
+                                                <li class="listitem"><img src="assets/images/pp.png" alt="img"></li>
+                                                <li class="listitem">tapon chandra sarker</li>
+                                                <li class="listitem">class - 7</li>
+                                                <li class="listitem"><span class="statusactive"><i
+                                                            class="fa-sharp fa-light fa-circle-check"></i></span></li>
+                                                <li class="listitem" id="absentStudentContactitems">
+                                                    <ul>
+                                                        <li><button><i class="fa-light fa-phone"></i></button></li>
+                                                        <li><button><i class="fa-light fa-message"></i></button></li>
+                                                        <li><button><i class="fa-thin fa-file-pdf"></i></button></li>
+                                                    </ul>
+                                                </li>
+                                                <!-- <li><button id="absentStudentcontactbar"><i class="fa-regular fa-ellipsis-vertical"></i></button></li> -->
+                                            </ul>
+                                        </div>
+                                        <div class="details">
+                                            <ul class="listarea">
+                                                <li class="studentid listitem">#14521</li>
+                                                <li class="listitem"><img src="assets/images/pp.png" alt="img"></li>
+                                                <li class="listitem">tapon chandra sarker</li>
+                                                <li class="listitem">class - 7</li>
+                                                <li class="listitem"><span class="statusactive"><i
+                                                            class="fa-sharp fa-light fa-circle-check"></i></span></li>
+                                                <li class="listitem" id="absentStudentContactitems">
+                                                    <ul>
+                                                        <li><button><i class="fa-light fa-phone"></i></button></li>
+                                                        <li><button><i class="fa-light fa-message"></i></button></li>
+                                                        <li><button><i class="fa-thin fa-file-pdf"></i></button></li>
+                                                    </ul>
+                                                </li>
+                                                <!-- <li><button id="absentStudentcontactbar"><i class="fa-regular fa-ellipsis-vertical"></i></button></li> -->
+                                            </ul>
+                                        </div>
+                                        <div class="details">
+                                            <ul class="listarea">
+                                                <li class="studentid listitem">#14521</li>
+                                                <li class="listitem"><img src="assets/images/pp.png" alt="img"></li>
+                                                <li class="listitem">tapon chandra sarker</li>
+                                                <li class="listitem">class - 7</li>
+                                                <li class="listitem"><span class="statusinactive"><i class="fa-light fa-x"></i></span></li>
+                                                <li class="listitem" id="absentStudentContactitems">
+                                                    <ul>
+                                                        <li><button><i class="fa-light fa-phone"></i></button></li>
+                                                        <li><button><i class="fa-light fa-message"></i></button></li>
+                                                        <li><button><i class="fa-thin fa-file-pdf"></i></button></li>
+                                                    </ul>
+                                                </li>
+                                                <!-- <li><button id="absentStudentcontactbar"><i class="fa-regular fa-ellipsis-vertical"></i></button></li> -->
+                                            </ul>
+                                        </div>
+                                        <div class="details">
+                                            <ul class="listarea">
+                                                <li class="studentid listitem">#14521</li>
+                                                <li class="listitem"><img src="assets/images/pp.png" alt="img"></li>
+                                                <li class="listitem">tapon chandra sarker</li>
+                                                <li class="listitem">class - 7</li>
+                                                <li class="listitem"><span class="statusactive"><i
+                                                            class="fa-sharp fa-light fa-circle-check"></i></span></li>
+                                                <li class="listitem" id="absentStudentContactitems">
+                                                    <ul>
+                                                        <li><button><i class="fa-light fa-phone"></i></button></li>
+                                                        <li><button><i class="fa-light fa-message"></i></button></li>
+                                                        <li><button><i class="fa-thin fa-file-pdf"></i></button></li>
+                                                    </ul>
+                                                </li>
+                                                <!-- <li><button id="absentStudentcontactbar"><i class="fa-regular fa-ellipsis-vertical"></i></button></li> -->
+                                            </ul>
+                                        </div>
+                                        <div class="details">
+                                            <ul class="listarea">
+                                                <li class="studentid listitem">#14521</li>
+                                                <li class="listitem"><img src="assets/images/pp.png" alt="img"></li>
+                                                <li class="listitem">tapon chandra sarker</li>
+                                                <li class="listitem">class - 7</li>
+                                                <li class="listitem"><span class="statusactive"><i
+                                                            class="fa-sharp fa-light fa-circle-check"></i></span></li>
+                                                <li class="listitem" id="absentStudentContactitems">
+                                                    <ul>
+                                                        <li><button><i class="fa-light fa-phone"></i></button></li>
+                                                        <li><button><i class="fa-light fa-message"></i></button></li>
+                                                        <li><button><i class="fa-thin fa-file-pdf"></i></button></li>
+                                                    </ul>
+                                                </li>
+                                                <!-- <li><button id="absentStudentcontactbar"><i class="fa-regular fa-ellipsis-vertical"></i></button></li> -->
+                                            </ul>
+                                        </div>
+                                        <div class="details">
+                                            <ul class="listarea">
+                                                <li class="studentid listitem">#14521</li>
+                                                <li class="listitem"><img src="assets/images/pp.png" alt="img"></li>
+                                                <li class="listitem">tapon chandra sarker</li>
+                                                <li class="listitem">class - 7</li>
+                                                <li class="listitem"><span class="statusinactive"><i class="fa-light fa-x"></i></span></li>
+                                                <li class="listitem" id="absentStudentContactitems">
+                                                    <ul>
+                                                        <li><button><i class="fa-light fa-phone"></i></button></li>
+                                                        <li><button><i class="fa-light fa-message"></i></button></li>
+                                                        <li><button><i class="fa-thin fa-file-pdf"></i></button></li>
+                                                    </ul>
+                                                </li>
+                                                <!-- <li><button id="absentStudentcontactbar"><i class="fa-regular fa-ellipsis-vertical"></i></button></li> -->
+                                            </ul>
+                                        </div>
+                                        <div class="details">
+                                            <ul class="listarea">
+                                                <li class="studentid listitem">#14521</li>
+                                                <li class="listitem"><img src="assets/images/pp.png" alt="img"></li>
+                                                <li class="listitem">tapon chandra sarker</li>
+                                                <li class="listitem">class - 7</li>
+                                                <li class="listitem"><span class="statusactive"><i
+                                                            class="fa-sharp fa-light fa-circle-check"></i></span></li>
+                                                <li class="listitem" id="absentStudentContactitems">
+                                                    <ul>
+                                                        <li><button><i class="fa-light fa-phone"></i></button></li>
+                                                        <li><button><i class="fa-light fa-message"></i></button></li>
+                                                        <li><button><i class="fa-thin fa-file-pdf"></i></button></li>
+                                                    </ul>
+                                                </li>
+                                                <!-- <li><button id="absentStudentcontactbar"><i class="fa-regular fa-ellipsis-vertical"></i></button></li> -->
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                                 <!-- student absent table end -->
                             </div>
-                            
+
                         </div>
                     </div>
 

@@ -294,6 +294,15 @@ a {
   background: #2a2f5b;
   color: #ffffff !important;
 }
+.full-black-bg .details-main-area .details {
+  background: #000000 !important;
+}
+.full-black-bg .details-main-area .details .studentid {
+  background: #000000 !important;
+}
+.full-black-bg .details-main-area .details .listitem {
+  color: #ffffff !important;
+}
 
 .full-purple-bg {
   background: #6610f2;
@@ -1172,6 +1181,9 @@ a {
   padding: 30px;
   width: 100%;
   border-radius: 10px;
+  /* WebKit-based browsers (Chrome, Safari, Edge) */
+  /* Firefox */
+  /* Internet Explorer 10+ and Edge (older versions) */
 }
 .wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper h1 {
   font-size: 20px;
@@ -1180,13 +1192,20 @@ a {
   margin-bottom: 20px;
   font-weight: 600;
 }
-.wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .student-details {
-  -webkit-box-shadow: 2px 6px 15px 0 rgba(69, 65, 78, 0.2);
-          box-shadow: 2px 6px 15px 0 rgba(69, 65, 78, 0.2);
-  border-radius: 8px;
-  padding: 10px 20px;
+.wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .details-main-area {
+  overflow: scroll;
+  height: 440px;
 }
-.wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .student-details ul {
+.wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .details-main-area .details {
+  -webkit-box-shadow: 0 0 15px 2px rgba(69, 65, 78, 0.2);
+          box-shadow: 0 0 15px 2px rgba(69, 65, 78, 0.2);
+  border-radius: 8px;
+  min-width: 768px;
+  margin: 10px;
+  padding-right: 10px;
+  background: #ffffff;
+}
+.wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .details-main-area .details ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1196,24 +1215,38 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-column-gap: 20px;
-     -moz-column-gap: 20px;
-          column-gap: 20px;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+  position: relative;
 }
-.wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .student-details ul li {
+.wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .details-main-area .details ul .studentid {
+  position: sticky;
+  left: 0;
+  top: 0;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 8px 0 0 8px;
+  /* Applying multiple box-shadows */
+  -webkit-box-shadow: -15px 0 15px -10px rgba(69, 65, 78, 0.2), 0 -15px 15px -10px rgba(69, 65, 78, 0.2), 0 15px 15px -10px rgba(69, 65, 78, 0.2);
+          box-shadow: -15px 0 15px -10px rgba(69, 65, 78, 0.2), 0 -15px 15px -10px rgba(69, 65, 78, 0.2), 0 15px 15px -10px rgba(69, 65, 78, 0.2);
+  /* Bottom shadow */
+}
+.wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .details-main-area .details ul li {
   font-size: 14px;
   font-family: "Inter", sans-serif;
   font-weight: 400;
   text-transform: capitalize;
+  vertical-align: middle;
 }
-.wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .student-details ul li img {
+.wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .details-main-area .details ul li img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
   background: #00025c;
   padding: 2px;
 }
-.wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .student-details ul li button {
+.wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .details-main-area .details ul li button {
   background: #ffffff;
   padding: 10px;
   border-radius: 4px;
@@ -1224,15 +1257,65 @@ a {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-.wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .student-details ul li button:hover {
+.wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .details-main-area .details ul li button:hover {
   background: #888;
   color: #ffffff;
 }
-.wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .student-details ul li span {
-  background: #20c997;
-  padding: 10px;
+.wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .details-main-area .details ul li span {
+  padding: 5px 10px;
   border-radius: 5px;
   color: #ffffff;
+}
+.wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .details-main-area .details ul li .statusactive {
+  background: #20c997;
+}
+.wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .details-main-area .details ul li .statusinactive {
+  background: #910101;
+}
+.wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .details-main-area .details .listarea .listitem:nth-child(1) {
+  min-width: 70px;
+}
+.wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .details-main-area .details .listarea .listitem:nth-child(2) {
+  min-width: 50px;
+}
+.wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .details-main-area .details .listarea .listitem:nth-child(3) {
+  min-width: 120px;
+}
+.wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .details-main-area .details .listarea .listitem:nth-child(4) {
+  min-width: 70px;
+}
+.wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .details-main-area .details .listarea .listitem:nth-child(5) {
+  min-width: 40px;
+}
+.wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .details-main-area .details .listarea .listitem:nth-child(6) {
+  min-width: 120px;
+}
+.wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .details-main-area::-webkit-scrollbar {
+  width: 12px;
+  /* Adjust the width of the scrollbar */
+}
+.wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .details-main-area::-webkit-scrollbar-track {
+  background: #ffffff;
+  /* Background color of the scrollbar track */
+}
+.wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .details-main-area::-webkit-scrollbar-thumb {
+  background: #888;
+  /* Color of the scrollbar thumb */
+  border-radius: 6px;
+  /* Optional: round the corners of the scrollbar thumb */
+}
+.wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .details-main-area::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  /* Color when hovered */
+}
+.wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .details-main-area {
+  scrollbar-width: thin;
+  /* Make the scrollbar thinner */
+  scrollbar-color: #888 #ffffff;
+  /* Thumb color, Track color */
+}
+.wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .details-main-area {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 .wrapper .main-panel .main-body-wrapper::-webkit-scrollbar {
   width: 12px;
