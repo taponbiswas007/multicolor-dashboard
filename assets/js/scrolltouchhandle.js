@@ -33,10 +33,10 @@ $(document).ready(function() {
                         $element.scrollLeft(scrollLeft - distance);
                     }
                     if (direction === "up") { // Handle vertical scroll up
-                        $element.scrollTop(scrollTop - distance);
+                        $element.scrollTop(scrollTop + distance);
                     }
                     if (direction === "down") { // Handle vertical scroll down
-                        $element.scrollTop(scrollTop + distance);
+                        $element.scrollTop(scrollTop - distance);
                     }
                     updateScrollEffect();
                 }
