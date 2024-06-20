@@ -23,7 +23,7 @@ $(document).ready(function() {
         $element.swipe({
             swipeStatus: function(event, phase, direction, distance, duration, fingers) {
                 var scrollLeft = $element.scrollLeft();
-                var scrollTop = $element.scrollTop(); // Capture scrollTop for vertical scroll
+                var scrollTop = $element.scrollTop();
         
                 if (phase === "move") {
                     if (direction === "left") {
@@ -32,10 +32,10 @@ $(document).ready(function() {
                     if (direction === "right") {
                         $element.scrollLeft(scrollLeft - distance);
                     }
-                    if (direction === "up") { // Handle vertical scroll up
+                    if (direction === "up") {
                         $element.scrollTop(scrollTop + distance);
                     }
-                    if (direction === "down") { // Handle vertical scroll down
+                    if (direction === "down") {
                         $element.scrollTop(scrollTop - distance);
                     }
                     updateScrollEffect();
@@ -45,14 +45,17 @@ $(document).ready(function() {
             fingers: 'all'
         });
         
-
         $element.on('touchstart', function(e) {
             var startX = e.originalEvent.touches[0].pageX;
+            var startY = e.originalEvent.touches[0].pageY;
             var scrollLeft = $element.scrollLeft();
+            var scrollTop = $element.scrollTop();
         
             $(document).on('touchmove.detailsMainArea', function(e) {
                 var x = e.originalEvent.touches[0].pageX;
+                var y = e.originalEvent.touches[0].pageY;
                 $element.scrollLeft(scrollLeft - (x - startX));
+                $element.scrollTop(scrollTop - (y - startY));
                 updateScrollEffect();
             });
         
@@ -62,6 +65,7 @@ $(document).ready(function() {
         
             return false;
         });
+        
         
 
         $element.on('scroll', function() {
