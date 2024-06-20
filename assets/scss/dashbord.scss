@@ -1139,7 +1139,7 @@
                 padding: 30px;
                 width: 100%;
                 border-radius: 10px;
-
+                position: relative;
                 h1 {
                     font-size: 20px;
                     font-family: $roboto;
@@ -1151,7 +1151,8 @@
                 .details-main-area {
                     overflow: scroll;
                     height: 440px;
-
+                    position: relative;
+                    cursor: pointer;
                     .details {
                         box-shadow: 0 0 15px 2px rgba(69, 65, 78, 0.2);
                         border-radius: 8px;
@@ -1174,14 +1175,14 @@
                                 padding: 25px;
                                 background: $white;
                                 border-radius: 8px 0 0 8px;
-                                /* Applying multiple box-shadows */
-                                box-shadow:
-                                    -15px 0 15px -10px rgba(69, 65, 78, 0.2),
-                                    /* Left shadow */
-                                    0 -15px 15px -10px rgba(69, 65, 78, 0.2),
-                                    /* Top shadow */
-                                    0 15px 15px -10px rgba(69, 65, 78, 0.2);
-                                /* Bottom shadow */
+                              
+                                // box-shadow:
+                                //     -15px 0 15px -10px rgba(69, 65, 78, 0.2),
+                                   
+                                //     0 -15px 15px -10px rgba(69, 65, 78, 0.2),
+                                   
+                                //     0 15px 15px -10px rgba(69, 65, 78, 0.2);
+                              
 
 
                             }
@@ -1197,8 +1198,7 @@
                                     width: 50px;
                                     height: 50px;
                                     border-radius: 50%;
-                                    background: $blue;
-                                    padding: 2px;
+                                  
                                 }
 
                                 button {
@@ -1266,41 +1266,36 @@
                     }
                 }
 
-                /* WebKit-based browsers (Chrome, Safari, Edge) */
+                .details-main-area {
+                    position: relative;
+                    overflow: scroll;
+                    height: 440px;
+                    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+                    scrollbar-width: none;  /* Firefox */
+                }
                 .details-main-area::-webkit-scrollbar {
-                    width: 12px;
-                    /* Adjust the width of the scrollbar */
+                    display: none;  /* Safari and Chrome */
                 }
-
-                .details-main-area::-webkit-scrollbar-track {
-                    background: $white;
-                    /* Background color of the scrollbar track */
+                .scroll-gradient {
+                    position: absolute;
+                    top: 71px;
+                    bottom: 30px;
+                    width: 40px;
+                    pointer-events: none;
+                    transition: opacity 0.3s;
+                    z-index: 1;
                 }
-
-                .details-main-area::-webkit-scrollbar-thumb {
-                    background: #888;
-                    /* Color of the scrollbar thumb */
-                    border-radius: 6px;
-                    /* Optional: round the corners of the scrollbar thumb */
+                .scroll-gradient.left {
+                    left: 108px;
+                    background: linear-gradient(to right, rgba(0, 0, 0, .06), rgba(255, 255, 255, 0));
+                    opacity: 0;
                 }
-
-                .details-main-area::-webkit-scrollbar-thumb:hover {
-                    background: #555;
-                    /* Color when hovered */
+                .scroll-gradient.right {
+                    right: 31px;
+                    background: linear-gradient(to left, rgba(0, 0, 0, 0.06), rgba(255, 255, 255, 0));
+                    opacity: 1;
                 }
-
-                /* Firefox */
-                .details-main-area {
-                    scrollbar-width: thin;
-                    /* Make the scrollbar thinner */
-                    scrollbar-color: #888 $white;
-                    /* Thumb color, Track color */
-                }
-
-                /* Internet Explorer 10+ and Edge (older versions) */
-                .details-main-area {
-                    -ms-overflow-style: -ms-autohiding-scrollbar;
-                }
+                
 
 
 
