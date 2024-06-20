@@ -454,4 +454,38 @@ $(document).on('fullscreenchange webkitfullscreenchange mozfullscreenchange MSFu
     });
 
 
+    //filter area 
+        // Toggle the filter popup area on button click
+        $('.filterbtn').click(function(event) {
+            event.stopPropagation(); // Prevent the event from bubbling up to the document
+    
+            var $button = $(this);
+            var $container = $button.closest('.table-header-and-filter-area');
+            var $popup = $container.find('.filter-popup-area');
+    
+            // Hide all other popups
+            $('.filter-popup-area').not($popup).hide();
+    
+            // Toggle the clicked popup
+            $popup.toggle();
+        });
+    
+        // Hide the filter popup area when clicking outside of it
+        $(document).click(function(event) {
+            if (!$(event.target).closest('.filter-popup-area').length) {
+                $('.filter-popup-area').hide();
+            }
+        });
+    
+        // Prevent hiding the popup when clicking inside it
+        $('.filter-popup-area').click(function(event) {
+            event.stopPropagation();
+        });
+    
+    // Toggle the display of filteritemchack when its parent li is clicked
+    $('.filter-popup-area ul li').click(function() {
+        $(this).find('.filteritemchack').toggle();
+    });
+
+
 });

@@ -13,7 +13,7 @@ $(document).ready(function() {
                 $scrollGradientLeft.css('opacity', 1);
             }
 
-            if (scrollLeft >= maxScrollLeft) {
+            if (scrollLeft >= maxScrollLeft - 1) { // Use a small tolerance for Chrome
                 $scrollGradientRight.css('opacity', 0);
             } else {
                 $scrollGradientRight.css('opacity', 1);

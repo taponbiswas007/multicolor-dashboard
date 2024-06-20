@@ -174,7 +174,7 @@ a {
   color: #ffffff !important;
 }
 .black-bg h1 {
-  color: #ffffff;
+  color: #ffffff !important;
 }
 .black-bg .topbar-item:hover {
   background: #000000 !important;
@@ -182,6 +182,10 @@ a {
 }
 .black-bg .indicator {
   color: #1a2035 !important;
+}
+.black-bg .information-details-area {
+  -webkit-box-shadow: 0 4px 10px rgba(220, 220, 0, 0.6) !important;
+          box-shadow: 0 4px 10px rgba(220, 220, 0, 0.6) !important;
 }
 .black-bg .content {
   border-bottom: 2px solid #000000 !important;
@@ -234,6 +238,11 @@ a {
 
 .full-black-bg {
   background: #1a2035;
+}
+.full-black-bg .filter-popup-area {
+  background: #1a2035 !important;
+  -webkit-box-shadow: 0 4px 10px rgba(220, 220, 0, 0.6) !important;
+          box-shadow: 0 4px 10px rgba(220, 220, 0, 0.6) !important;
 }
 .full-black-bg h1 {
   color: #ffffff !important;
@@ -301,6 +310,9 @@ a {
   background: #000000 !important;
 }
 .full-black-bg .details-main-area .details .listitem {
+  color: #ffffff !important;
+}
+.full-black-bg ul li {
   color: #ffffff !important;
 }
 
@@ -1183,12 +1195,73 @@ a {
   border-radius: 10px;
   position: relative;
 }
-.wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper h1 {
+.wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .table-header-and-filter-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+.wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .table-header-and-filter-area h1 {
   font-size: 20px;
   font-family: "Roboto", sans-serif;
   text-transform: capitalize;
   margin-bottom: 20px;
   font-weight: 600;
+}
+.wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .table-header-and-filter-area button {
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 4px;
+  color: #00025c;
+  text-transform: capitalize;
+  -webkit-box-shadow: 2px 6px 15px 0 rgba(69, 65, 78, 0.2);
+          box-shadow: 2px 6px 15px 0 rgba(69, 65, 78, 0.2);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  margin-top: -15px;
+}
+.wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .table-header-and-filter-area button:hover {
+  background: #888;
+  color: #ffffff;
+}
+.wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .table-header-and-filter-area .filter-popup-area {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #ffffff;
+  -webkit-box-shadow: 0 4px 10px rgba(69, 69, 0, 0.6);
+          box-shadow: 0 4px 10px rgba(69, 69, 0, 0.6);
+  z-index: 5;
+  padding: 20px;
+  border-radius: 8px;
+  display: none;
+}
+.wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .table-header-and-filter-area .filter-popup-area h1 {
+  font-size: 15px;
+}
+.wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .table-header-and-filter-area .filter-popup-area ul {
+  padding-left: 20px;
+}
+.wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .table-header-and-filter-area .filter-popup-area ul li {
+  font-size: 13px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  text-transform: capitalize;
+  padding: 5px 5px;
+  cursor: pointer;
+}
+.wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .table-header-and-filter-area .filter-popup-area ul li:hover {
+  background: #f5f7fd;
+  color: #000000 !important;
+}
+.wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .table-header-and-filter-area .filter-popup-area ul li .filteritemchack {
+  display: none;
 }
 .wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .details-main-area {
   overflow: scroll;
@@ -1224,7 +1297,7 @@ a {
   position: sticky;
   left: 0;
   top: 0;
-  padding: 25px;
+  padding: 25px 10px;
   background: #ffffff;
   border-radius: 8px 0 0 8px;
 }
@@ -1267,7 +1340,7 @@ a {
   background: #910101;
 }
 .wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .details-main-area .details .listarea .listitem:nth-child(1) {
-  min-width: 70px;
+  width: 70px;
 }
 .wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .details-main-area .details .listarea .listitem:nth-child(2) {
   min-width: 50px;
@@ -1297,7 +1370,7 @@ a {
 .wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .scroll-gradient {
   position: absolute;
   top: 71px;
-  bottom: 30px;
+  bottom: 31px;
   width: 40px;
   pointer-events: none;
   -webkit-transition: opacity 0.3s;
@@ -1305,15 +1378,15 @@ a {
   z-index: 1;
 }
 .wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .scroll-gradient.left {
-  left: 108px;
+  left: 100px;
   background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.06)), to(rgba(255, 255, 255, 0)));
   background: linear-gradient(to right, rgba(0, 0, 0, 0.06), rgba(255, 255, 255, 0));
   opacity: 0;
 }
 .wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .scroll-gradient.right {
-  right: 31px;
-  background: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0.06)), to(rgba(255, 255, 255, 0)));
-  background: linear-gradient(to left, rgba(0, 0, 0, 0.06), rgba(255, 255, 255, 0));
+  right: 30px;
+  background: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0));
   opacity: 1;
 }
 .wrapper .main-panel .main-body-wrapper::-webkit-scrollbar {

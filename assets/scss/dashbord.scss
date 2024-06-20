@@ -51,7 +51,7 @@
     }
 
     h1 {
-        color: $white;
+        color: $white !important;
     }
 
     .topbar-item {
@@ -64,7 +64,9 @@
     .indicator {
         color: $blackbg !important;
     }
-
+    .information-details-area{
+        box-shadow: 0 4px 10px rgba(220, 220, 0, 0.6) !important;
+    }
     .content {
         border-bottom: 2px solid $black !important;
 
@@ -143,6 +145,10 @@
 
 .full-black-bg {
     background: $blackbg;
+   .filter-popup-area{
+    background: $blackbg !important;
+    box-shadow: 0 4px 10px rgba(220, 220, 0, 0.6) !important;
+   }
 
     h1 {
         color: $white !important;
@@ -231,6 +237,11 @@
             .listitem{
                 color: $white !important;
             }
+        }
+    }
+    ul{
+        li{
+            color: $white !important;
         }
     }
 }
@@ -1140,13 +1151,68 @@
                 width: 100%;
                 border-radius: 10px;
                 position: relative;
-                h1 {
-                    font-size: 20px;
-                    font-family: $roboto;
-                    text-transform: capitalize;
-                    margin-bottom: 20px;
-                    font-weight: 600;
+                .table-header-and-filter-area{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    position: relative;
+                    h1 {
+                        font-size: 20px;
+                        font-family: $roboto;
+                        text-transform: capitalize;
+                        margin-bottom: 20px;
+                        font-weight: 600;
+                    }
+                    button{
+                        background: $white;
+                        padding: 10px;
+                        border-radius: 4px;
+                        color: $blue;
+                        text-transform: capitalize;
+                        box-shadow: 2px 6px 15px 0 rgba(69, 65, 78, 0.2);
+                        transition: all .3s ease;
+                        margin-top: -15px;
+
+                        &:hover {
+                            background: #888;
+                            color: $white;
+                        }
+                    }
+                    .filter-popup-area{
+                        position: absolute;
+                        top: 100%;
+                        right: 0;
+                        background: $white;
+                        box-shadow: 0 4px 10px rgba(69, 69, 0, 0.6);
+                        z-index: 5;
+                        padding: 20px;
+                        border-radius: 8px;
+                        display: none;
+                        h1{
+                            font-size: 15px;
+
+                        }
+                        ul{
+                            padding-left: 20px;
+                            li{
+                                font-size: 13px;
+                                font-family: $roboto;
+                                font-weight: 400;
+                                text-transform: capitalize;
+                                padding: 5px 5px;
+                                cursor: pointer;
+                                &:hover{
+                                    background: $gray;
+                                    color: $black !important;
+                                }
+                                .filteritemchack{
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
                 }
+             
 
                 .details-main-area {
                     overflow: scroll;
@@ -1172,7 +1238,7 @@
                                 position: sticky;
                                 left: 0;
                                 top: 0;
-                                padding: 25px;
+                                padding: 25px 10px;
                                 background: $white;
                                 border-radius: 8px 0 0 8px;
                               
@@ -1238,7 +1304,7 @@
                         .listarea {
                             .listitem {
                                 &:nth-child(1) {
-                                    min-width: 70px;
+                                    width: 70px;
                                 }
 
                                 &:nth-child(2) {
@@ -1279,20 +1345,20 @@
                 .scroll-gradient {
                     position: absolute;
                     top: 71px;
-                    bottom: 30px;
+                    bottom: 31px;
                     width: 40px;
                     pointer-events: none;
                     transition: opacity 0.3s;
                     z-index: 1;
                 }
                 .scroll-gradient.left {
-                    left: 108px;
+                    left: 100px;
                     background: linear-gradient(to right, rgba(0, 0, 0, .06), rgba(255, 255, 255, 0));
                     opacity: 0;
                 }
                 .scroll-gradient.right {
-                    right: 31px;
-                    background: linear-gradient(to left, rgba(0, 0, 0, 0.06), rgba(255, 255, 255, 0));
+                    right: 30px;
+                    background: linear-gradient(to left, rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0));
                     opacity: 1;
                 }
                 
