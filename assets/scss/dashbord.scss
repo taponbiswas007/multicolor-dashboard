@@ -241,6 +241,13 @@
     .custom-col-11 {
         width: calc(100% - 76px);
     }
+    .custom-col-0 {
+        width: 0;
+    }
+
+    .custom-col-12 {
+        width: 100%;
+    }
 
     .custom-col-3 {
         width: 250px;
@@ -470,6 +477,13 @@
 
             #toggleBar {
                 display: none;
+
+            }
+            #lefttoggleBar {
+                display: none;
+                .closeicon{
+                    display: none;
+                }
 
             }
 
@@ -1338,6 +1352,18 @@
                     display: none;
                 }
             }
+        }
+        #lefttoggleBar {
+            display: block !important;
+           
+            button {
+                font-size: 25px;
+
+                .closeicon {
+                    display: none;
+                }
+            }
+
         }
 
         .topbarlogo {
