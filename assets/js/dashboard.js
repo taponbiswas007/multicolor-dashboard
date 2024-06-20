@@ -1,45 +1,111 @@
 $(document).ready(function () {
 
-    // Show full screen area start
-    $('#fullscreenToggle').on('click touchend', function () {
-        if (!document.fullscreenElement && !document.webkitFullscreenElement && !document.mozFullScreenElement && !document.msFullscreenElement) {
-            var requestFullscreen = document.documentElement.requestFullscreen || document.documentElement.webkitRequestFullscreen || document.documentElement.mozRequestFullScreen || document.documentElement.msRequestFullscreen;
-            requestFullscreen.call(document.documentElement).then(() => {
-                $('.maximize').hide();
-                $('.minimize').show();
-            }).catch((err) => {
-                console.error(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
-            });
-        } else {
-            var exitFullscreen = document.exitFullscreen || document.webkitExitFullscreen || document.mozCancelFullScreen || document.msExitFullscreen;
-            exitFullscreen.call(document).then(() => {
-                $('.maximize').show();
-                $('.minimize').hide();
-            }).catch((err) => {
-                console.error(`Error attempting to exit full-screen mode: ${err.message} (${err.name})`);
-            });
-        }
-    });
+  // Function to request fullscreen mode
+  function enterFullscreen() {
+    if (document.documentElement.requestFullscreen) {
+        return document.documentElement.requestFullscreen();
+    } else if (document.documentElement.webkitRequestFullscreen) { // Safari
+        return document.documentElement.webkitRequestFullscreen();
+    } else if (document.documentElement.mozRequestFullScreen) { // Firefox
+        return document.documentElement.mozRequestFullScreen();
+    } else if (document.documentElement.msRequestFullscreen) { // IE/Edge
+        return document.documentElement.msRequestFullscreen();
+    }
+}
 
-    // Additional event listeners to handle fullscreen changes
-    $(document).on('fullscreenchange webkitfullscreenchange mozfullscreenchange MSFullscreenChange', function () {
-        if (!document.fullscreenElement && !document.webkitFullscreenElement && !document.mozFullScreenElement && !document.msFullscreenElement) {
-            $('.maximize').show();
-            $('.minimize').hide();
-        } else {
+// Function to exit fullscreen mode
+function exitFullscreen() {
+    if (document.exitFullscreen) {
+        return document.exitFullscreen();
+    } else if (document.webkitExitFullscreen) { // Safari
+        return document.webkitExitFullscreen();
+    } else if (document.mozCancelFullScreen) { // Firefox
+        return document.mozCancelFullScreen();
+    } else if (document.msExitFullscreen) { // IE/Edge
+        return document.msExitFullscreen();
+    }
+}
+
+// Show full screen area start
+$('#fullscreenToggle').on('click touchend', function (e) {
+    e.preventDefault();
+    if (!document.fullscreenElement && !document.webkitFullscreenElement && !document.mozFullScreenElement && !document.msFullscreenElement) {
+        enterFullscreen().then(() => {
             $('.maximize').hide();
             $('.minimize').show();
-        }
-    });
+        }).catch((err) => {
+            console.error(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+        });
+    } else {
+        exitFullscreen().then(() => {
+            $('.maximize').show();
+            $('.minimize').hide();
+        }).catch((err) => {
+            console.error(`Error attempting to exit full-screen mode: ${err.message} (${err.name})`);
+        });
+    }
+});
+
+// Additional event listeners to handle fullscreen changes
+$(document).on('fullscreenchange webkitfullscreenchange mozfullscreenchange MSFullscreenChange', function () {
+    if (!document.fullscreenElement && !document.webkitFullscreenElement && !document.mozFullScreenElement && !document.msFullscreenElement) {
+        $('.maximize').show();
+        $('.minimize').hide();
+    } else {
+        $('.maximize').hide();
+        $('.minimize').show();
+    }
+});
+
 
     //full body color change function
     $("#fullbodyGray").click(function () {
         $("#fullWrapper").addClass("full-gray-bg");
         $("#fullWrapper").removeClass("full-black-bg");
+        $("#sidebarLogoArea").addClass("white-bg");
+        $("#sidebarLogoArea").removeClass("black-bg");
+        $("#sideNavitem").addClass("white-bg");
+        $("#sideNavitem").removeClass("black-bg");
+        $("#topheader").addClass("white-bg");
+        $("#topheader").removeClass("black-bg");
+        $("#responsivetopheader").addClass("white-bg");
+        $("#responsivetopheader").removeClass("black-bg");
+        $("#topbarpopup1").addClass("white-bg");
+        $("#topbarpopup1").removeClass("black-bg");
+        $("#topbarpopup2").addClass("white-bg");
+        $("#topbarpopup2").removeClass("black-bg");
+        $("#topbarpopup3").addClass("white-bg");
+        $("#topbarpopup3").removeClass("black-bg");
+        $("#topbarpopupr1").addClass("white-bg");
+        $("#topbarpopupr1").removeClass("black-bg");
+        $("#topbarpopupr2").addClass("white-bg");
+        $("#topbarpopupr2").removeClass("black-bg");
+        $("#topbarpopupr3").addClass("white-bg");
+        $("#topbarpopupr3").removeClass("black-bg");
     });
     $("#fullbodyBlack").click(function () {
         $("#fullWrapper").addClass("full-black-bg");
         $("#fullWrapper").removeClass("full-gray-bg");
+        $("#sidebarLogoArea").addClass("black-bg");
+        $("#sidebarLogoArea").removeClass("white-bg");
+        $("#sideNavitem").addClass("black-bg");
+        $("#sideNavitem").removeClass("white-bg");
+        $("#topheader").addClass("black-bg");
+        $("#topheader").removeClass("white-bg");
+        $("#responsivetopheader").addClass("black-bg");
+        $("#responsivetopheader").removeClass("white-bg");
+        $("#topbarpopup1").addClass("black-bg");
+        $("#topbarpopup1").removeClass("white-bg");
+        $("#topbarpopup2").addClass("black-bg");
+        $("#topbarpopup2").removeClass("white-bg");
+        $("#topbarpopup3").addClass("black-bg");
+        $("#topbarpopup3").removeClass("white-bg");
+        $("#topbarpopupr1").addClass("black-bg");
+        $("#topbarpopupr1").removeClass("white-bg");
+        $("#topbarpopupr2").addClass("black-bg");
+        $("#topbarpopupr2").removeClass("white-bg");
+        $("#topbarpopupr3").addClass("black-bg");
+        $("#topbarpopupr3").removeClass("white-bg");
     });
     //side bar header color change function
     $("#logobarwhite").click(function () {
