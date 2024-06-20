@@ -23,6 +23,7 @@
 .black-bg {
     background: $blackbg;
 
+    
     .active {
         color: $green !important;
     }
@@ -64,9 +65,11 @@
     .indicator {
         color: $blackbg !important;
     }
-    .information-details-area{
+
+    .information-details-area {
         box-shadow: 0 4px 10px rgba(220, 220, 0, 0.6) !important;
     }
+
     .content {
         border-bottom: 2px solid $black !important;
 
@@ -145,10 +148,25 @@
 
 .full-black-bg {
     background: $blackbg;
-   .filter-popup-area{
-    background: $blackbg !important;
-    box-shadow: 0 4px 10px rgba(220, 220, 0, 0.6) !important;
-   }
+    .sidebar{
+        box-shadow: 4px 0 10px rgba(255, 255, 255, 0.6) !important;
+    }
+    .top-header-inner{
+        box-shadow:  0 4px 10px rgba(255, 255, 255, 0.6) !important;
+    }
+    .filter-popup-area {
+        background: $blackbg !important;
+        box-shadow: 0 4px 10px rgba(220, 220, 0, 0.6) !important;
+    }
+
+    .footer-area {
+        background: $blackbg !important;
+
+        box-shadow: 8px -1px 8px rgba(255, 255, 255, 0.6);
+        p {
+            color: $white !important;
+        }
+    }
 
     h1 {
         color: $white !important;
@@ -228,19 +246,22 @@
         }
     }
 
-    .details-main-area{
-        .details{
+    .details-main-area {
+        .details {
             background: $black !important;
-            .studentid{
+
+            .studentid {
                 background: $black !important;
             }
-            .listitem{
+
+            .listitem {
                 color: $white !important;
             }
         }
     }
-    ul{
-        li{
+
+    ul {
+        li {
             color: $white !important;
         }
     }
@@ -286,7 +307,7 @@
         box-shadow: 4px 4px 10px rgba(69, 65, 78, .06);
         transition: all 0.5s ease;
         position: relative;
-        height: 100vh;
+
 
         .inner {
             height: 100%;
@@ -325,7 +346,7 @@
             }
 
             .sidenavbar-area {
-                height: calc(100% - 70px);
+                height: calc(100vh - 100px);
                 overflow-y: scroll;
                 /* WebKit-based browsers (Chrome, Safari, Edge) */
 
@@ -471,7 +492,7 @@
 
     .main-panel {
         transition: all 0.5s ease;
-        height: 100vh;
+        height: calc(100vh - 30px);
 
         .responsivetopheader {
             display: none;
@@ -1151,11 +1172,13 @@
                 width: 100%;
                 border-radius: 10px;
                 position: relative;
-                .table-header-and-filter-area{
+
+                .table-header-and-filter-area {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
                     position: relative;
+
                     h1 {
                         font-size: 20px;
                         font-family: $roboto;
@@ -1163,7 +1186,8 @@
                         margin-bottom: 20px;
                         font-weight: 600;
                     }
-                    button{
+
+                    button {
                         background: $white;
                         padding: 10px;
                         border-radius: 4px;
@@ -1178,7 +1202,8 @@
                             color: $white;
                         }
                     }
-                    .filter-popup-area{
+
+                    .filter-popup-area {
                         position: absolute;
                         top: 100%;
                         right: 0;
@@ -1188,37 +1213,43 @@
                         padding: 20px;
                         border-radius: 8px;
                         display: none;
-                        h1{
+
+                        h1 {
                             font-size: 15px;
 
                         }
-                        ul{
+
+                        ul {
                             padding-left: 20px;
-                            li{
+
+                            li {
                                 font-size: 13px;
                                 font-family: $roboto;
                                 font-weight: 400;
                                 text-transform: capitalize;
                                 padding: 5px 5px;
                                 cursor: pointer;
-                                &:hover{
+
+                                &:hover {
                                     background: $gray;
                                     color: $black !important;
                                 }
-                                .filteritemchack{
+
+                                .filteritemchack {
                                     display: none;
                                 }
                             }
                         }
                     }
                 }
-             
+
 
                 .details-main-area {
                     overflow: scroll;
                     height: 440px;
                     position: relative;
                     cursor: pointer;
+
                     .details {
                         box-shadow: 0 0 15px 2px rgba(69, 65, 78, 0.2);
                         border-radius: 8px;
@@ -1241,14 +1272,14 @@
                                 padding: 25px 10px;
                                 background: $white;
                                 border-radius: 8px 0 0 8px;
-                              
+
                                 // box-shadow:
                                 //     -15px 0 15px -10px rgba(69, 65, 78, 0.2),
-                                   
+
                                 //     0 -15px 15px -10px rgba(69, 65, 78, 0.2),
-                                   
+
                                 //     0 15px 15px -10px rgba(69, 65, 78, 0.2);
-                              
+
 
 
                             }
@@ -1264,7 +1295,7 @@
                                     width: 50px;
                                     height: 50px;
                                     border-radius: 50%;
-                                  
+
                                 }
 
                                 button {
@@ -1283,15 +1314,17 @@
                                 }
 
                                 span {
-                                    
+
                                     padding: 5px 10px;
                                     border-radius: 5px;
                                     color: $white;
                                 }
-                                .statusactive{
+
+                                .statusactive {
                                     background: $green;
                                 }
-                                .statusinactive{
+
+                                .statusinactive {
                                     background: $red;
                                 }
 
@@ -1336,12 +1369,17 @@
                     position: relative;
                     overflow: scroll;
                     height: 440px;
-                    -ms-overflow-style: none;  /* Internet Explorer 10+ */
-                    scrollbar-width: none;  /* Firefox */
+                    -ms-overflow-style: none;
+                    /* Internet Explorer 10+ */
+                    scrollbar-width: none;
+                    /* Firefox */
                 }
+
                 .details-main-area::-webkit-scrollbar {
-                    display: none;  /* Safari and Chrome */
+                    display: none;
+                    /* Safari and Chrome */
                 }
+
                 .scroll-gradient {
                     position: absolute;
                     top: 71px;
@@ -1351,17 +1389,19 @@
                     transition: opacity 0.3s;
                     z-index: 1;
                 }
+
                 .scroll-gradient.left {
                     left: 100px;
                     background: linear-gradient(to right, rgba(0, 0, 0, .06), rgba(255, 255, 255, 0));
                     opacity: 0;
                 }
+
                 .scroll-gradient.right {
                     right: 30px;
                     background: linear-gradient(to left, rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0));
                     opacity: 1;
                 }
-                
+
 
 
 
@@ -1405,6 +1445,19 @@
         }
 
 
+    }
+
+    .footer-area {
+        height: 30px;
+        padding: 10px;
+        background: $white;
+
+        p {
+            font-size: 12px;
+            font-weight: 400;
+            font-family: $andadapro;
+            text-align: center;
+        }
     }
 }
 

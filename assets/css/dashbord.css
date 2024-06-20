@@ -239,10 +239,26 @@ a {
 .full-black-bg {
   background: #1a2035;
 }
+.full-black-bg .sidebar {
+  -webkit-box-shadow: 4px 0 10px rgba(255, 255, 255, 0.6) !important;
+          box-shadow: 4px 0 10px rgba(255, 255, 255, 0.6) !important;
+}
+.full-black-bg .top-header-inner {
+  -webkit-box-shadow: 0 4px 10px rgba(255, 255, 255, 0.6) !important;
+          box-shadow: 0 4px 10px rgba(255, 255, 255, 0.6) !important;
+}
 .full-black-bg .filter-popup-area {
   background: #1a2035 !important;
   -webkit-box-shadow: 0 4px 10px rgba(220, 220, 0, 0.6) !important;
           box-shadow: 0 4px 10px rgba(220, 220, 0, 0.6) !important;
+}
+.full-black-bg .footer-area {
+  background: #1a2035 !important;
+  -webkit-box-shadow: 8px -1px 8px rgba(255, 255, 255, 0.6);
+          box-shadow: 8px -1px 8px rgba(255, 255, 255, 0.6);
+}
+.full-black-bg .footer-area p {
+  color: #ffffff !important;
 }
 .full-black-bg h1 {
   color: #ffffff !important;
@@ -351,7 +367,6 @@ a {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   position: relative;
-  height: 100vh;
 }
 .wrapper .sidebar .inner {
   height: 100%;
@@ -392,7 +407,7 @@ a {
   display: none;
 }
 .wrapper .sidebar .inner .sidenavbar-area {
-  height: calc(100% - 70px);
+  height: calc(100vh - 100px);
   overflow-y: scroll;
   /* WebKit-based browsers (Chrome, Safari, Edge) */
 }
@@ -526,7 +541,7 @@ a {
 .wrapper .main-panel {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  height: 100vh;
+  height: calc(100vh - 30px);
   /* WebKit-based browsers (Chrome, Safari, Edge) */
   /* Firefox */
   /* Internet Explorer 10+ and Edge (older versions) */
@@ -1361,11 +1376,14 @@ a {
   position: relative;
   overflow: scroll;
   height: 440px;
-  -ms-overflow-style: none; /* Internet Explorer 10+ */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  /* Internet Explorer 10+ */
+  scrollbar-width: none;
+  /* Firefox */
 }
 .wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .details-main-area::-webkit-scrollbar {
-  display: none; /* Safari and Chrome */
+  display: none;
+  /* Safari and Chrome */
 }
 .wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .scroll-gradient {
   position: absolute;
@@ -1415,6 +1433,17 @@ a {
 }
 .wrapper .main-panel .main-body-wrapper {
   -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+.wrapper .footer-area {
+  height: 30px;
+  padding: 10px;
+  background: #ffffff;
+}
+.wrapper .footer-area p {
+  font-size: 12px;
+  font-weight: 400;
+  font-family: "Andada Pro", serif;
+  text-align: center;
 }
 
 .theme-setting-area {
