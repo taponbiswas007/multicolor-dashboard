@@ -23,13 +23,20 @@ $(document).ready(function() {
         $element.swipe({
             swipeStatus: function(event, phase, direction, distance, duration, fingers) {
                 var scrollLeft = $element.scrollLeft();
-
-                if (phase === "move" && (direction === "left" || direction === "right")) {
+                var scrollTop = $element.scrollTop(); // Capture scrollTop for vertical scroll
+        
+                if (phase === "move") {
                     if (direction === "left") {
                         $element.scrollLeft(scrollLeft + distance);
                     }
                     if (direction === "right") {
                         $element.scrollLeft(scrollLeft - distance);
+                    }
+                    if (direction === "up") { // Handle vertical scroll up
+                        $element.scrollTop(scrollTop - distance);
+                    }
+                    if (direction === "down") { // Handle vertical scroll down
+                        $element.scrollTop(scrollTop + distance);
                     }
                     updateScrollEffect();
                 }
@@ -37,23 +44,25 @@ $(document).ready(function() {
             threshold: 0,
             fingers: 'all'
         });
+        
 
-        $element.on('mousedown', function(e) {
-            var startX = e.pageX;
+        $element.on('touchstart', function(e) {
+            var startX = e.originalEvent.touches[0].pageX;
             var scrollLeft = $element.scrollLeft();
-
-            $(document).on('mousemove.detailsMainArea', function(e) {
-                var x = e.pageX;
+        
+            $(document).on('touchmove.detailsMainArea', function(e) {
+                var x = e.originalEvent.touches[0].pageX;
                 $element.scrollLeft(scrollLeft - (x - startX));
                 updateScrollEffect();
             });
-
-            $(document).on('mouseup.detailsMainArea', function() {
+        
+            $(document).on('touchend.detailsMainArea', function() {
                 $(document).off('.detailsMainArea');
             });
-
+        
             return false;
         });
+        
 
         $element.on('scroll', function() {
             updateScrollEffect();
