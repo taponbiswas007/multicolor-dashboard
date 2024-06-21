@@ -1508,7 +1508,7 @@
     right: -261px;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 999;
+    z-index: 9999999999999999999999;
 
     .inner {
         position: relative;
@@ -1665,7 +1665,7 @@
                 position: absolute;
                 top: 76px;
                 right: 5px;
-                z-index: 2;
+                z-index: 99;
 
                 .top-header-inner {
                     height: fit-content !important;

@@ -1470,7 +1470,7 @@ a {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  z-index: 999;
+  z-index: 10000000000000000000000;
 }
 .theme-setting-area .inner {
   position: relative;
@@ -1606,7 +1606,7 @@ a {
     position: absolute;
     top: 76px;
     right: 5px;
-    z-index: 2;
+    z-index: 99;
   }
   .wrapper .main-panel .responsivetopheader .top-header-inner {
     height: -webkit-fit-content !important;
