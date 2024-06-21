@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Andada+Pro:ital,wght@0,400..840;1,400..840&family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!-- bootstrap link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+        integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- fontawesome link -->
+
+    <link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome"
+        href="/css/app-wa-d53d10572a0e0d37cb8d614a3f177a0c.css?vsn=d">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-thin.css">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-solid.css">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-regular.css">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-light.css">
+
+    <!-- apex chart css link -->
+    <link rel="stylesheet" href="assets/css/apexcharts.css">
+    <!-- main css link -->
+    <link rel="stylesheet" href="assets/css/dashbord.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+</head>
+
+<body>
+    <section class="wrapper full-gray-bg" id="fullWrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="sidebar  custom-col-3   p-0" id="sideBar">
+                    <div class="inner">
+                        <div class="side-bar-logo-area white-bg d-flex justify-content-between align-items-center"
+                            id="sidebarLogoArea">
+                            <div class="logo sidebarlogo">
+                                <a href="#">
+                                    <img src="assets/images/logo.png" alt="logo">
+                                </a>
+                            </div>
+                            <div class="sidebar-toggle-icon">
+                                <button class="sidebartoggle">
+                                    <i class="fa-light fa-arrow-left-to-line sortsidebar"></i>
+                                    <i class="fa-light fa-arrow-right-to-line bigsidebar"></i>
+
+                                </button>
+                            </div>
+
+                        </div>
+                        <div class="sidenavbar-area white-bg" id="sideNavitem">
+                            <h1>menu</h1>
+                            <a href="index.html" class="sidenavitem active">
+                                <div class="navcontent">
+                                    <i class="fa-sharp fa-light fa-house font-icon"></i>
+                                    <span class="navitem-text">Dashboard</span>
+                                </div>
+
+                            </a>
+                            <!-- menu item  -->
+                            <a data-bs-toggle="collapse" href="#generalsettings" class="sidenavitem">
+                                <div class="navcontent">
+                                    <i class="fa-sharp fa-light fa-gear font-icon"></i>
+                                    <span class="navitem-text">general settings</span>
+                                </div>
+                                <button class="submenuitem">
+                                    <i class="fa-solid fa-angle-right font-icon submenuarrow"></i>
+                                </button>
+                            </a>
+                            <div class="navsubitems collapse" id="generalsettings">
+                                <ul>
+                                    <li><a href="instituteprofile.html" class="submenuactive"><i
+                                                class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>Institute
+                                            Profile</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>fee
+                                            perticulars</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>rules
+                                            and regulations</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>marks
+                                            and grading</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>account
+                                            settings</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>log
+                                            out</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- menu item -->
+
+                            <a data-bs-toggle="collapse" href="#classes" class="sidenavitem">
+                                <div class="navcontent">
+                                    <i class="fa-sharp fa-light fa-pen-field font-icon"></i>
+                                    <span class="navitem-text">classes</span>
+                                </div>
+                                <button class="submenuitem">
+                                    <i class="fa-solid fa-angle-right font-icon submenuarrow"></i>
+                                </button>
+                            </a>
+                            <div class="navsubitems collapse" id="classes">
+                                <ul>
+                                    <li><a href="#" class="submenuactive"><i
+                                                class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>all class</a>
+                                    </li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>new
+                                            class</a></li>
+
+                                </ul>
+                            </div>
+
+                            <!-- menu item -->
+                            <a data-bs-toggle="collapse" href="#subjects" class="sidenavitem">
+                                <div class="navcontent">
+                                    <i class="fa-thin fa-book-open-cover font-icon"></i>
+                                    <span class="navitem-text">subjects</span>
+                                </div>
+                                <button class="submenuitem">
+                                    <i class="fa-solid fa-angle-right font-icon submenuarrow"></i>
+                                </button>
+                            </a>
+                            <div class="navsubitems collapse" id="subjects">
+                                <ul>
+                                    <li><a href="#" class="submenuactive"><i
+                                                class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>classes with
+                                            subjects</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>assign
+                                            subject</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- menu item -->
+                            <a data-bs-toggle="collapse" href="#students" class="sidenavitem">
+                                <div class="navcontent">
+                                    <i class="fa-light fa-user font-icon"></i>
+                                    <span class="navitem-text">Students</span>
+                                </div>
+                                <button class="submenuitem">
+                                    <i class="fa-solid fa-angle-right font-icon submenuarrow"></i>
+                                </button>
+                            </a>
+                            <div class="navsubitems collapse" id="students">
+                                <ul>
+                                    <li><a href="#" class="submenuactive"><i
+                                                class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>all
+                                            students</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>add
+                                            new</a></li>
+                                    <li><a href="#"><i
+                                                class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>admission
+                                            letter</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>student
+                                            id cards</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>print
+                                            basic list</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>promote
+                                            students</a></li>
+
+                                </ul>
+                            </div>
+
+                            <!-- menu item -->
+                            <a data-bs-toggle="collapse" href="#employees" class="sidenavitem">
+                                <div class="navcontent">
+                                    <i class="fa-light fa-briefcase font-icon"></i>
+                                    <span class="navitem-text">employees</span>
+                                </div>
+                                <button class="submenuitem">
+                                    <i class="fa-solid fa-angle-right font-icon submenuarrow"></i>
+                                </button>
+                            </a>
+                            <div class="navsubitems collapse" id="employees">
+                                <ul>
+                                    <li><a href="#" class="submenuactive"><i
+                                                class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>all
+                                            employees</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>add
+                                            new</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>staff id
+                                            cards</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>job
+                                            letter</a></li>
+
+
+                                </ul>
+                            </div>
+
+                            <!-- menu item -->
+                            <a data-bs-toggle="collapse" href="#accounts" class="sidenavitem">
+                                <div class="navcontent">
+                                    <i class="fa-light fa-credit-card"></i>
+                                    <span class="navitem-text">accounts</span>
+                                </div>
+                                <button class="submenuitem">
+                                    <i class="fa-solid fa-angle-right font-icon submenuarrow"></i>
+                                </button>
+                            </a>
+                            <div class="navsubitems collapse" id="accounts">
+                                <ul>
+                                    <li><a href="#" class="submenuactive"><i
+                                                class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>chart of
+                                            account</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>add
+                                            income</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>add
+                                            expense</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>account
+                                            statement</a></li>
+
+
+                                </ul>
+                            </div>
+                            <!-- menu item -->
+                            <a data-bs-toggle="collapse" href="#fees" class="sidenavitem">
+                                <div class="navcontent">
+                                    <i class="fa-duotone fa-credit-card"></i>
+                                    <span class="navitem-text">fees</span>
+                                </div>
+                                <button class="submenuitem">
+                                    <i class="fa-solid fa-angle-right font-icon submenuarrow"></i>
+                                </button>
+                            </a>
+                            <div class="navsubitems collapse" id="fees">
+                                <ul>
+                                    <li><a href="#" class="submenuactive"><i
+                                                class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>Generate Bank Challan</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>Collect fee</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>Fee slip</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>Fees Defaulters</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>Fees Report</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>Delete fee</a></li>
+
+
+                                </ul>
+                            </div>
+                            <!-- menu item -->
+                            <a data-bs-toggle="collapse" href="#salary" class="sidenavitem">
+                                <div class="navcontent">
+                                    <i class="fa-duotone fa-credit-card"></i>
+                                    <span class="navitem-text">salary</span>
+                                </div>
+                                <button class="submenuitem">
+                                    <i class="fa-solid fa-angle-right font-icon submenuarrow"></i>
+                                </button>
+                            </a>
+                            <div class="navsubitems collapse" id="salary">
+                                <ul>
+                                    <li><a href="#" class="submenuactive"><i
+                                                class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>pay salary</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>Salary slip</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>Salary sheet</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>Salary report</a></li>
+                                   
+
+
+                                </ul>
+                            </div>
+                            <!-- menu item -->
+                            <a data-bs-toggle="collapse" href="#attendance" class="sidenavitem">
+                                <div class="navcontent">
+                                    <i class="fa-thin fa-hand"></i>
+                                    <span class="navitem-text">attendance</span>
+                                </div>
+                                <button class="submenuitem">
+                                    <i class="fa-solid fa-angle-right font-icon submenuarrow"></i>
+                                </button>
+                            </a>
+                            <div class="navsubitems collapse" id="attendance">
+                                <ul>
+                                    <li><a href="#" class="submenuactive"><i
+                                                class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>Mark Student Attendance</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>Mark Employees Attendance</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>Class wise report</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>Students Attendance Report</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>Employees Attendance Report</a></li>
+                                   
+
+
+                                </ul>
+                            </div>
+                            <!-- menu item -->
+                            <a data-bs-toggle="collapse" href="#timetable" class="sidenavitem">
+                                <div class="navcontent">
+                                    <i class="fa-regular fa-clock-three"></i>
+                                    <span class="navitem-text">timetable</span>
+                                </div>
+                                <button class="submenuitem">
+                                    <i class="fa-solid fa-angle-right font-icon submenuarrow"></i>
+                                </button>
+                            </a>
+                            <div class="navsubitems collapse" id="timetable">
+                                <ul>
+                                    <li><a href="#" class="submenuactive"><i
+                                                class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>Weekdays</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>Time priods</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>Class rooms</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>Create Timetabl</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>Generate for class</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>Generate for Teacher</a></li>
+                                   
+
+
+                                </ul>
+                            </div>
+                            <!-- menu item -->
+                            <a data-bs-toggle="collapse" href="#homework" class="sidenavitem">
+                                <div class="navcontent">
+                                    <i class="fa-light fa-pen-field"></i>
+                                    <span class="navitem-text">homework</span>
+                                </div>
+                                <button class="submenuitem">
+                                    <i class="fa-solid fa-angle-right font-icon submenuarrow"></i>
+                                </button>
+                            </a>
+                            <div class="navsubitems collapse" id="homework">
+                                <ul>
+                                    <li><a href="#" class="submenuactive"><i
+                                                class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>Class one</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>Class two</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>Class Three</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>Class four</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>Class five</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>Class six</a></li>
+                                   
+
+
+                                </ul>
+                            </div>
+                            <!-- menu item -->
+                            <a data-bs-toggle="collapse" href="#behaveandskill" class="sidenavitem">
+                                <div class="navcontent">
+                                    <i class="fa-regular fa-people"></i>
+                                    <span class="navitem-text">Behaviour & Skill</span>
+                                </div>
+                                <button class="submenuitem">
+                                    <i class="fa-solid fa-angle-right font-icon submenuarrow"></i>
+                                </button>
+                            </a>
+                            <div class="navsubitems collapse" id="behaveandskill">
+                                <ul>
+                                    <li><a href="#" class="submenuactive"><i
+                                                class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>Rate Behaviours</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>Rate skills</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>Observation</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>Affective domain rating report</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>Psycomotor Domain Rating Report</a></li>
+                                   
+                                   
+
+
+                                </ul>
+                            </div>
+                            <!-- menu item -->
+                            <a data-bs-toggle="collapse" href="#exams" class="sidenavitem">
+                                <div class="navcontent">
+                                    <i class="fa-light fa-pen-field"></i>
+                                    <span class="navitem-text">Exams</span>
+                                </div>
+                                <button class="submenuitem">
+                                    <i class="fa-solid fa-angle-right font-icon submenuarrow"></i>
+                                </button>
+                            </a>
+                            <div class="navsubitems collapse" id="exams">
+                                <ul>
+                                    <li><a href="#" class="submenuactive"><i
+                                                class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>Create New Exam</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>Edit or delete</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>Add / update Exam Marks</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>Result Card</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>Blank Award List</a></li>
+                                   
+                                   
+
+
+                                </ul>
+                            </div>
+                            <!-- menu item -->
+                            <a data-bs-toggle="collapse" href="#classtest" class="sidenavitem">
+                                <div class="navcontent">
+                                    <i class="fa-light fa-pen-field"></i>
+                                    <span class="navitem-text">class test</span>
+                                </div>
+                                <button class="submenuitem">
+                                    <i class="fa-solid fa-angle-right font-icon submenuarrow"></i>
+                                </button>
+                            </a>
+                            <div class="navsubitems collapse" id="classtest">
+                                <ul>
+                                    <li><a href="#" class="submenuactive"><i
+                                                class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>Create New test</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>Test results</a></li>
+                            
+                                   
+                                   
+
+
+                                </ul>
+                            </div>
+                            <!-- menu item -->
+                            <a data-bs-toggle="collapse" href="#report" class="sidenavitem">
+                                <div class="navcontent">
+                                    <i class="fa-light fa-files"></i>
+                                    <span class="navitem-text">reports</span>
+                                </div>
+                                <button class="submenuitem">
+                                    <i class="fa-solid fa-angle-right font-icon submenuarrow"></i>
+                                </button>
+                            </a>
+                            <div class="navsubitems collapse" id="report">
+                                <ul>
+                                    <li><a href="#" class="submenuactive"><i
+                                                class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>Student report card</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>Students info report</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>Parents info report</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>Students Monthly Attendance Report</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>Staff Monthly Attendance Report</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>Fee Collection Report</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>Student Progress Report</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>Accounts Report</a></li>
+                            
+                                   
+                                   
+
+
+                                </ul>
+                            </div>
+                            <!-- menu item -->
+                            <a data-bs-toggle="collapse" href="#certificate" class="sidenavitem">
+                                <div class="navcontent">
+                                    <i class="fa-light fa-file-certificate"></i>
+                                    <span class="navitem-text">certificates</span>
+                                </div>
+                                <button class="submenuitem">
+                                    <i class="fa-solid fa-angle-right font-icon submenuarrow"></i>
+                                </button>
+                            </a>
+                            <div class="navsubitems collapse" id="certificate">
+                                <ul>
+                                    <li><a href="#" class="submenuactive"><i
+                                                class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>Leave certificate</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>Character certificate</a></li>
+                                
+                            
+                                   
+                                   
+
+
+                                </ul>
+                            </div>
+                            <!-- menu item -->
+                            <a data-bs-toggle="collapse" href="#questionspaper" class="sidenavitem">
+                                <div class="navcontent">
+                                    <i class="fa-light fa-file-circle-question"></i>
+                                    <span class="navitem-text">questions paper</span>
+                                </div>
+                                <button class="submenuitem">
+                                    <i class="fa-solid fa-angle-right font-icon submenuarrow"></i>
+                                </button>
+                            </a>
+                            <div class="navsubitems collapse" id="questionspaper">
+                                <ul>
+                                    <li><a href="#" class="submenuactive"><i
+                                                class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>Subject chapters</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>Question Bank</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>Create Question paper</a></li>
+                                
+                            
+                                   
+                                   
+
+
+                                </ul>
+                            </div>
+                            <!-- menu item -->
+                            <a data-bs-toggle="collapse" href="#smsservices" class="sidenavitem">
+                                <div class="navcontent">
+                                    <i class="fa-sharp fa-light fa-message"></i>
+                                    <span class="navitem-text">sms services</span>
+                                </div>
+                                <button class="submenuitem">
+                                    <i class="fa-solid fa-angle-right font-icon submenuarrow"></i>
+                                </button>
+                            </a>
+                            <div class="navsubitems collapse" id="smsservices">
+                                <ul>
+                                    <li><a href="#" class="submenuactive"><i
+                                                class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>Free SMS Gateway</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>premium getway</a></li>
+                                    
+                                
+                            
+                                   
+                                   
+
+
+                                </ul>
+                            </div>
+                            <!-- menu item -->
+                            <a data-bs-toggle="collapse" href="#messaging" class="sidenavitem">
+                                <div class="navcontent">
+                                    <i class="fa-light fa-comment"></i>
+                                    <span class="navitem-text">Messaging</span>
+                                </div>
+                                <button class="submenuitem">
+                                    <i class="fa-solid fa-angle-right font-icon submenuarrow"></i>
+                                </button>
+                            </a>
+                            <div class="navsubitems collapse" id="messaging">
+                                <ul>
+                                    <li><a href="#" class="submenuactive"><i
+                                                class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>received messages</a></li>
+                                    <li><a href="#"><i class="fa-sharp fa-solid fa-circle hoversubmenuicon"></i>send messages</a></li>
+                                    
+                                
+                            
+                                   
+                                   
+
+
+                                </ul>
+                            </div>
+                            <!-- menu item -->
+                            <a data-bs-toggle="collapse" href="#whatsapp" class="sidenavitem">
+                                <div class="navcontent">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                    <span class="navitem-text">what's apps</span>
+                                </div>
+                                
+                            </a>
+                          
+
+                        </div>
+                    </div>
+                </div>
+                <div class="main-panel custom-col-9    p-0" id="mainPanel">
+                    <!-- top nav area start -->
+                    <div class="top-header white-bg topheaderhide" id="topheader">
+                        <div class="top-header-inner">
+                            <div class="logo-and-left-bar-side d-flex align-items-center">
+                                <!-- logo area start -->
+                                <div class="logo topbarlogo">
+                                    <a href="#">
+                                        <img src="assets/images/logo.png" alt="logo">
+                                    </a>
+                                </div>
+                                <!-- logo area end -->
+
+                                <!-- toggle bar area -->
+                                <div class="topbar-item" id="lefttoggleBar">
+                                    <button>
+                                        <i class="fa-regular fa-bars baricon"></i>
+                                        <i class="fa-regular fa-xmark closeicon"></i>
+                                    </button>
+                                </div>
+                                <!-- toggle bar area end -->
+                            </div>
+
+                            <div class="left">
+                                <!-- search area start -->
+                                <div class="search-area">
+                                    <input type="search">
+                                    <i class="fa-light fa-magnifying-glass search-icon"></i>
+                                </div>
+                                <!-- search area end -->
+
+                            </div>
+                            <!-- toggle bar area -->
+                            <div class="topbar-item" id="toggleBar">
+                                <button>
+                                    <i class="fa-light fa-ellipsis-stroke-vertical"></i>
+
+                                </button>
+                            </div>
+                            <!-- toggle bar area end -->
+                            <div class="right">
+                                <!-- message area start -->
+                                <div class="topbar-item ">
+                                    <button>
+                                        <i class="fa-sharp fa-solid fa-envelope"></i>
+                                        <span>4</span>
+                                    </button>
+
+                                    <div class="information-details-area white-bg" id="topbarpopup1">
+                                        <div class="inner">
+                                            <div class="header-area">
+                                                <h1>messages</h1>
+                                                <button>mark all as read</button>
+                                            </div>
+                                            <div class="main-content-area">
+                                                <!-- main content area start-->
+                                                <a href="#" class="content d-flex justify-content-left">
+                                                    <div class="sender-images">
+                                                        <img src="assets/images/pp.png" alt="">
+                                                    </div>
+                                                    <ul>
+                                                        <li>Tapon sarker</li>
+                                                        <li>How are you?</li>
+                                                        <li>5 minutes ago</li>
+                                                    </ul>
+                                                </a>
+                                                <!-- main content area end -->
+                                                <!-- main content area start-->
+                                                <a href="#" class="content d-flex justify-content-left">
+                                                    <div class="sender-images">
+                                                        <img src="assets/images/pp.png" alt="">
+                                                    </div>
+                                                    <ul>
+                                                        <li>Tapon sarker</li>
+                                                        <li>How are you?</li>
+                                                        <li>5 minutes ago</li>
+                                                    </ul>
+                                                </a>
+                                                <!-- main content area end -->
+                                                <!-- main content area start-->
+                                                <a href="#" class="content d-flex justify-content-left">
+                                                    <div class="sender-images">
+                                                        <img src="assets/images/pp.png" alt="">
+                                                    </div>
+                                                    <ul>
+                                                        <li>Tapon sarker</li>
+                                                        <li>How are you?</li>
+                                                        <li>5 minutes ago</li>
+                                                    </ul>
+                                                </a>
+                                                <!-- main content area end -->
+                                                <!-- main content area start-->
+                                                <a href="#" class="content d-flex justify-content-left">
+                                                    <div class="sender-images">
+                                                        <img src="assets/images/pp.png" alt="">
+                                                    </div>
+                                                    <ul>
+                                                        <li>Tapon sarker</li>
+                                                        <li>How are you?</li>
+                                                        <li>5 minutes ago</li>
+                                                    </ul>
+                                                </a>
+                                                <!-- main content area end -->
+                                            </div>
+                                            <div class="footer">
+                                                <a href="#">
+                                                    <span>see all messages</span>
+                                                    <span><i class="fa-light fa-angle-right"></i></span>
+                                                </a>
+                                            </div>
+                                            <div class="indicator">
+                                                <i class="fa-solid fa-triangle"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- message area end -->
+
+                                <!-- notification area start -->
+                                <div class="topbar-item">
+                                    <button>
+                                        <i class="fa-sharp fa-solid fa-bell"></i>
+                                        <span>4</span>
+                                    </button>
+
+                                    <div class="information-details-area white-bg" id="topbarpopup2">
+                                        <div class="inner">
+                                            <div class="header-area">
+                                                <h1>you have 4 new notification</h1>
+
+                                            </div>
+                                            <div class="main-content-area">
+                                                <!-- main content area start-->
+                                                <a href="#" class="content d-flex justify-content-left">
+                                                    <div class="sender-images">
+                                                        <i class="fa-light fa-user-plus"></i>
+                                                    </div>
+                                                    <ul>
+                                                        <li>new user registered</li>
+                                                        <li>5 minutes ago</li>
+                                                    </ul>
+                                                </a>
+                                                <!-- main content area end -->
+                                                <!-- main content area start-->
+                                                <a href="#" class="content d-flex justify-content-left">
+                                                    <div class="sender-images">
+                                                        <i class="fa-sharp fa-solid fa-comment"></i>
+                                                    </div>
+                                                    <ul>
+                                                        <li>Tapon commented on admin</li>
+                                                        <li>5 minutes ago</li>
+                                                    </ul>
+                                                </a>
+                                                <!-- main content area end -->
+                                                <!-- main content area start-->
+                                                <a href="#" class="content d-flex justify-content-left">
+                                                    <div class="sender-images">
+                                                        <img src="assets/images/pp.png" alt="">
+                                                    </div>
+                                                    <ul>
+                                                        <li>tapon send message to you</li>
+                                                        <li>5 minutes ago</li>
+                                                    </ul>
+                                                </a>
+                                                <!-- main content area end -->
+                                                <!-- main content area start-->
+                                                <a href="#" class="content d-flex justify-content-left">
+                                                    <div class="sender-images">
+                                                        <i class="fa-sharp fa-solid fa-heart"></i>
+                                                    </div>
+                                                    <ul>
+                                                        <li>Tapon like admin</li>
+                                                        <li>5 minutes ago</li>
+                                                    </ul>
+                                                </a>
+                                                <!-- main content area end -->
+                                            </div>
+                                            <div class="footer">
+                                                <a href="#">
+                                                    <span>see all notification</span>
+                                                    <span><i class="fa-light fa-angle-right"></i></span>
+                                                </a>
+                                            </div>
+                                            <div class="indicator">
+                                                <i class="fa-solid fa-triangle"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- notification area end -->
+
+                                <!-- full screen mode area start -->
+                                <div class="topbar-item">
+                                    <button class="fullscreenmode" id="fullscreenToggle">
+                                        <i class="fa-sharp fa-light fa-arrows-maximize maximize"></i>
+                                        <i class="fa-sharp fa-light fa-arrows-minimize minimize"></i>
+                                    </button>
+
+                                </div>
+                                <!-- full screen mode area end -->
+
+                                <!-- institute area start -->
+                                <div class="topbar-item">
+                                    <div class="institute-information informationbtn">
+                                        <a href="#" class="institutelogo">
+                                            <img src="assets/images/profile.jpg" alt="images">
+                                        </a>
+                                        <div class="institute-name">
+                                            <h1>
+                                                institute name
+                                                <i class="fa-light fa-angle-down"></i>
+                                            </h1>
+                                        </div>
+
+                                    </div>
+                                    <div class="information-details-area white-bg user-area" id="topbarpopup3">
+                                        <div class="inner">
+                                            <ul>
+                                                <li>
+                                                    <a href="#">
+                                                        <i class="fa-thin fa-address-card m-r"></i>profile
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <i class="fa-light fa-gear m-r"></i> account settings
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <i class="fa-sharp fa-thin fa-left-from-bracket m-r"></i>log
+                                                        out
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <div class="indicator">
+                                                <i class="fa-solid fa-triangle"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- institute area end -->
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="top-header white-bg responsivetopheader" id="responsivetopheader">
+                        <div class="top-header-inner">
+                            <div class="left">
+
+
+
+                            </div>
+                            <div class="right">
+                                <!-- message area start -->
+                                <div class="topbar-item ">
+                                    <button>
+                                        <i class="fa-sharp fa-solid fa-envelope"></i>
+                                        <span>4</span>
+                                    </button>
+
+                                    <div class="information-details-area white-bg" id="topbarpopupr1">
+                                        <div class="inner">
+                                            <div class="header-area">
+                                                <h1>messages</h1>
+                                                <button>mark all as read</button>
+                                            </div>
+                                            <div class="main-content-area">
+                                                <!-- main content area start-->
+                                                <a href="#" class="content d-flex justify-content-left">
+                                                    <div class="sender-images">
+                                                        <img src="assets/images/pp.png" alt="">
+                                                    </div>
+                                                    <ul>
+                                                        <li>Tapon sarker</li>
+                                                        <li>How are you?</li>
+                                                        <li>5 minutes ago</li>
+                                                    </ul>
+                                                </a>
+                                                <!-- main content area end -->
+                                                <!-- main content area start-->
+                                                <a href="#" class="content d-flex justify-content-left">
+                                                    <div class="sender-images">
+                                                        <img src="assets/images/pp.png" alt="">
+                                                    </div>
+                                                    <ul>
+                                                        <li>Tapon sarker</li>
+                                                        <li>How are you?</li>
+                                                        <li>5 minutes ago</li>
+                                                    </ul>
+                                                </a>
+                                                <!-- main content area end -->
+                                                <!-- main content area start-->
+                                                <a href="#" class="content d-flex justify-content-left">
+                                                    <div class="sender-images">
+                                                        <img src="assets/images/pp.png" alt="">
+                                                    </div>
+                                                    <ul>
+                                                        <li>Tapon sarker</li>
+                                                        <li>How are you?</li>
+                                                        <li>5 minutes ago</li>
+                                                    </ul>
+                                                </a>
+                                                <!-- main content area end -->
+                                                <!-- main content area start-->
+                                                <a href="#" class="content d-flex justify-content-left">
+                                                    <div class="sender-images">
+                                                        <img src="assets/images/pp.png" alt="">
+                                                    </div>
+                                                    <ul>
+                                                        <li>Tapon sarker</li>
+                                                        <li>How are you?</li>
+                                                        <li>5 minutes ago</li>
+                                                    </ul>
+                                                </a>
+                                                <!-- main content area end -->
+                                            </div>
+                                            <div class="footer">
+                                                <a href="#">
+                                                    <span>see all messages</span>
+                                                    <span><i class="fa-light fa-angle-right"></i></span>
+                                                </a>
+                                            </div>
+                                            <div class="indicator">
+                                                <i class="fa-solid fa-triangle"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- message area end -->
+
+                                <!-- notification area start -->
+                                <div class="topbar-item">
+                                    <button>
+                                        <i class="fa-sharp fa-solid fa-bell"></i>
+                                        <span>4</span>
+                                    </button>
+
+                                    <div class="information-details-area white-bg" id="topbarpopupr2">
+                                        <div class="inner">
+                                            <div class="header-area">
+                                                <h1>you have 4 new notification</h1>
+
+                                            </div>
+                                            <div class="main-content-area">
+                                                <!-- main content area start-->
+                                                <a href="#" class="content d-flex justify-content-left">
+                                                    <div class="sender-images">
+                                                        <i class="fa-light fa-user-plus"></i>
+                                                    </div>
+                                                    <ul>
+                                                        <li>new user registered</li>
+                                                        <li>5 minutes ago</li>
+                                                    </ul>
+                                                </a>
+                                                <!-- main content area end -->
+                                                <!-- main content area start-->
+                                                <a href="#" class="content d-flex justify-content-left">
+                                                    <div class="sender-images">
+                                                        <i class="fa-sharp fa-solid fa-comment"></i>
+                                                    </div>
+                                                    <ul>
+                                                        <li>Tapon commented on admin</li>
+                                                        <li>5 minutes ago</li>
+                                                    </ul>
+                                                </a>
+                                                <!-- main content area end -->
+                                                <!-- main content area start-->
+                                                <a href="#" class="content d-flex justify-content-left">
+                                                    <div class="sender-images">
+                                                        <img src="assets/images/pp.png" alt="">
+                                                    </div>
+                                                    <ul>
+                                                        <li>tapon send message to you</li>
+                                                        <li>5 minutes ago</li>
+                                                    </ul>
+                                                </a>
+                                                <!-- main content area end -->
+                                                <!-- main content area start-->
+                                                <a href="#" class="content d-flex justify-content-left">
+                                                    <div class="sender-images">
+                                                        <i class="fa-sharp fa-solid fa-heart"></i>
+                                                    </div>
+                                                    <ul>
+                                                        <li>Tapon like admin</li>
+                                                        <li>5 minutes ago</li>
+                                                    </ul>
+                                                </a>
+                                                <!-- main content area end -->
+                                            </div>
+                                            <div class="footer">
+                                                <a href="#">
+                                                    <span>see all messages</span>
+                                                    <span><i class="fa-light fa-angle-right"></i></span>
+                                                </a>
+                                            </div>
+                                            <div class="indicator">
+                                                <i class="fa-solid fa-triangle"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- notification area end -->
+
+                                <!-- full screen mode area start -->
+                                <div class="topbar-item">
+                                    <button class="fullscreenmode" id="fullscreenToggle">
+                                        <i class="fa-sharp fa-light fa-arrows-maximize maximize"></i>
+                                        <i class="fa-sharp fa-light fa-arrows-minimize minimize"></i>
+                                    </button>
+
+                                </div>
+                                <!-- full screen mode area end -->
+
+                                <!-- institute area start -->
+                                <div class="topbar-item">
+                                    <div class="institute-information informationbtn">
+                                        <a href="#" class="institutelogo">
+                                            <img src="assets/images/profile.jpg" alt="images">
+                                        </a>
+                                        <div class="institute-name">
+                                            <h1>
+                                                institute name
+                                                <i class="fa-light fa-angle-down"></i>
+                                            </h1>
+                                        </div>
+
+                                    </div>
+                                    <div class="information-details-area white-bg  user-area" id="topbarpopupr3">
+                                        <div class="inner">
+                                            <ul>
+                                                <li>
+                                                    <a href="#">
+                                                        <i class="fa-thin fa-address-card m-r"></i>profile
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <i class="fa-light fa-gear m-r"></i> account settings
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <i class="fa-sharp fa-thin fa-left-from-bracket m-r"></i>log
+                                                        out
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <div class="indicator">
+                                                <i class="fa-solid fa-triangle"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- institute area end -->
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- top nav area end -->
+
+                    <!-- main body start -->
+
+                    <div class="main-body-wrapper">
+                        <!-- body header start -->
+                        <div class="main-body-header">
+                            <h1>General Settings
+                                <i class="fa-thin fa-grip-lines-vertical"></i>
+                                 <i class="fa-sharp fa-light fa-house"></i> 
+                                 <i class="fa-thin fa-dash"></i>
+                                <span> Institute Profile</span>
+                            </h1>
+                           
+                        </div>
+                        <!-- body header end -->
+
+                        
+
+                       
+                       
+                    </div>
+
+
+                </div>
+            </div>
+            <footer class="footer-area ">
+                <p>Copyright © BSP Digital Solutions. All rights reserved. | Design by Tapon | Website powered by www.bspdigitalsolutions.com</p>
+            </footer>
+        </div>
+    </section>
+
+    <!-- theme and language setting area start -->
+
+    <div class="theme-setting-area">
+        <div class="inner">
+            <div class="setting-area-title">
+                <h2>settings</h2>
+            </div>
+            <div class="color-changer">
+                <h1>Full body</h1>
+                <button class="gray" id="fullbodyGray"></button>
+                <button class="black" id="fullbodyBlack"></button>
+            </div>
+            <div class="color-changer">
+                <h1>logo header</h1>
+                <button class="white" id="logobarwhite"></button>
+                <button class="black" id="logobarBlack"></button>
+            </div>
+            <div class="color-changer">
+                <h1>sidebar</h1>
+                <button class="white" id="sidenavbarwhite"></button>
+                <button class="black" id="sidenavbarBlack"></button>
+            </div>
+            <div class="color-changer">
+                <h1>top header</h1>
+                <button class="white" id="topnavbarwhite"></button>
+                <button class="black" id="topnavbarBlack"></button>
+            </div>
+            <div class="setting-icons-close">
+                <button class="settingbtn"> <i class="fa-light fa-gear"></i></button>
+            </div>
+        </div>
+    </div>
+    <!-- theme and language setting area end -->
+
+    <!-- jquery js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <!-- bootstrap link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"
+        integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- apex chart js -->
+    <script src="assets/js/apexcharts.min.js"></script>
+    <!-- dashboard js link -->
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/chartvalue.js"></script>
+    <script src="assets/js/scrolltouchhandle.js"></script>
+</body>
+
+</html>

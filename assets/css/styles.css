@@ -1,0 +1,167 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Webkit-based browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 4px; /* Width of the entire scrollbar */
+  height: 4px; /* Height of the scrollbar for horizontal scrolling */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Background of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color of the scrollbar handle */
+  border-radius: 10px; /* Roundness of the scrollbar handle */
+  border: 1px solid #ccc; /* Border around the scrollbar handle */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the scrollbar handle when hovered */
+}
+
+/* Firefox */
+html {
+  scrollbar-width: thin; /* Sets the width of the scrollbar */
+  scrollbar-color: #888 #f1f1f1; /* Sets the color of the scrollbar handle and track */
+}
+
+body {
+  scrollbar-width: thin; /* Apply to the body element */
+  scrollbar-color: #888 #f1f1f1;
+}
+
+/* Internet Explorer and Edge */
+body {
+  -ms-overflow-style: none; /* Hides the default scrollbar in IE/Edge */
+}
+
+/* For IE 10+ */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  ::-ms-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+}
+/* General styling for scrollable elements within the page */
+.scrollable-element {
+  overflow: auto;
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #888 #f1f1f1; /* For Firefox */
+}
+
+.scrollable-element::-webkit-scrollbar {
+  width: 4px; /* Width of the scrollbar */
+  height: 4px; /* Height of the scrollbar for horizontal scrolling */
+}
+
+.scrollable-element::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Background of the scrollbar track */
+}
+
+.scrollable-element::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color of the scrollbar handle */
+  border-radius: 10px; /* Roundness of the scrollbar handle */
+  border: 1px solid #ccc; /* Border around the scrollbar handle */
+}
+
+.scrollable-element::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the scrollbar handle when hovered */
+}
+
+img {
+  width: 100%;
+}
+
+button {
+  background: none;
+  outline: none;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.m-r {
+  margin-right: 15px;
+}
+
+.font-icon {
+  font-size: 20px;
+}
+
+.full-black-bg .main-body-wrapper .main-body-header {
+  background: #000000 !important;
+}
+
+.main-body-wrapper .main-body-header {
+  background: #ffffff;
+  border-radius: 10px;
+}
+.main-body-wrapper .main-body-header h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+  padding: 0 20px;
+}
+.main-body-wrapper .main-body-header h1 span {
+  opacity: 0.6;
+}
