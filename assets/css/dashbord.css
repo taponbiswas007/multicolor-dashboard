@@ -425,6 +425,14 @@ a {
   overflow-y: scroll;
   /* WebKit-based browsers (Chrome, Safari, Edge) */
 }
+.wrapper .sidebar .inner .sidenavbar-area h1 {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  padding: 20px;
+  text-transform: capitalize;
+  border-bottom: 1px solid #00025c;
+}
 .wrapper .sidebar .inner .sidenavbar-area .sidenavitem {
   display: -webkit-box;
   display: -ms-flexbox;
