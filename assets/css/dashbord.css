@@ -184,8 +184,8 @@ a {
   color: #1a2035 !important;
 }
 .black-bg .information-details-area {
-  -webkit-box-shadow: 0 4px 10px rgba(220, 220, 0, 0.6) !important;
-          box-shadow: 0 4px 10px rgba(220, 220, 0, 0.6) !important;
+  -webkit-box-shadow: 0 4px 10px rgba(255, 255, 255, 0.6) !important;
+          box-shadow: 0 4px 10px rgba(255, 255, 255, 0.6) !important;
 }
 .black-bg .content {
   border-bottom: 2px solid #000000 !important;
