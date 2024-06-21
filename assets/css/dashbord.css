@@ -331,6 +331,20 @@ a {
 .full-black-bg ul li {
   color: #ffffff !important;
 }
+.full-black-bg .details-main-area .details {
+  border-bottom: 1px solid #ffffff !important;
+}
+.full-black-bg .details-main-area .details:first-child {
+  border-top: 1px solid #ffffff !important;
+}
+.full-black-bg .scroll-gradient.left {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.08)), to(rgba(255, 255, 255, 0))) !important;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0)) !important;
+}
+.full-black-bg .scroll-gradient.right {
+  background: -webkit-gradient(linear, right top, left top, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0))) !important;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0)) !important;
+}
 
 .full-purple-bg {
   background: #6610f2;
@@ -407,7 +421,7 @@ a {
   display: none;
 }
 .wrapper .sidebar .inner .sidenavbar-area {
-  height: calc(100vh - 100px);
+  height: calc(100vh - 110px);
   overflow-y: scroll;
   /* WebKit-based browsers (Chrome, Safari, Edge) */
 }
@@ -541,7 +555,7 @@ a {
 .wrapper .main-panel {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  height: calc(100vh - 30px);
+  height: calc(100vh - 40px);
   /* WebKit-based browsers (Chrome, Safari, Edge) */
   /* Firefox */
   /* Internet Explorer 10+ and Edge (older versions) */
@@ -1285,13 +1299,13 @@ a {
   cursor: pointer;
 }
 .wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .details-main-area .details {
-  -webkit-box-shadow: 0 0 15px 2px rgba(69, 65, 78, 0.2);
-          box-shadow: 0 0 15px 2px rgba(69, 65, 78, 0.2);
-  border-radius: 8px;
   min-width: 768px;
-  margin: 10px;
   padding-right: 10px;
   background: #ffffff;
+  border-bottom: 1px solid #1a2035;
+}
+.wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .details-main-area .details:first-child {
+  border-top: 1px solid #1a2035;
 }
 .wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .details-main-area .details ul {
   display: -webkit-box;
@@ -1314,7 +1328,6 @@ a {
   top: 0;
   padding: 25px 10px;
   background: #ffffff;
-  border-radius: 8px 0 0 8px;
 }
 .wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .details-main-area .details ul li {
   font-size: 14px;
@@ -1389,7 +1402,6 @@ a {
   position: absolute;
   top: 71px;
   bottom: 31px;
-  width: 40px;
   pointer-events: none;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
@@ -1400,12 +1412,14 @@ a {
   background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.06)), to(rgba(255, 255, 255, 0)));
   background: linear-gradient(to right, rgba(0, 0, 0, 0.06), rgba(255, 255, 255, 0));
   opacity: 0;
+  width: 10px;
 }
 .wrapper .main-panel .main-body-wrapper .student-absent-table-wrapper .scroll-gradient.right {
   right: 30px;
   background: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(255, 255, 255, 0)));
   background: linear-gradient(to left, rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0));
   opacity: 1;
+  width: 20px;
 }
 .wrapper .main-panel .main-body-wrapper::-webkit-scrollbar {
   width: 12px;
@@ -1435,7 +1449,7 @@ a {
   -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 .wrapper .footer-area {
-  height: 30px;
+  height: 40px;
   padding: 10px;
   background: #ffffff;
 }

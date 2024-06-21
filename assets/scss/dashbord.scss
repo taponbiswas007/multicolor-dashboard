@@ -23,7 +23,7 @@
 .black-bg {
     background: $blackbg;
 
-    
+
     .active {
         color: $green !important;
     }
@@ -148,12 +148,15 @@
 
 .full-black-bg {
     background: $blackbg;
-    .sidebar{
+
+    .sidebar {
         box-shadow: 4px 0 10px rgba(255, 255, 255, 0.6) !important;
     }
-    .top-header-inner{
-        box-shadow:  0 4px 10px rgba(255, 255, 255, 0.6) !important;
+
+    .top-header-inner {
+        box-shadow: 0 4px 10px rgba(255, 255, 255, 0.6) !important;
     }
+
     .filter-popup-area {
         background: $blackbg !important;
         box-shadow: 0 4px 10px rgba(220, 220, 0, 0.6) !important;
@@ -163,6 +166,7 @@
         background: $blackbg !important;
 
         box-shadow: 8px -1px 8px rgba(255, 255, 255, 0.6);
+
         p {
             color: $white !important;
         }
@@ -265,6 +269,30 @@
             color: $white !important;
         }
     }
+
+    .details-main-area {
+
+
+        .details {
+
+            border-bottom: 1px solid $white !important;
+
+            &:first-child {
+                border-top: 1px solid $white !important;
+            }
+        }
+    }
+    .scroll-gradient.left {
+      
+        background: linear-gradient(to right, rgba(255, 255, 255, .08), rgba(255, 255, 255, 0)) !important;
+       
+    }
+
+    .scroll-gradient.right {
+     
+        background: linear-gradient(to left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0)) !important;
+       
+    }
 }
 
 .full-purple-bg {
@@ -346,7 +374,7 @@
             }
 
             .sidenavbar-area {
-                height: calc(100vh - 100px);
+                height: calc(100vh - 110px);
                 overflow-y: scroll;
                 /* WebKit-based browsers (Chrome, Safari, Edge) */
 
@@ -492,7 +520,7 @@
 
     .main-panel {
         transition: all 0.5s ease;
-        height: calc(100vh - 30px);
+        height: calc(100vh - 40px);
 
         .responsivetopheader {
             display: none;
@@ -1251,12 +1279,18 @@
                     cursor: pointer;
 
                     .details {
-                        box-shadow: 0 0 15px 2px rgba(69, 65, 78, 0.2);
-                        border-radius: 8px;
+                        //box-shadow: 0 0 15px 2px rgba(69, 65, 78, 0.2);
+                        //border-radius: 8px;
                         min-width: 768px;
-                        margin: 10px;
+                        // margin: 10px 0;
                         padding-right: 10px;
                         background: $white;
+                        border-bottom: 1px solid $blackbg;
+
+                        &:first-child {
+                            border-top: 1px solid $blackbg;
+                        }
+
 
                         ul {
                             display: flex;
@@ -1271,7 +1305,7 @@
                                 top: 0;
                                 padding: 25px 10px;
                                 background: $white;
-                                border-radius: 8px 0 0 8px;
+                                // border-radius: 8px 0 0 8px;
 
                                 // box-shadow:
                                 //     -15px 0 15px -10px rgba(69, 65, 78, 0.2),
@@ -1384,7 +1418,7 @@
                     position: absolute;
                     top: 71px;
                     bottom: 31px;
-                    width: 40px;
+
                     pointer-events: none;
                     transition: opacity 0.3s;
                     z-index: 1;
@@ -1394,12 +1428,14 @@
                     left: 100px;
                     background: linear-gradient(to right, rgba(0, 0, 0, .06), rgba(255, 255, 255, 0));
                     opacity: 0;
+                    width: 10px;
                 }
 
                 .scroll-gradient.right {
                     right: 30px;
                     background: linear-gradient(to left, rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0));
                     opacity: 1;
+                    width: 20px;
                 }
 
 
@@ -1448,7 +1484,7 @@
     }
 
     .footer-area {
-        height: 30px;
+        height: 40px;
         padding: 10px;
         background: $white;
 
