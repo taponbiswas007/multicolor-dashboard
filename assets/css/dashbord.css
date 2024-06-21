@@ -264,7 +264,7 @@ a {
   color: #ffffff !important;
 }
 .full-black-bg .card {
-  background: #6610f2;
+  background: #000000;
 }
 .full-black-bg .card p {
   color: #ffffff !important;
@@ -273,7 +273,7 @@ a {
   color: #ffffff !important;
 }
 .full-black-bg .statistics-chart-area {
-  background: #6610f2;
+  background: #000000;
 }
 .full-black-bg .statistics-chart-area .apexcharts-zoomin-icon svg {
   fill: #ffffff !important;
@@ -307,13 +307,13 @@ a {
   color: #ffffff !important;
 }
 .full-black-bg .estimated-fee-area {
-  background: #6610f2;
+  background: #000000;
 }
 .full-black-bg .attendance {
-  background: #6610f2;
+  background: #000000;
 }
 .full-black-bg .student-absent-table-wrapper {
-  background: #6610f2;
+  background: #000000;
 }
 .full-black-bg .student-absent-table-wrapper .student-details {
   background: #2a2f5b;
@@ -344,6 +344,12 @@ a {
 .full-black-bg .scroll-gradient.right {
   background: -webkit-gradient(linear, right top, left top, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0))) !important;
   background: linear-gradient(to left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0)) !important;
+}
+.full-black-bg main span {
+  color: #ffffff !important;
+}
+.full-black-bg footer span {
+  color: #ffffff !important;
 }
 
 .full-purple-bg {

@@ -177,7 +177,7 @@
     }
 
     .card {
-        background: $purple;
+        background: $black;
 
         p {
             color: $white !important;
@@ -189,7 +189,7 @@
     }
 
     .statistics-chart-area {
-        background: $purple;
+        background: $black;
 
         .apexcharts-zoomin-icon svg {
             fill: $white !important;
@@ -234,15 +234,15 @@
     }
 
     .estimated-fee-area {
-        background: $purple;
+        background: $black;
     }
 
     .attendance {
-        background: $purple;
+        background: $black;
     }
 
     .student-absent-table-wrapper {
-        background: $purple;
+        background: $black;
 
         .student-details {
             background: #2a2f5b;
@@ -292,6 +292,16 @@
      
         background: linear-gradient(to left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0)) !important;
        
+    }
+    main{
+        span{
+            color: $white !important;
+        }
+    }
+    footer{
+        span{
+            color: $white !important;
+        }
     }
 }
 
