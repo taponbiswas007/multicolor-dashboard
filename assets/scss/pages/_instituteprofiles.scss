@@ -3,6 +3,29 @@
         .main-body-header{
             background: $black !important;
         }
+        .profileupdate-area{
+            background: $black !important;
+            .inputfield{
+                border: 1px solid $white !important;
+                .form-control{
+                    background: $black !important;
+                    color: $white !important;
+                }
+                label{
+                    background: $black !important;
+                    color: $white !important;
+                }
+                input{
+                    color: $white !important;
+                }
+                .uploadlogo-area{
+                    border: 1px solid $white !important;
+                }
+            }
+        }
+        .profile-show-area{
+            background: $black !important;
+        }
     }
 }
 .main-body-wrapper{
@@ -49,15 +72,15 @@
                 column-gap: 20px;
             }
             .uploadlogo-area{
-                height: 50px;
-                width: 50px;
+                height: 80px;
+                width: 80px;
                 border-radius: 50%;
                 border: 1px solid $blackbg;
                 overflow: hidden;
                 margin-left: 20px;
                 img {
-                    width: 50px;
-                    height: 50px;
+                    width: 80px;
+                    height: 80px;
                     display: block;
                 }
         

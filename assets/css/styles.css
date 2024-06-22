@@ -142,6 +142,29 @@ a {
 .full-black-bg .main-body-wrapper .main-body-header {
   background: #000000 !important;
 }
+.full-black-bg .main-body-wrapper .profileupdate-area {
+  background: #000000 !important;
+}
+.full-black-bg .main-body-wrapper .profileupdate-area .inputfield {
+  border: 1px solid #ffffff !important;
+}
+.full-black-bg .main-body-wrapper .profileupdate-area .inputfield .form-control {
+  background: #000000 !important;
+  color: #ffffff !important;
+}
+.full-black-bg .main-body-wrapper .profileupdate-area .inputfield label {
+  background: #000000 !important;
+  color: #ffffff !important;
+}
+.full-black-bg .main-body-wrapper .profileupdate-area .inputfield input {
+  color: #ffffff !important;
+}
+.full-black-bg .main-body-wrapper .profileupdate-area .inputfield .uploadlogo-area {
+  border: 1px solid #ffffff !important;
+}
+.full-black-bg .main-body-wrapper .profile-show-area {
+  background: #000000 !important;
+}
 
 .main-body-wrapper .main-body-header {
   background: #ffffff;
@@ -204,16 +227,16 @@ a {
           column-gap: 20px;
 }
 .main-body-wrapper .profileupdate-area .inputfield .uploadlogo-area {
-  height: 50px;
-  width: 50px;
+  height: 80px;
+  width: 80px;
   border-radius: 50%;
   border: 1px solid #1a2035;
   overflow: hidden;
   margin-left: 20px;
 }
 .main-body-wrapper .profileupdate-area .inputfield .uploadlogo-area img {
-  width: 50px;
-  height: 50px;
+  width: 80px;
+  height: 80px;
   display: block;
 }
 .main-body-wrapper .profileupdate-area .inputfield .fileinputfield {
