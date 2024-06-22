@@ -236,10 +236,32 @@ a {
   border: none;
   background: none;
   padding: 10px 20px;
+  border-radius: 8px;
 }
 .main-body-wrapper .profileupdate-area .inputfield .custom-file-upload {
+  color: #ffffff;
   padding: 10px 15px;
   cursor: pointer;
   background-color: #00025c;
   border-radius: 4px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.main-body-wrapper .profileupdate-area .inputfield .custom-file-upload:hover {
+  background-color: #20c997;
+}
+.main-body-wrapper .profileupdate-area .updatebtn {
+  background: #fdd701;
+  color: #000000;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 20px;
+  text-transform: capitalize;
+  border-radius: 5px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.main-body-wrapper .profileupdate-area .updatebtn:hover {
+  background: rgb(124, 122, 1);
 }/*# sourceMappingURL=styles.css.map */

@@ -300,7 +300,7 @@ function populateCountries(countryElementId, stateElementId) {
 
 populateCountries("country", "state");
 
-document.getElementById('updatelogo').addEventListener('change', function(event) {
+document.getElementById('updatelogo').addEventListener('change', function (event) {
     const fileInput = event.target;
     const files = fileInput.files;
     const uploadLogoArea = document.querySelector('.uploadlogo-area');
@@ -312,7 +312,7 @@ document.getElementById('updatelogo').addEventListener('change', function(event)
         const file = files[0];
         const reader = new FileReader();
 
-        reader.onload = function(e) {
+        reader.onload = function (e) {
             const img = document.createElement('img');
             img.src = e.target.result;
             uploadLogoArea.appendChild(img);
