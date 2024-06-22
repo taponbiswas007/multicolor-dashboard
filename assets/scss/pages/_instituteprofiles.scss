@@ -219,10 +219,17 @@
                 padding-bottom: 4px;
             }
             .right-arrow{
-                font-size: 20px;
+                font-size: 25px;
                 position: absolute;
                 left: 0;
                 top: 20px;
+            }
+            .content{
+                font-family: $poppins;
+                font-size: 14px;
+                position: absolute;
+                top: 27px;
+                left: 29px;
             }
         }
     }
