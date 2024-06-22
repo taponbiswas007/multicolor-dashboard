@@ -343,6 +343,7 @@ a {
 }
 .main-body-wrapper .profile-show-area .profile-details-item {
   position: relative;
+  margin-bottom: 40px;
 }
 .main-body-wrapper .profile-show-area .profile-details-item .title {
   font-size: 14px;
@@ -364,4 +365,7 @@ a {
   position: absolute;
   top: 27px;
   left: 29px;
+  text-transform: capitalize;
+  font-weight: 600;
+  color: #00025c;
 }/*# sourceMappingURL=styles.css.map */

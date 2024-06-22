@@ -210,6 +210,7 @@
 
         .profile-details-item{
             position: relative;
+            margin-bottom: 40px;
             .title{
                 font-size: 14px;
                 font-family: $inter;
@@ -230,6 +231,10 @@
                 position: absolute;
                 top: 27px;
                 left: 29px;
+                text-transform: capitalize;
+                font-weight: 600;
+                color: $blue;
+                
             }
         }
     }
