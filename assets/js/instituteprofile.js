@@ -299,3 +299,25 @@ function populateCountries(countryElementId, stateElementId) {
 
 
 populateCountries("country", "state");
+
+document.getElementById('updatelogo').addEventListener('change', function(event) {
+    const fileInput = event.target;
+    const files = fileInput.files;
+    const uploadLogoArea = document.querySelector('.uploadlogo-area');
+
+    // Clear previous images
+    uploadLogoArea.innerHTML = '';
+
+    if (files && files[0]) {
+        const file = files[0];
+        const reader = new FileReader();
+
+        reader.onload = function(e) {
+            const img = document.createElement('img');
+            img.src = e.target.result;
+            uploadLogoArea.appendChild(img);
+        };
+
+        reader.readAsDataURL(file);
+    }
+});
