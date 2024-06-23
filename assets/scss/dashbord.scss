@@ -488,6 +488,9 @@
 
                             .submenuactive {
                                 color: $cyan;
+                                .hoversubmenuicon{
+                                    opacity: 100% !important;
+                                }
                             }
                         }
                     }

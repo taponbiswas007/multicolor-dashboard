@@ -538,6 +538,9 @@ a {
 .wrapper .sidebar .inner .sidenavbar-area .navsubitems ul li .submenuactive {
   color: #0dcaf0;
 }
+.wrapper .sidebar .inner .sidenavbar-area .navsubitems ul li .submenuactive .hoversubmenuicon {
+  opacity: 100% !important;
+}
 .wrapper .sidebar .inner .sidenavbar-area::-webkit-scrollbar {
   width: 4px;
   /* Adjust the width of the scrollbar */
