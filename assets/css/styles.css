@@ -368,4 +368,13 @@ a {
   text-transform: capitalize;
   font-weight: 600;
   color: #00025c;
+}
+
+.feeparticular-main-area .header {
+  background: #ffffff;
+  padding: 20px;
+}
+.feeparticular-main-area .header h1 {
+  font-size: 20px;
+  text-transform: capitalize;
 }/*# sourceMappingURL=styles.css.map */
