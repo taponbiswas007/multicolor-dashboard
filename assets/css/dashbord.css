@@ -136,7 +136,7 @@ a {
 }
 
 .font-icon {
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .white-bg {
@@ -449,8 +449,8 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 15px 20px;
-  font-size: 15px;
+  padding: 15px 10px;
+  font-size: 13px;
   font-weight: 500;
   font-family: "Roboto", sans-serif;
   margin: 0 10px;
